@@ -1,0 +1,11 @@
+{
+    "npmName": "spartera-api-sdk",
+    "npmVersion": "1.0.41",
+    "clientPackage": "SparteraApiSdk",
+    "npmRepository": "https://github.com/spartera-com/spartera-api-sdks/tree/main/javascript",
+    "npmDescription": "Official SDK for Spartera API - Interface to manage companies' accounts and process insights remotely",
+    "licenseName": "MIT",
+    "npmAuthor": "Tony D <tony@spartera.com>",
+    "usePromises": true,
+    "supportsES6": true
+}

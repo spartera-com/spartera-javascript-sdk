@@ -1,0 +1,24 @@
+{
+  "scripts": {
+    "test": "node example.js",
+    "example": "node example.js",
+    "lint": "eslint src/",
+    "format": "prettier --write src/"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "keywords": [
+    "spartera",
+    "api",
+    "sdk",
+    "javascript",
+    "nodejs",
+    "data",
+    "analytics"
+  ]
+}
