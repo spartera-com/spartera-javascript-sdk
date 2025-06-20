@@ -18,15 +18,15 @@ import InlineObject2 from '../model/InlineObject2';
 import InlineObject3 from '../model/InlineObject3';
 
 /**
-* CloudProviders service.
-* @module api/CloudProvidersApi
+* StorageEngines service.
+* @module api/StorageEnginesApi
 * @version 0.0.0
 */
-export default class CloudProvidersApi {
+export default class StorageEnginesApi {
 
     /**
-    * Constructs a new CloudProvidersApi. 
-    * @alias module:api/CloudProvidersApi
+    * Constructs a new StorageEnginesApi. 
+    * @alias module:api/StorageEnginesApi
     * @class
     * @param {module:ApiClient} [apiClient] Optional API client implementation to use,
     * default to {@link module:ApiClient#instance} if unspecified.
@@ -38,13 +38,25 @@ export default class CloudProvidersApi {
 
 
     /**
-     * Get a list of all cloud providers
+     * Get single storage engine by ID
+     * @param {String} providerId 
+     * @param {String} engineId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    cloudProvidersGetWithHttpInfo() {
+    cloudProvidersProviderIdStorageEnginesEngineIdGetWithHttpInfo(providerId, engineId) {
       let postBody = null;
+      // verify the required parameter 'providerId' is set
+      if (providerId === undefined || providerId === null) {
+        throw new Error("Missing the required parameter 'providerId' when calling cloudProvidersProviderIdStorageEnginesEngineIdGet");
+      }
+      // verify the required parameter 'engineId' is set
+      if (engineId === undefined || engineId === null) {
+        throw new Error("Missing the required parameter 'engineId' when calling cloudProvidersProviderIdStorageEnginesEngineIdGet");
+      }
 
       let pathParams = {
+        'provider_id': providerId,
+        'engine_id': engineId
       };
       let queryParams = {
       };
@@ -58,18 +70,20 @@ export default class CloudProvidersApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/cloud-providers', 'GET',
+        '/cloud-providers/{provider_id}/storage-engines/{engine_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Get a list of all cloud providers
+     * Get single storage engine by ID
+     * @param {String} providerId 
+     * @param {String} engineId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    cloudProvidersGet() {
-      return this.cloudProvidersGetWithHttpInfo()
+    cloudProvidersProviderIdStorageEnginesEngineIdGet(providerId, engineId) {
+      return this.cloudProvidersProviderIdStorageEnginesEngineIdGetWithHttpInfo(providerId, engineId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -77,15 +91,15 @@ export default class CloudProvidersApi {
 
 
     /**
-     * Get single cloud provider by ID
+     * Get a list of all storage engines
      * @param {String} providerId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    cloudProvidersProviderIdGetWithHttpInfo(providerId) {
+    cloudProvidersProviderIdStorageEnginesGetWithHttpInfo(providerId) {
       let postBody = null;
       // verify the required parameter 'providerId' is set
       if (providerId === undefined || providerId === null) {
-        throw new Error("Missing the required parameter 'providerId' when calling cloudProvidersProviderIdGet");
+        throw new Error("Missing the required parameter 'providerId' when calling cloudProvidersProviderIdStorageEnginesGet");
       }
 
       let pathParams = {
@@ -103,19 +117,19 @@ export default class CloudProvidersApi {
       let accepts = ['application/json'];
       let returnType = Object;
       return this.apiClient.callApi(
-        '/cloud-providers/{provider_id}', 'GET',
+        '/cloud-providers/{provider_id}/storage-engines', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null
       );
     }
 
     /**
-     * Get single cloud provider by ID
+     * Get a list of all storage engines
      * @param {String} providerId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    cloudProvidersProviderIdGet(providerId) {
-      return this.cloudProvidersProviderIdGetWithHttpInfo(providerId)
+    cloudProvidersProviderIdStorageEnginesGet(providerId) {
+      return this.cloudProvidersProviderIdStorageEnginesGetWithHttpInfo(providerId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

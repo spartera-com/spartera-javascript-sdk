@@ -24,6 +24,7 @@ docs/InlineObject.md
 docs/InlineObject1.md
 docs/InlineObject2.md
 docs/InlineObject3.md
+docs/StorageEnginesApi.md
 docs/User.md
 docs/UsersApi.md
 git_push.sh
@@ -38,6 +39,7 @@ src/api/CloudProvidersApi.js
 src/api/CompaniesApi.js
 src/api/ConnectionsApi.js
 src/api/FavoritesApi.js
+src/api/StorageEnginesApi.js
 src/api/UsersApi.js
 src/index.js
 src/model/Alert.js
@@ -62,6 +64,7 @@ test/api/CloudProvidersApi.spec.js
 test/api/CompaniesApi.spec.js
 test/api/ConnectionsApi.spec.js
 test/api/FavoritesApi.spec.js
+test/api/StorageEnginesApi.spec.js
 test/api/UsersApi.spec.js
 test/model/Alert.spec.js
 test/model/Apikey.spec.js

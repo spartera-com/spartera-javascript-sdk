@@ -41,24 +41,24 @@ export default class AssetsApi {
 
     /**
      * Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
-     * @param {String} companyHandle 
      * @param {String} assetSlug 
+     * @param {String} companyHandle 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
      */
-    analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(companyHandle, assetSlug) {
+    analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(assetSlug, companyHandle) {
       let postBody = null;
-      // verify the required parameter 'companyHandle' is set
-      if (companyHandle === undefined || companyHandle === null) {
-        throw new Error("Missing the required parameter 'companyHandle' when calling analyzeCompanyHandleAssetsAssetSlugGet");
-      }
       // verify the required parameter 'assetSlug' is set
       if (assetSlug === undefined || assetSlug === null) {
         throw new Error("Missing the required parameter 'assetSlug' when calling analyzeCompanyHandleAssetsAssetSlugGet");
       }
+      // verify the required parameter 'companyHandle' is set
+      if (companyHandle === undefined || companyHandle === null) {
+        throw new Error("Missing the required parameter 'companyHandle' when calling analyzeCompanyHandleAssetsAssetSlugGet");
+      }
 
       let pathParams = {
-        'company_handle': companyHandle,
-        'asset_slug': assetSlug
+        'asset_slug': assetSlug,
+        'company_handle': companyHandle
       };
       let queryParams = {
       };
@@ -80,12 +80,12 @@ export default class AssetsApi {
 
     /**
      * Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
-     * @param {String} companyHandle 
      * @param {String} assetSlug 
+     * @param {String} companyHandle 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
      */
-    analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug) {
-      return this.analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(companyHandle, assetSlug)
+    analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle) {
+      return this.analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(assetSlug, companyHandle)
         .then(function(response_and_data) {
           return response_and_data.data;
         });

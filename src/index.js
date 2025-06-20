@@ -35,6 +35,7 @@ import CloudProvidersApi from './api/CloudProvidersApi';
 import CompaniesApi from './api/CompaniesApi';
 import ConnectionsApi from './api/ConnectionsApi';
 import FavoritesApi from './api/FavoritesApi';
+import StorageEnginesApi from './api/StorageEnginesApi';
 import UsersApi from './api/UsersApi';
 
 
@@ -207,6 +208,12 @@ export {
     * @property {module:api/FavoritesApi}
     */
     FavoritesApi,
+
+    /**
+    * The StorageEnginesApi service constructor.
+    * @property {module:api/StorageEnginesApi}
+    */
+    StorageEnginesApi,
 
     /**
     * The UsersApi service constructor.

@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## analyzeCompanyHandleAssetsAssetSlugGet
 
-> Object analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug)
+> Object analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle)
 
 Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask&#39;s routing (if available)
 
@@ -39,9 +39,9 @@ let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
 let apiInstance = new SparteraApiDocumentation.AssetsApi();
-let companyHandle = "companyHandle_example"; // String | 
 let assetSlug = "assetSlug_example"; // String | 
-apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug).then((data) => {
+let companyHandle = "companyHandle_example"; // String | 
+apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -54,8 +54,8 @@ apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug).the
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyHandle** | **String**|  | 
  **assetSlug** | **String**|  | 
+ **companyHandle** | **String**|  | 
 
 ### Return type
 

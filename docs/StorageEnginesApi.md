@@ -1,19 +1,19 @@
-# SparteraApiDocumentation.CloudProvidersApi
+# SparteraApiDocumentation.StorageEnginesApi
 
 All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cloudProvidersGet**](CloudProvidersApi.md#cloudProvidersGet) | **GET** /cloud-providers | Get a list of all cloud providers
-[**cloudProvidersProviderIdGet**](CloudProvidersApi.md#cloudProvidersProviderIdGet) | **GET** /cloud-providers/{provider_id} | Get single cloud provider by ID
+[**cloudProvidersProviderIdStorageEnginesEngineIdGet**](StorageEnginesApi.md#cloudProvidersProviderIdStorageEnginesEngineIdGet) | **GET** /cloud-providers/{provider_id}/storage-engines/{engine_id} | Get single storage engine by ID
+[**cloudProvidersProviderIdStorageEnginesGet**](StorageEnginesApi.md#cloudProvidersProviderIdStorageEnginesGet) | **GET** /cloud-providers/{provider_id}/storage-engines | Get a list of all storage engines
 
 
 
-## cloudProvidersGet
+## cloudProvidersProviderIdStorageEnginesEngineIdGet
 
-> Object cloudProvidersGet()
+> Object cloudProvidersProviderIdStorageEnginesEngineIdGet(providerId, engineId)
 
-Get a list of all cloud providers
+Get single storage engine by ID
 
 ### Example
 
@@ -24,8 +24,10 @@ let defaultClient = SparteraApiDocumentation.ApiClient.instance;
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SparteraApiDocumentation.CloudProvidersApi();
-apiInstance.cloudProvidersGet().then((data) => {
+let apiInstance = new SparteraApiDocumentation.StorageEnginesApi();
+let providerId = "providerId_example"; // String | 
+let engineId = "engineId_example"; // String | 
+apiInstance.cloudProvidersProviderIdStorageEnginesEngineIdGet(providerId, engineId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -35,7 +37,11 @@ apiInstance.cloudProvidersGet().then((data) => {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **providerId** | **String**|  | 
+ **engineId** | **String**|  | 
 
 ### Return type
 
@@ -51,11 +57,11 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## cloudProvidersProviderIdGet
+## cloudProvidersProviderIdStorageEnginesGet
 
-> Object cloudProvidersProviderIdGet(providerId)
+> Object cloudProvidersProviderIdStorageEnginesGet(providerId)
 
-Get single cloud provider by ID
+Get a list of all storage engines
 
 ### Example
 
@@ -66,9 +72,9 @@ let defaultClient = SparteraApiDocumentation.ApiClient.instance;
 let bearerAuth = defaultClient.authentications['bearerAuth'];
 bearerAuth.accessToken = "YOUR ACCESS TOKEN"
 
-let apiInstance = new SparteraApiDocumentation.CloudProvidersApi();
+let apiInstance = new SparteraApiDocumentation.StorageEnginesApi();
 let providerId = "providerId_example"; // String | 
-apiInstance.cloudProvidersProviderIdGet(providerId).then((data) => {
+apiInstance.cloudProvidersProviderIdStorageEnginesGet(providerId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new SparteraApiDocumentation.CloudProvidersApi();
+    instance = new SparteraApiDocumentation.StorageEnginesApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,21 +47,21 @@
       object[property] = value;
   }
 
-  describe('CloudProvidersApi', function() {
-    describe('cloudProvidersGet', function() {
-      it('should call cloudProvidersGet successfully', function(done) {
-        //uncomment below and update the code to test cloudProvidersGet
-        //instance.cloudProvidersGet(function(error) {
+  describe('StorageEnginesApi', function() {
+    describe('cloudProvidersProviderIdStorageEnginesEngineIdGet', function() {
+      it('should call cloudProvidersProviderIdStorageEnginesEngineIdGet successfully', function(done) {
+        //uncomment below and update the code to test cloudProvidersProviderIdStorageEnginesEngineIdGet
+        //instance.cloudProvidersProviderIdStorageEnginesEngineIdGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
         done();
       });
     });
-    describe('cloudProvidersProviderIdGet', function() {
-      it('should call cloudProvidersProviderIdGet successfully', function(done) {
-        //uncomment below and update the code to test cloudProvidersProviderIdGet
-        //instance.cloudProvidersProviderIdGet(function(error) {
+    describe('cloudProvidersProviderIdStorageEnginesGet', function() {
+      it('should call cloudProvidersProviderIdStorageEnginesGet successfully', function(done) {
+        //uncomment below and update the code to test cloudProvidersProviderIdStorageEnginesGet
+        //instance.cloudProvidersProviderIdStorageEnginesGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
