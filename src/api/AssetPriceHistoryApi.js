@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdApiKeysGet200Response from '../model/CompaniesCompanyIdApiKeysGet200Response';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
@@ -42,7 +43,7 @@ export default class AssetPriceHistoryApi {
      * Get the currently active price for an asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesActiveGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -69,7 +70,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices/active', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -81,7 +82,7 @@ export default class AssetPriceHistoryApi {
      * Get the currently active price for an asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesActiveGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdPricesActiveGetWithHttpInfo(companyId, assetId)
@@ -96,7 +97,7 @@ export default class AssetPriceHistoryApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {String} aphId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesAphIdDeleteWithHttpInfo(companyId, assetId, aphId) {
       let postBody = null;
@@ -128,7 +129,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices/{aph_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -141,7 +142,7 @@ export default class AssetPriceHistoryApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {String} aphId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesAphIdDelete(companyId, assetId, aphId) {
       return this.companiesCompanyIdAssetsAssetIdPricesAphIdDeleteWithHttpInfo(companyId, assetId, aphId)
@@ -156,7 +157,7 @@ export default class AssetPriceHistoryApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {String} aphId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesAphIdGetWithHttpInfo(companyId, assetId, aphId) {
       let postBody = null;
@@ -188,7 +189,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices/{aph_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -201,7 +202,7 @@ export default class AssetPriceHistoryApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {String} aphId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesAphIdGet(companyId, assetId, aphId) {
       return this.companiesCompanyIdAssetsAssetIdPricesAphIdGetWithHttpInfo(companyId, assetId, aphId)
@@ -216,7 +217,7 @@ export default class AssetPriceHistoryApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {String} aphId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesAphIdPatchWithHttpInfo(companyId, assetId, aphId) {
       let postBody = null;
@@ -248,7 +249,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices/{aph_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -261,7 +262,7 @@ export default class AssetPriceHistoryApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {String} aphId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesAphIdPatch(companyId, assetId, aphId) {
       return this.companiesCompanyIdAssetsAssetIdPricesAphIdPatchWithHttpInfo(companyId, assetId, aphId)
@@ -275,7 +276,7 @@ export default class AssetPriceHistoryApi {
      * POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPostWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -302,7 +303,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices/calculate_credits', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -314,7 +315,7 @@ export default class AssetPriceHistoryApi {
      * POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPostWithHttpInfo(companyId, assetId)
@@ -328,7 +329,7 @@ export default class AssetPriceHistoryApi {
      * POST /companies/{company_id}/assets/{asset_id}/prices/discount
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesDiscountPostWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -355,7 +356,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices/discount', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -367,7 +368,7 @@ export default class AssetPriceHistoryApi {
      * POST /companies/{company_id}/assets/{asset_id}/prices/discount
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesDiscountPost(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdPricesDiscountPostWithHttpInfo(companyId, assetId)
@@ -381,7 +382,7 @@ export default class AssetPriceHistoryApi {
      * Get all price history records for a specific asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -408,7 +409,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -420,7 +421,7 @@ export default class AssetPriceHistoryApi {
      * Get all price history records for a specific asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdPricesGetWithHttpInfo(companyId, assetId)
@@ -434,7 +435,7 @@ export default class AssetPriceHistoryApi {
      * Create a new price history record for an asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPricesPostWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -461,7 +462,7 @@ export default class AssetPriceHistoryApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/prices', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -473,7 +474,7 @@ export default class AssetPriceHistoryApi {
      * Create a new price history record for an asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPricesPost(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdPricesPostWithHttpInfo(companyId, assetId)

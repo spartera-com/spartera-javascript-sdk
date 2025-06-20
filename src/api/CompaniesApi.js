@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdApiKeysGet200Response from '../model/CompaniesCompanyIdApiKeysGet200Response';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
@@ -41,7 +42,7 @@ export default class CompaniesApi {
     /**
      * Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAnalyticsAssetsGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -63,7 +64,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/analytics/assets', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -74,7 +75,7 @@ export default class CompaniesApi {
     /**
      * Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAnalyticsAssetsGet(companyId) {
       return this.companiesCompanyIdAnalyticsAssetsGetWithHttpInfo(companyId)
@@ -87,7 +88,7 @@ export default class CompaniesApi {
     /**
      * Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAnalyticsCustomersGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -109,7 +110,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/analytics/customers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -120,7 +121,7 @@ export default class CompaniesApi {
     /**
      * Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAnalyticsCustomersGet(companyId) {
       return this.companiesCompanyIdAnalyticsCustomersGetWithHttpInfo(companyId)
@@ -133,7 +134,7 @@ export default class CompaniesApi {
     /**
      * Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAnalyticsDashboardGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -155,7 +156,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/analytics/dashboard', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -166,7 +167,7 @@ export default class CompaniesApi {
     /**
      * Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAnalyticsDashboardGet(companyId) {
       return this.companiesCompanyIdAnalyticsDashboardGetWithHttpInfo(companyId)
@@ -179,7 +180,7 @@ export default class CompaniesApi {
     /**
      * Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdAnalyticsSalesGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -201,7 +202,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/analytics/sales', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -212,7 +213,7 @@ export default class CompaniesApi {
     /**
      * Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdAnalyticsSalesGet(companyId) {
       return this.companiesCompanyIdAnalyticsSalesGetWithHttpInfo(companyId)
@@ -225,7 +226,7 @@ export default class CompaniesApi {
     /**
      * Get details of the requestor's own company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -247,7 +248,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -258,7 +259,7 @@ export default class CompaniesApi {
     /**
      * Get details of the requestor's own company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdGet(companyId) {
       return this.companiesCompanyIdGetWithHttpInfo(companyId)
@@ -271,7 +272,7 @@ export default class CompaniesApi {
     /**
      * Get all objects (connections, assets) of a single company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdObjectsGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -293,7 +294,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/objects', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -304,7 +305,7 @@ export default class CompaniesApi {
     /**
      * Get all objects (connections, assets) of a single company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdObjectsGet(companyId) {
       return this.companiesCompanyIdObjectsGetWithHttpInfo(companyId)
@@ -317,7 +318,7 @@ export default class CompaniesApi {
     /**
      * Update an existing company by ID
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdPatchWithHttpInfo(companyId) {
       let postBody = null;
@@ -339,7 +340,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -350,7 +351,7 @@ export default class CompaniesApi {
     /**
      * Update an existing company by ID
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdPatch(companyId) {
       return this.companiesCompanyIdPatchWithHttpInfo(companyId)
@@ -363,7 +364,7 @@ export default class CompaniesApi {
     /**
      * Get the total number of requests allocated in the company's current subscription plan.
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdRequestsPlanGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -385,7 +386,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/requests/plan', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -396,7 +397,7 @@ export default class CompaniesApi {
     /**
      * Get the total number of requests allocated in the company's current subscription plan.
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdRequestsPlanGet(companyId) {
       return this.companiesCompanyIdRequestsPlanGetWithHttpInfo(companyId)
@@ -409,7 +410,7 @@ export default class CompaniesApi {
     /**
      * Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdRequestsUsageGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -431,7 +432,7 @@ export default class CompaniesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/requests/usage', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -442,7 +443,7 @@ export default class CompaniesApi {
     /**
      * Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdRequestsUsageGet(companyId) {
       return this.companiesCompanyIdRequestsUsageGetWithHttpInfo(companyId)

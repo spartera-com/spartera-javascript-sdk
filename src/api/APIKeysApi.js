@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdApiKeysGet200Response from '../model/CompaniesCompanyIdApiKeysGet200Response';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
@@ -42,7 +43,7 @@ export default class APIKeysApi {
      * Get single API key by ID
      * @param {String} companyId 
      * @param {String} apiKeyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdApiKeysApiKeyIdGetWithHttpInfo(companyId, apiKeyId) {
       let postBody = null;
@@ -69,7 +70,7 @@ export default class APIKeysApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/api-keys/{api_key_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -81,7 +82,7 @@ export default class APIKeysApi {
      * Get single API key by ID
      * @param {String} companyId 
      * @param {String} apiKeyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdApiKeysApiKeyIdGet(companyId, apiKeyId) {
       return this.companiesCompanyIdApiKeysApiKeyIdGetWithHttpInfo(companyId, apiKeyId)
@@ -95,7 +96,7 @@ export default class APIKeysApi {
      * Update an existing API key by ID
      * @param {String} companyId 
      * @param {String} apiKeyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdApiKeysApiKeyIdPatchWithHttpInfo(companyId, apiKeyId) {
       let postBody = null;
@@ -122,7 +123,7 @@ export default class APIKeysApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/api-keys/{api_key_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -134,7 +135,7 @@ export default class APIKeysApi {
      * Update an existing API key by ID
      * @param {String} companyId 
      * @param {String} apiKeyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdApiKeysApiKeyIdPatch(companyId, apiKeyId) {
       return this.companiesCompanyIdApiKeysApiKeyIdPatchWithHttpInfo(companyId, apiKeyId)
@@ -147,7 +148,7 @@ export default class APIKeysApi {
     /**
      * Get all API keys
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdApiKeysGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -169,7 +170,7 @@ export default class APIKeysApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/api-keys', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -180,7 +181,7 @@ export default class APIKeysApi {
     /**
      * Get all API keys
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdApiKeysGet(companyId) {
       return this.companiesCompanyIdApiKeysGetWithHttpInfo(companyId)
@@ -193,7 +194,7 @@ export default class APIKeysApi {
     /**
      * Create single API key
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdApiKeysPostWithHttpInfo(companyId) {
       let postBody = null;
@@ -215,7 +216,7 @@ export default class APIKeysApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/api-keys', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -226,7 +227,7 @@ export default class APIKeysApi {
     /**
      * Create single API key
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdApiKeysPost(companyId) {
       return this.companiesCompanyIdApiKeysPostWithHttpInfo(companyId)
@@ -240,7 +241,7 @@ export default class APIKeysApi {
      * Delete single API key by token
      * @param {String} companyId 
      * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     companiesCompanyIdApiKeysTokenDeleteWithHttpInfo(companyId, token) {
       let postBody = null;
@@ -267,7 +268,7 @@ export default class APIKeysApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/api-keys/{token}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -279,7 +280,7 @@ export default class APIKeysApi {
      * Delete single API key by token
      * @param {String} companyId 
      * @param {String} token 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     companiesCompanyIdApiKeysTokenDelete(companyId, token) {
       return this.companiesCompanyIdApiKeysTokenDeleteWithHttpInfo(companyId, token)

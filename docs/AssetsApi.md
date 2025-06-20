@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## analyzeCompanyHandleAssetsAssetSlugGet
 
-> Object analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle)
+> CompaniesCompanyIdAssetsAssetIdGet200Response analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug)
 
 Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
 
@@ -37,9 +37,9 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SparteraApiDocumentation.AssetsApi();
-let assetSlug = "assetSlug_example"; // String | 
 let companyHandle = "companyHandle_example"; // String | 
-apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle).then((data) => {
+let assetSlug = "assetSlug_example"; // String | 
+apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -52,12 +52,12 @@ apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle).the
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assetSlug** | **String**|  | 
  **companyHandle** | **String**|  | 
+ **assetSlug** | **String**|  | 
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdDelete
 
-> Object companiesCompanyIdAssetsAssetIdDelete(companyId, assetId)
+> CompaniesCompanyIdAssetsAssetIdDelete200Response companiesCompanyIdAssetsAssetIdDelete(companyId, assetId)
 
 Delete single asset by ID
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsAssetIdDelete200Response**](CompaniesCompanyIdAssetsAssetIdDelete200Response.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdGet
 
-> Object companiesCompanyIdAssetsAssetIdGet(companyId, assetId)
+> CompaniesCompanyIdAssetsAssetIdGet200Response companiesCompanyIdAssetsAssetIdGet(companyId, assetId)
 
 Get single asset by ID
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdInfoschemaGet
 
-> Object companiesCompanyIdAssetsAssetIdInfoschemaGet(companyId, assetId)
+> CompaniesCompanyIdAssetsGet200Response companiesCompanyIdAssetsAssetIdInfoschemaGet(companyId, assetId)
 
 Get the information schema for a specific asset&#39;s table
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdInfoschemaSaveGet
 
-> Object companiesCompanyIdAssetsAssetIdInfoschemaSaveGet(companyId, assetId)
+> CompaniesCompanyIdAssetsGet200Response companiesCompanyIdAssetsAssetIdInfoschemaSaveGet(companyId, assetId)
 
 Retrieve and save an asset&#39;s information schema
 
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPatch
 
-> Object companiesCompanyIdAssetsAssetIdPatch(companyId, assetId, asset)
+> CompaniesCompanyIdAssetsAssetIdPatch200Response companiesCompanyIdAssetsAssetIdPatch(companyId, assetId, asset)
 
 Update an existing asset by ID
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsAssetIdPatch200Response**](CompaniesCompanyIdAssetsAssetIdPatch200Response.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPredictedPriceGet
 
-> Object companiesCompanyIdAssetsAssetIdPredictedPriceGet(companyId, assetId)
+> CompaniesCompanyIdAssetsGet200Response companiesCompanyIdAssetsAssetIdPredictedPriceGet(companyId, assetId)
 
 Get AI-predicted pricing for a specific asset
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdStatisticsGet
 
-> Object companiesCompanyIdAssetsAssetIdStatisticsGet(companyId, assetId)
+> CompaniesCompanyIdAssetsGet200Response companiesCompanyIdAssetsAssetIdStatisticsGet(companyId, assetId)
 
 Get statistics for a specific asset (public endpoint)
 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -423,7 +423,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdTestGet
 
-> Object companiesCompanyIdAssetsAssetIdTestGet(companyId, assetId)
+> CompaniesCompanyIdAssetsGet200Response companiesCompanyIdAssetsAssetIdTestGet(companyId, assetId)
 
 Test out an Asset (on a subset of data)
 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsGet
 
-> Object companiesCompanyIdAssetsGet(companyId)
+> CompaniesCompanyIdAssetsGet200Response companiesCompanyIdAssetsGet(companyId)
 
 Get all assets for a specific company
 
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsPost
 
-> Object companiesCompanyIdAssetsPost(companyId, asset)
+> CompaniesCompanyIdAssetsPost200Response companiesCompanyIdAssetsPost(companyId, asset)
 
 Create a new asset
 
@@ -557,7 +557,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsPost200Response**](CompaniesCompanyIdAssetsPost200Response.md)
 
 ### Authorization
 
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsStatisticsGet
 
-> Object companiesCompanyIdAssetsStatisticsGet(companyId)
+> CompaniesCompanyIdAssetsGet200Response companiesCompanyIdAssetsStatisticsGet(companyId)
 
 Get statistics for all assets the user has access to
 
@@ -605,7 +605,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdAssetsGet200Response**](CompaniesCompanyIdAssetsGet200Response.md)
 
 ### Authorization
 

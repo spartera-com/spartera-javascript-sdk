@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdAssetsAssetIdPricesActiveGet
 
-> Object companiesCompanyIdAssetsAssetIdPricesActiveGet(companyId, assetId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesActiveGet(companyId, assetId)
 
 Get the currently active price for an asset
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesAphIdDelete
 
-> Object companiesCompanyIdAssetsAssetIdPricesAphIdDelete(companyId, assetId, aphId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesAphIdDelete(companyId, assetId, aphId)
 
 Delete single price history record by ID
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesAphIdGet
 
-> Object companiesCompanyIdAssetsAssetIdPricesAphIdGet(companyId, assetId, aphId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesAphIdGet(companyId, assetId, aphId)
 
 Get single price history record by ID
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesAphIdPatch
 
-> Object companiesCompanyIdAssetsAssetIdPricesAphIdPatch(companyId, assetId, aphId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesAphIdPatch(companyId, assetId, aphId)
 
 Update an existing price history record by ID
 
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost
 
-> Object companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost(companyId, assetId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost(companyId, assetId)
 
 POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesDiscountPost
 
-> Object companiesCompanyIdAssetsAssetIdPricesDiscountPost(companyId, assetId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesDiscountPost(companyId, assetId)
 
 POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesGet
 
-> Object companiesCompanyIdAssetsAssetIdPricesGet(companyId, assetId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesGet(companyId, assetId)
 
 Get all price history records for a specific asset
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesPost
 
-> Object companiesCompanyIdAssetsAssetIdPricesPost(companyId, assetId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesPost(companyId, assetId)
 
 Create a new price history record for an asset
 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 

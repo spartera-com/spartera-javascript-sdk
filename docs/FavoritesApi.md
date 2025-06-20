@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGet
 
-> Object companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGet(companyId, userId, category)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGet(companyId, userId, category)
 
 Get all favorites for the specified user in a specific category
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGet
 
-> Object companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGet(companyId, userId, assetId)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGet(companyId, userId, assetId)
 
 Check if the specified user has favorited a specific asset
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesFavoriteIdDelete
 
-> Object companiesCompanyIdUsersUserIdFavoritesFavoriteIdDelete(companyId, userId, favoriteId)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response companiesCompanyIdUsersUserIdFavoritesFavoriteIdDelete(companyId, userId, favoriteId)
 
 Delete single favorite by ID (unfavorite an asset)
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesFavoriteIdGet
 
-> Object companiesCompanyIdUsersUserIdFavoritesFavoriteIdGet(companyId, userId, favoriteId)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companiesCompanyIdUsersUserIdFavoritesFavoriteIdGet(companyId, userId, favoriteId)
 
 Get single favorite by ID
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch
 
-> Object companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch(companyId, userId, favoriteId, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch(companyId, userId, favoriteId, favorite)
 
 Update an existing favorite by ID
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesGet
 
-> Object companiesCompanyIdUsersUserIdFavoritesGet(companyId, userId)
+> CompaniesCompanyIdUsersUserIdFavoritesGet200Response companiesCompanyIdUsersUserIdFavoritesGet(companyId, userId)
 
 Get a list of all favorites for a specific user
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesGet200Response.md)
 
 ### Authorization
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesPost
 
-> Object companiesCompanyIdUsersUserIdFavoritesPost(companyId, userId, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesPost200Response companiesCompanyIdUsersUserIdFavoritesPost(companyId, userId, favorite)
 
 POST /companies/{company_id}/users/{user_id}/favorites
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesPost200Response**](CompaniesCompanyIdUsersUserIdFavoritesPost200Response.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesUncategorizedGet
 
-> Object companiesCompanyIdUsersUserIdFavoritesUncategorizedGet(companyId, userId)
+> CompaniesCompanyIdUsersUserIdFavoritesGet200Response companiesCompanyIdUsersUserIdFavoritesUncategorizedGet(companyId, userId)
 
 Get all favorites for the specified user that don&#39;t have a category
 
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdFavoritesGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesGet200Response.md)
 
 ### Authorization
 

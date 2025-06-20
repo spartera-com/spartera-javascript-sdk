@@ -13,10 +13,16 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdUsersGet200Response from '../model/CompaniesCompanyIdUsersGet200Response';
+import CompaniesCompanyIdUsersPost200Response from '../model/CompaniesCompanyIdUsersPost200Response';
+import CompaniesCompanyIdUsersUserIdDelete200Response from '../model/CompaniesCompanyIdUsersUserIdDelete200Response';
+import CompaniesCompanyIdUsersUserIdGet200Response from '../model/CompaniesCompanyIdUsersUserIdGet200Response';
+import CompaniesCompanyIdUsersUserIdPatch200Response from '../model/CompaniesCompanyIdUsersUserIdPatch200Response';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
 import InlineObject3 from '../model/InlineObject3';
+import MeGet200Response from '../model/MeGet200Response';
 import User from '../model/User';
 
 /**
@@ -42,7 +48,7 @@ export default class UsersApi {
     /**
      * Get a list of all users in a company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersGet200Response} and HTTP response
      */
     companiesCompanyIdUsersGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -64,7 +70,7 @@ export default class UsersApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -75,7 +81,7 @@ export default class UsersApi {
     /**
      * Get a list of all users in a company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersGet200Response}
      */
     companiesCompanyIdUsersGet(companyId) {
       return this.companiesCompanyIdUsersGetWithHttpInfo(companyId)
@@ -89,7 +95,7 @@ export default class UsersApi {
      * Create a new user
      * @param {String} companyId 
      * @param {module:model/User} user 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersPost200Response} and HTTP response
      */
     companiesCompanyIdUsersPostWithHttpInfo(companyId, user) {
       let postBody = user;
@@ -115,7 +121,7 @@ export default class UsersApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersPost200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -127,7 +133,7 @@ export default class UsersApi {
      * Create a new user
      * @param {String} companyId 
      * @param {module:model/User} user 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersPost200Response}
      */
     companiesCompanyIdUsersPost(companyId, user) {
       return this.companiesCompanyIdUsersPostWithHttpInfo(companyId, user)
@@ -141,7 +147,7 @@ export default class UsersApi {
      * Delete single user by ID
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdDelete200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdDeleteWithHttpInfo(companyId, userId) {
       let postBody = null;
@@ -168,7 +174,7 @@ export default class UsersApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdDelete200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -180,7 +186,7 @@ export default class UsersApi {
      * Delete single user by ID
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdDelete200Response}
      */
     companiesCompanyIdUsersUserIdDelete(companyId, userId) {
       return this.companiesCompanyIdUsersUserIdDeleteWithHttpInfo(companyId, userId)
@@ -194,7 +200,7 @@ export default class UsersApi {
      * Get single user by ID
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdGetWithHttpInfo(companyId, userId) {
       let postBody = null;
@@ -221,7 +227,7 @@ export default class UsersApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -233,7 +239,7 @@ export default class UsersApi {
      * Get single user by ID
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdGet200Response}
      */
     companiesCompanyIdUsersUserIdGet(companyId, userId) {
       return this.companiesCompanyIdUsersUserIdGetWithHttpInfo(companyId, userId)
@@ -248,7 +254,7 @@ export default class UsersApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {module:model/User} user 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdPatch200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdPatchWithHttpInfo(companyId, userId, user) {
       let postBody = user;
@@ -279,7 +285,7 @@ export default class UsersApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdPatch200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -292,10 +298,49 @@ export default class UsersApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {module:model/User} user 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdPatch200Response}
      */
     companiesCompanyIdUsersUserIdPatch(companyId, userId, user) {
       return this.companiesCompanyIdUsersUserIdPatchWithHttpInfo(companyId, userId, user)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
+     * Get current authenticated user's profile information.              Returns:                 JSON response with user profile data from database
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/MeGet200Response} and HTTP response
+     */
+    meGetWithHttpInfo() {
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = MeGet200Response;
+      return this.apiClient.callApi(
+        '/me', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Get current authenticated user's profile information.              Returns:                 JSON response with user profile data from database
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/MeGet200Response}
+     */
+    meGet() {
+      return this.meGetWithHttpInfo()
         .then(function(response_and_data) {
           return response_and_data.data;
         });

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdConnectionsConnectionIdDelete
 
-> Object companiesCompanyIdConnectionsConnectionIdDelete(companyId, connectionId)
+> CompaniesCompanyIdConnectionsConnectionIdDelete200Response companiesCompanyIdConnectionsConnectionIdDelete(companyId, connectionId)
 
 Delete single connection by ID
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdConnectionsConnectionIdDelete200Response**](CompaniesCompanyIdConnectionsConnectionIdDelete200Response.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsConnectionIdGet
 
-> Object companiesCompanyIdConnectionsConnectionIdGet(companyId, connectionId)
+> CompaniesCompanyIdConnectionsConnectionIdGet200Response companiesCompanyIdConnectionsConnectionIdGet(companyId, connectionId)
 
 Get single connection by ID
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdConnectionsConnectionIdGet200Response**](CompaniesCompanyIdConnectionsConnectionIdGet200Response.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsConnectionIdInfoschemaGet
 
-> Object companiesCompanyIdConnectionsConnectionIdInfoschemaGet(companyId, connectionId)
+> CompaniesCompanyIdConnectionsGet200Response companiesCompanyIdConnectionsConnectionIdInfoschemaGet(companyId, connectionId)
 
 Retrieve the information schema for the specified connection
 
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsConnectionIdPatch
 
-> Object companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connection)
+> CompaniesCompanyIdConnectionsConnectionIdPatch200Response companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connection)
 
 Update an existing connection by ID
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdConnectionsConnectionIdPatch200Response**](CompaniesCompanyIdConnectionsConnectionIdPatch200Response.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsConnectionIdTestGet
 
-> Object companiesCompanyIdConnectionsConnectionIdTestGet(companyId, connectionId)
+> CompaniesCompanyIdConnectionsGet200Response companiesCompanyIdConnectionsConnectionIdTestGet(companyId, connectionId)
 
 Test the specified connection
 
@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsGet
 
-> Object companiesCompanyIdConnectionsGet(companyId)
+> CompaniesCompanyIdConnectionsGet200Response companiesCompanyIdConnectionsGet(companyId)
 
 Get all connections for a specific company
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
 
 ### Authorization
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsPost
 
-> Object companiesCompanyIdConnectionsPost(companyId, connection)
+> CompaniesCompanyIdConnectionsPost200Response companiesCompanyIdConnectionsPost(companyId, connection)
 
 Create a new connection by ID
 
@@ -352,7 +352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdConnectionsPost200Response**](CompaniesCompanyIdConnectionsPost200Response.md)
 
 ### Authorization
 

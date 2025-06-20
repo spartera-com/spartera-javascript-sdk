@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdApiKeysGet200Response from '../model/CompaniesCompanyIdApiKeysGet200Response';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
 import InlineObject3 from '../model/InlineObject3';
@@ -41,7 +42,7 @@ export default class StorageEnginesApi {
      * Get single storage engine by ID
      * @param {String} providerId 
      * @param {String} engineId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     cloudProvidersProviderIdStorageEnginesEngineIdGetWithHttpInfo(providerId, engineId) {
       let postBody = null;
@@ -68,7 +69,7 @@ export default class StorageEnginesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/cloud-providers/{provider_id}/storage-engines/{engine_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -80,7 +81,7 @@ export default class StorageEnginesApi {
      * Get single storage engine by ID
      * @param {String} providerId 
      * @param {String} engineId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     cloudProvidersProviderIdStorageEnginesEngineIdGet(providerId, engineId) {
       return this.cloudProvidersProviderIdStorageEnginesEngineIdGetWithHttpInfo(providerId, engineId)
@@ -93,7 +94,7 @@ export default class StorageEnginesApi {
     /**
      * Get a list of all storage engines
      * @param {String} providerId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     cloudProvidersProviderIdStorageEnginesGetWithHttpInfo(providerId) {
       let postBody = null;
@@ -115,7 +116,7 @@ export default class StorageEnginesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/cloud-providers/{provider_id}/storage-engines', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -126,7 +127,7 @@ export default class StorageEnginesApi {
     /**
      * Get a list of all storage engines
      * @param {String} providerId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     cloudProvidersProviderIdStorageEnginesGet(providerId) {
       return this.cloudProvidersProviderIdStorageEnginesGetWithHttpInfo(providerId)

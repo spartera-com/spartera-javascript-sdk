@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdApiKeysGet200Response from '../model/CompaniesCompanyIdApiKeysGet200Response';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
 import InlineObject3 from '../model/InlineObject3';
@@ -39,7 +40,7 @@ export default class CloudProvidersApi {
 
     /**
      * Get a list of all cloud providers
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     cloudProvidersGetWithHttpInfo() {
       let postBody = null;
@@ -56,7 +57,7 @@ export default class CloudProvidersApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/cloud-providers', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -66,7 +67,7 @@ export default class CloudProvidersApi {
 
     /**
      * Get a list of all cloud providers
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     cloudProvidersGet() {
       return this.cloudProvidersGetWithHttpInfo()
@@ -79,7 +80,7 @@ export default class CloudProvidersApi {
     /**
      * Get single cloud provider by ID
      * @param {String} providerId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response} and HTTP response
      */
     cloudProvidersProviderIdGetWithHttpInfo(providerId) {
       let postBody = null;
@@ -101,7 +102,7 @@ export default class CloudProvidersApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdApiKeysGet200Response;
       return this.apiClient.callApi(
         '/cloud-providers/{provider_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -112,7 +113,7 @@ export default class CloudProvidersApi {
     /**
      * Get single cloud provider by ID
      * @param {String} providerId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdApiKeysGet200Response}
      */
     cloudProvidersProviderIdGet(providerId) {
       return this.cloudProvidersProviderIdGetWithHttpInfo(providerId)

@@ -13,6 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response from '../model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response from '../model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response from '../model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesGet200Response from '../model/CompaniesCompanyIdUsersUserIdFavoritesGet200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesPost200Response from '../model/CompaniesCompanyIdUsersUserIdFavoritesPost200Response';
 import Favorite from '../model/Favorite';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
@@ -44,7 +49,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} category 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGetWithHttpInfo(companyId, userId, category) {
       let postBody = null;
@@ -76,7 +81,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites/category/{category}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +94,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} category 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGet(companyId, userId, category) {
       return this.companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGetWithHttpInfo(companyId, userId, category)
@@ -104,7 +109,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGetWithHttpInfo(companyId, userId, assetId) {
       let postBody = null;
@@ -136,7 +141,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites/check/{asset_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -149,7 +154,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGet(companyId, userId, assetId) {
       return this.companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGetWithHttpInfo(companyId, userId, assetId)
@@ -164,7 +169,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} favoriteId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesFavoriteIdDeleteWithHttpInfo(companyId, userId, favoriteId) {
       let postBody = null;
@@ -196,7 +201,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites/{favorite_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -209,7 +214,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} favoriteId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesFavoriteIdDelete(companyId, userId, favoriteId) {
       return this.companiesCompanyIdUsersUserIdFavoritesFavoriteIdDeleteWithHttpInfo(companyId, userId, favoriteId)
@@ -224,7 +229,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} favoriteId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesFavoriteIdGetWithHttpInfo(companyId, userId, favoriteId) {
       let postBody = null;
@@ -256,7 +261,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites/{favorite_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -269,7 +274,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} favoriteId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesFavoriteIdGet(companyId, userId, favoriteId) {
       return this.companiesCompanyIdUsersUserIdFavoritesFavoriteIdGetWithHttpInfo(companyId, userId, favoriteId)
@@ -285,7 +290,7 @@ export default class FavoritesApi {
      * @param {String} userId 
      * @param {String} favoriteId 
      * @param {module:model/Favorite} favorite 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatchWithHttpInfo(companyId, userId, favoriteId, favorite) {
       let postBody = favorite;
@@ -321,7 +326,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites/{favorite_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -335,7 +340,7 @@ export default class FavoritesApi {
      * @param {String} userId 
      * @param {String} favoriteId 
      * @param {module:model/Favorite} favorite 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch(companyId, userId, favoriteId, favorite) {
       return this.companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatchWithHttpInfo(companyId, userId, favoriteId, favorite)
@@ -349,7 +354,7 @@ export default class FavoritesApi {
      * Get a list of all favorites for a specific user
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesGetWithHttpInfo(companyId, userId) {
       let postBody = null;
@@ -376,7 +381,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -388,7 +393,7 @@ export default class FavoritesApi {
      * Get a list of all favorites for a specific user
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesGet200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesGet(companyId, userId) {
       return this.companiesCompanyIdUsersUserIdFavoritesGetWithHttpInfo(companyId, userId)
@@ -403,7 +408,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {module:model/Favorite} favorite 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesPost200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesPostWithHttpInfo(companyId, userId, favorite) {
       let postBody = favorite;
@@ -434,7 +439,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesPost200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -447,7 +452,7 @@ export default class FavoritesApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {module:model/Favorite} favorite 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesPost200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesPost(companyId, userId, favorite) {
       return this.companiesCompanyIdUsersUserIdFavoritesPostWithHttpInfo(companyId, userId, favorite)
@@ -461,7 +466,7 @@ export default class FavoritesApi {
      * Get all favorites for the specified user that don't have a category
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdFavoritesUncategorizedGetWithHttpInfo(companyId, userId) {
       let postBody = null;
@@ -488,7 +493,7 @@ export default class FavoritesApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdFavoritesGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/favorites/uncategorized', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -500,7 +505,7 @@ export default class FavoritesApi {
      * Get all favorites for the specified user that don't have a category
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdFavoritesGet200Response}
      */
     companiesCompanyIdUsersUserIdFavoritesUncategorizedGet(companyId, userId) {
       return this.companiesCompanyIdUsersUserIdFavoritesUncategorizedGetWithHttpInfo(companyId, userId)

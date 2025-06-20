@@ -18,6 +18,47 @@ import Apikey from './model/Apikey';
 import Asset from './model/Asset';
 import Assetpricehistory from './model/Assetpricehistory';
 import Cloudprovider from './model/Cloudprovider';
+import CompaniesCompanyIdApiKeysGet200Response from './model/CompaniesCompanyIdApiKeysGet200Response';
+import CompaniesCompanyIdAssetsAssetIdDelete200Response from './model/CompaniesCompanyIdAssetsAssetIdDelete200Response';
+import CompaniesCompanyIdAssetsAssetIdDelete200ResponseData from './model/CompaniesCompanyIdAssetsAssetIdDelete200ResponseData';
+import CompaniesCompanyIdAssetsAssetIdGet200Response from './model/CompaniesCompanyIdAssetsAssetIdGet200Response';
+import CompaniesCompanyIdAssetsAssetIdPatch200Response from './model/CompaniesCompanyIdAssetsAssetIdPatch200Response';
+import CompaniesCompanyIdAssetsAssetIdPatch200ResponseData from './model/CompaniesCompanyIdAssetsAssetIdPatch200ResponseData';
+import CompaniesCompanyIdAssetsGet200Response from './model/CompaniesCompanyIdAssetsGet200Response';
+import CompaniesCompanyIdAssetsPost200Response from './model/CompaniesCompanyIdAssetsPost200Response';
+import CompaniesCompanyIdAssetsPost200ResponseData from './model/CompaniesCompanyIdAssetsPost200ResponseData';
+import CompaniesCompanyIdConnectionsConnectionIdDelete200Response from './model/CompaniesCompanyIdConnectionsConnectionIdDelete200Response';
+import CompaniesCompanyIdConnectionsConnectionIdDelete200ResponseData from './model/CompaniesCompanyIdConnectionsConnectionIdDelete200ResponseData';
+import CompaniesCompanyIdConnectionsConnectionIdGet200Response from './model/CompaniesCompanyIdConnectionsConnectionIdGet200Response';
+import CompaniesCompanyIdConnectionsConnectionIdPatch200Response from './model/CompaniesCompanyIdConnectionsConnectionIdPatch200Response';
+import CompaniesCompanyIdConnectionsConnectionIdPatch200ResponseData from './model/CompaniesCompanyIdConnectionsConnectionIdPatch200ResponseData';
+import CompaniesCompanyIdConnectionsGet200Response from './model/CompaniesCompanyIdConnectionsGet200Response';
+import CompaniesCompanyIdConnectionsPost200Response from './model/CompaniesCompanyIdConnectionsPost200Response';
+import CompaniesCompanyIdConnectionsPost200ResponseData from './model/CompaniesCompanyIdConnectionsPost200ResponseData';
+import CompaniesCompanyIdUsersGet200Response from './model/CompaniesCompanyIdUsersGet200Response';
+import CompaniesCompanyIdUsersPost200Response from './model/CompaniesCompanyIdUsersPost200Response';
+import CompaniesCompanyIdUsersPost200ResponseData from './model/CompaniesCompanyIdUsersPost200ResponseData';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response from './model/CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200ResponseData from './model/CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200ResponseData';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response from './model/CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response from './model/CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200ResponseData from './model/CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200ResponseData';
+import CompaniesCompanyIdUsersUserIdAlertsGet200Response from './model/CompaniesCompanyIdUsersUserIdAlertsGet200Response';
+import CompaniesCompanyIdUsersUserIdAlertsPost200Response from './model/CompaniesCompanyIdUsersUserIdAlertsPost200Response';
+import CompaniesCompanyIdUsersUserIdAlertsPost200ResponseData from './model/CompaniesCompanyIdUsersUserIdAlertsPost200ResponseData';
+import CompaniesCompanyIdUsersUserIdDelete200Response from './model/CompaniesCompanyIdUsersUserIdDelete200Response';
+import CompaniesCompanyIdUsersUserIdDelete200ResponseData from './model/CompaniesCompanyIdUsersUserIdDelete200ResponseData';
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response from './model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200ResponseData from './model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200ResponseData';
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response from './model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response from './model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200ResponseData from './model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200ResponseData';
+import CompaniesCompanyIdUsersUserIdFavoritesGet200Response from './model/CompaniesCompanyIdUsersUserIdFavoritesGet200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesPost200Response from './model/CompaniesCompanyIdUsersUserIdFavoritesPost200Response';
+import CompaniesCompanyIdUsersUserIdFavoritesPost200ResponseData from './model/CompaniesCompanyIdUsersUserIdFavoritesPost200ResponseData';
+import CompaniesCompanyIdUsersUserIdGet200Response from './model/CompaniesCompanyIdUsersUserIdGet200Response';
+import CompaniesCompanyIdUsersUserIdPatch200Response from './model/CompaniesCompanyIdUsersUserIdPatch200Response';
+import CompaniesCompanyIdUsersUserIdPatch200ResponseData from './model/CompaniesCompanyIdUsersUserIdPatch200ResponseData';
 import Company from './model/Company';
 import Connection from './model/Connection';
 import Error from './model/Error';
@@ -26,6 +67,10 @@ import InlineObject from './model/InlineObject';
 import InlineObject1 from './model/InlineObject1';
 import InlineObject2 from './model/InlineObject2';
 import InlineObject3 from './model/InlineObject3';
+import MeGet200Response from './model/MeGet200Response';
+import MeGet200ResponseApiKeyInfo from './model/MeGet200ResponseApiKeyInfo';
+import MeGet200ResponseProfile from './model/MeGet200ResponseProfile';
+import MeGet200ResponseTokenMetadata from './model/MeGet200ResponseTokenMetadata';
 import User from './model/User';
 import APIKeysApi from './api/APIKeysApi';
 import AlertsApi from './api/AlertsApi';
@@ -108,6 +153,252 @@ export {
     Cloudprovider,
 
     /**
+     * The CompaniesCompanyIdApiKeysGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdApiKeysGet200Response}
+     */
+    CompaniesCompanyIdApiKeysGet200Response,
+
+    /**
+     * The CompaniesCompanyIdAssetsAssetIdDelete200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsAssetIdDelete200Response}
+     */
+    CompaniesCompanyIdAssetsAssetIdDelete200Response,
+
+    /**
+     * The CompaniesCompanyIdAssetsAssetIdDelete200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsAssetIdDelete200ResponseData}
+     */
+    CompaniesCompanyIdAssetsAssetIdDelete200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdAssetsAssetIdGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsAssetIdGet200Response}
+     */
+    CompaniesCompanyIdAssetsAssetIdGet200Response,
+
+    /**
+     * The CompaniesCompanyIdAssetsAssetIdPatch200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsAssetIdPatch200Response}
+     */
+    CompaniesCompanyIdAssetsAssetIdPatch200Response,
+
+    /**
+     * The CompaniesCompanyIdAssetsAssetIdPatch200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsAssetIdPatch200ResponseData}
+     */
+    CompaniesCompanyIdAssetsAssetIdPatch200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdAssetsGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsGet200Response}
+     */
+    CompaniesCompanyIdAssetsGet200Response,
+
+    /**
+     * The CompaniesCompanyIdAssetsPost200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsPost200Response}
+     */
+    CompaniesCompanyIdAssetsPost200Response,
+
+    /**
+     * The CompaniesCompanyIdAssetsPost200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdAssetsPost200ResponseData}
+     */
+    CompaniesCompanyIdAssetsPost200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdConnectionsConnectionIdDelete200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsConnectionIdDelete200Response}
+     */
+    CompaniesCompanyIdConnectionsConnectionIdDelete200Response,
+
+    /**
+     * The CompaniesCompanyIdConnectionsConnectionIdDelete200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsConnectionIdDelete200ResponseData}
+     */
+    CompaniesCompanyIdConnectionsConnectionIdDelete200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdConnectionsConnectionIdGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsConnectionIdGet200Response}
+     */
+    CompaniesCompanyIdConnectionsConnectionIdGet200Response,
+
+    /**
+     * The CompaniesCompanyIdConnectionsConnectionIdPatch200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsConnectionIdPatch200Response}
+     */
+    CompaniesCompanyIdConnectionsConnectionIdPatch200Response,
+
+    /**
+     * The CompaniesCompanyIdConnectionsConnectionIdPatch200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsConnectionIdPatch200ResponseData}
+     */
+    CompaniesCompanyIdConnectionsConnectionIdPatch200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdConnectionsGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsGet200Response}
+     */
+    CompaniesCompanyIdConnectionsGet200Response,
+
+    /**
+     * The CompaniesCompanyIdConnectionsPost200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsPost200Response}
+     */
+    CompaniesCompanyIdConnectionsPost200Response,
+
+    /**
+     * The CompaniesCompanyIdConnectionsPost200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdConnectionsPost200ResponseData}
+     */
+    CompaniesCompanyIdConnectionsPost200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersGet200Response}
+     */
+    CompaniesCompanyIdUsersGet200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersPost200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersPost200Response}
+     */
+    CompaniesCompanyIdUsersPost200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersPost200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersPost200ResponseData}
+     */
+    CompaniesCompanyIdUsersPost200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsGet200Response}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsGet200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsPost200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsPost200Response}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsPost200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdAlertsPost200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdAlertsPost200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdAlertsPost200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdDelete200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdDelete200Response}
+     */
+    CompaniesCompanyIdUsersUserIdDelete200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdDelete200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdDelete200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdDelete200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdDelete200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesGet200Response}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesGet200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesPost200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesPost200Response}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesPost200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdFavoritesPost200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdFavoritesPost200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdFavoritesPost200ResponseData,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdGet200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdGet200Response}
+     */
+    CompaniesCompanyIdUsersUserIdGet200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdPatch200Response model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdPatch200Response}
+     */
+    CompaniesCompanyIdUsersUserIdPatch200Response,
+
+    /**
+     * The CompaniesCompanyIdUsersUserIdPatch200ResponseData model constructor.
+     * @property {module:model/CompaniesCompanyIdUsersUserIdPatch200ResponseData}
+     */
+    CompaniesCompanyIdUsersUserIdPatch200ResponseData,
+
+    /**
      * The Company model constructor.
      * @property {module:model/Company}
      */
@@ -154,6 +445,30 @@ export {
      * @property {module:model/InlineObject3}
      */
     InlineObject3,
+
+    /**
+     * The MeGet200Response model constructor.
+     * @property {module:model/MeGet200Response}
+     */
+    MeGet200Response,
+
+    /**
+     * The MeGet200ResponseApiKeyInfo model constructor.
+     * @property {module:model/MeGet200ResponseApiKeyInfo}
+     */
+    MeGet200ResponseApiKeyInfo,
+
+    /**
+     * The MeGet200ResponseProfile model constructor.
+     * @property {module:model/MeGet200ResponseProfile}
+     */
+    MeGet200ResponseProfile,
+
+    /**
+     * The MeGet200ResponseTokenMetadata model constructor.
+     * @property {module:model/MeGet200ResponseTokenMetadata}
+     */
+    MeGet200ResponseTokenMetadata,
 
     /**
      * The User model constructor.

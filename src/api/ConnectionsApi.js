@@ -13,6 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
+import CompaniesCompanyIdConnectionsConnectionIdDelete200Response from '../model/CompaniesCompanyIdConnectionsConnectionIdDelete200Response';
+import CompaniesCompanyIdConnectionsConnectionIdGet200Response from '../model/CompaniesCompanyIdConnectionsConnectionIdGet200Response';
+import CompaniesCompanyIdConnectionsConnectionIdPatch200Response from '../model/CompaniesCompanyIdConnectionsConnectionIdPatch200Response';
+import CompaniesCompanyIdConnectionsGet200Response from '../model/CompaniesCompanyIdConnectionsGet200Response';
+import CompaniesCompanyIdConnectionsPost200Response from '../model/CompaniesCompanyIdConnectionsPost200Response';
 import Connection from '../model/Connection';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
@@ -43,7 +48,7 @@ export default class ConnectionsApi {
      * Delete single connection by ID
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdConnectionsConnectionIdDelete200Response} and HTTP response
      */
     companiesCompanyIdConnectionsConnectionIdDeleteWithHttpInfo(companyId, connectionId) {
       let postBody = null;
@@ -70,7 +75,7 @@ export default class ConnectionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdConnectionsConnectionIdDelete200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/connections/{connection_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -82,7 +87,7 @@ export default class ConnectionsApi {
      * Delete single connection by ID
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdConnectionsConnectionIdDelete200Response}
      */
     companiesCompanyIdConnectionsConnectionIdDelete(companyId, connectionId) {
       return this.companiesCompanyIdConnectionsConnectionIdDeleteWithHttpInfo(companyId, connectionId)
@@ -96,7 +101,7 @@ export default class ConnectionsApi {
      * Get single connection by ID
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdConnectionsConnectionIdGet200Response} and HTTP response
      */
     companiesCompanyIdConnectionsConnectionIdGetWithHttpInfo(companyId, connectionId) {
       let postBody = null;
@@ -123,7 +128,7 @@ export default class ConnectionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdConnectionsConnectionIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/connections/{connection_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -135,7 +140,7 @@ export default class ConnectionsApi {
      * Get single connection by ID
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdConnectionsConnectionIdGet200Response}
      */
     companiesCompanyIdConnectionsConnectionIdGet(companyId, connectionId) {
       return this.companiesCompanyIdConnectionsConnectionIdGetWithHttpInfo(companyId, connectionId)
@@ -149,7 +154,7 @@ export default class ConnectionsApi {
      * Retrieve the information schema for the specified connection
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdConnectionsGet200Response} and HTTP response
      */
     companiesCompanyIdConnectionsConnectionIdInfoschemaGetWithHttpInfo(companyId, connectionId) {
       let postBody = null;
@@ -176,7 +181,7 @@ export default class ConnectionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdConnectionsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/connections/{connection_id}/infoschema', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -188,7 +193,7 @@ export default class ConnectionsApi {
      * Retrieve the information schema for the specified connection
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdConnectionsGet200Response}
      */
     companiesCompanyIdConnectionsConnectionIdInfoschemaGet(companyId, connectionId) {
       return this.companiesCompanyIdConnectionsConnectionIdInfoschemaGetWithHttpInfo(companyId, connectionId)
@@ -203,7 +208,7 @@ export default class ConnectionsApi {
      * @param {String} companyId 
      * @param {String} connectionId 
      * @param {module:model/Connection} connection 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdConnectionsConnectionIdPatch200Response} and HTTP response
      */
     companiesCompanyIdConnectionsConnectionIdPatchWithHttpInfo(companyId, connectionId, connection) {
       let postBody = connection;
@@ -234,7 +239,7 @@ export default class ConnectionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdConnectionsConnectionIdPatch200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/connections/{connection_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -247,7 +252,7 @@ export default class ConnectionsApi {
      * @param {String} companyId 
      * @param {String} connectionId 
      * @param {module:model/Connection} connection 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdConnectionsConnectionIdPatch200Response}
      */
     companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connection) {
       return this.companiesCompanyIdConnectionsConnectionIdPatchWithHttpInfo(companyId, connectionId, connection)
@@ -261,7 +266,7 @@ export default class ConnectionsApi {
      * Test the specified connection
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdConnectionsGet200Response} and HTTP response
      */
     companiesCompanyIdConnectionsConnectionIdTestGetWithHttpInfo(companyId, connectionId) {
       let postBody = null;
@@ -288,7 +293,7 @@ export default class ConnectionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdConnectionsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/connections/{connection_id}/test', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -300,7 +305,7 @@ export default class ConnectionsApi {
      * Test the specified connection
      * @param {String} companyId 
      * @param {String} connectionId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdConnectionsGet200Response}
      */
     companiesCompanyIdConnectionsConnectionIdTestGet(companyId, connectionId) {
       return this.companiesCompanyIdConnectionsConnectionIdTestGetWithHttpInfo(companyId, connectionId)
@@ -313,7 +318,7 @@ export default class ConnectionsApi {
     /**
      * Get all connections for a specific company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdConnectionsGet200Response} and HTTP response
      */
     companiesCompanyIdConnectionsGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -335,7 +340,7 @@ export default class ConnectionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdConnectionsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/connections', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -346,7 +351,7 @@ export default class ConnectionsApi {
     /**
      * Get all connections for a specific company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdConnectionsGet200Response}
      */
     companiesCompanyIdConnectionsGet(companyId) {
       return this.companiesCompanyIdConnectionsGetWithHttpInfo(companyId)
@@ -360,7 +365,7 @@ export default class ConnectionsApi {
      * Create a new connection by ID
      * @param {String} companyId 
      * @param {module:model/Connection} connection 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdConnectionsPost200Response} and HTTP response
      */
     companiesCompanyIdConnectionsPostWithHttpInfo(companyId, connection) {
       let postBody = connection;
@@ -386,7 +391,7 @@ export default class ConnectionsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdConnectionsPost200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/connections', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -398,7 +403,7 @@ export default class ConnectionsApi {
      * Create a new connection by ID
      * @param {String} companyId 
      * @param {module:model/Connection} connection 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdConnectionsPost200Response}
      */
     companiesCompanyIdConnectionsPost(companyId, connection) {
       return this.companiesCompanyIdConnectionsPostWithHttpInfo(companyId, connection)

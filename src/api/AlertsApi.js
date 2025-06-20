@@ -14,6 +14,11 @@
 
 import ApiClient from "../ApiClient";
 import Alert from '../model/Alert';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response from '../model/CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response from '../model/CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response';
+import CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response from '../model/CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response';
+import CompaniesCompanyIdUsersUserIdAlertsGet200Response from '../model/CompaniesCompanyIdUsersUserIdAlertsGet200Response';
+import CompaniesCompanyIdUsersUserIdAlertsPost200Response from '../model/CompaniesCompanyIdUsersUserIdAlertsPost200Response';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
@@ -44,7 +49,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} alertId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdAlertsAlertIdDeleteWithHttpInfo(companyId, userId, alertId) {
       let postBody = null;
@@ -76,7 +81,7 @@ export default class AlertsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/alerts/{alert_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -89,7 +94,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} alertId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response}
      */
     companiesCompanyIdUsersUserIdAlertsAlertIdDelete(companyId, userId, alertId) {
       return this.companiesCompanyIdUsersUserIdAlertsAlertIdDeleteWithHttpInfo(companyId, userId, alertId)
@@ -104,7 +109,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} alertId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdAlertsAlertIdGetWithHttpInfo(companyId, userId, alertId) {
       let postBody = null;
@@ -136,7 +141,7 @@ export default class AlertsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/alerts/{alert_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -149,7 +154,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} alertId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response}
      */
     companiesCompanyIdUsersUserIdAlertsAlertIdGet(companyId, userId, alertId) {
       return this.companiesCompanyIdUsersUserIdAlertsAlertIdGetWithHttpInfo(companyId, userId, alertId)
@@ -165,7 +170,7 @@ export default class AlertsApi {
      * @param {String} userId 
      * @param {String} alertId 
      * @param {module:model/Alert} alert 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdAlertsAlertIdPatchWithHttpInfo(companyId, userId, alertId, alert) {
       let postBody = alert;
@@ -201,7 +206,7 @@ export default class AlertsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/alerts/{alert_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -215,7 +220,7 @@ export default class AlertsApi {
      * @param {String} userId 
      * @param {String} alertId 
      * @param {module:model/Alert} alert 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response}
      */
     companiesCompanyIdUsersUserIdAlertsAlertIdPatch(companyId, userId, alertId, alert) {
       return this.companiesCompanyIdUsersUserIdAlertsAlertIdPatchWithHttpInfo(companyId, userId, alertId, alert)
@@ -230,7 +235,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGetWithHttpInfo(companyId, userId, assetId) {
       let postBody = null;
@@ -262,7 +267,7 @@ export default class AlertsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdAlertsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/alerts/asset/{asset_id}/all', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -275,7 +280,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsGet200Response}
      */
     companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGet(companyId, userId, assetId) {
       return this.companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGetWithHttpInfo(companyId, userId, assetId)
@@ -290,7 +295,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdAlertsAssetAssetIdGetWithHttpInfo(companyId, userId, assetId) {
       let postBody = null;
@@ -322,7 +327,7 @@ export default class AlertsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/alerts/asset/{asset_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -335,7 +340,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response}
      */
     companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet(companyId, userId, assetId) {
       return this.companiesCompanyIdUsersUserIdAlertsAssetAssetIdGetWithHttpInfo(companyId, userId, assetId)
@@ -349,7 +354,7 @@ export default class AlertsApi {
      * Get a list of all alerts for a specific user
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsGet200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdAlertsGetWithHttpInfo(companyId, userId) {
       let postBody = null;
@@ -376,7 +381,7 @@ export default class AlertsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdAlertsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/alerts', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -388,7 +393,7 @@ export default class AlertsApi {
      * Get a list of all alerts for a specific user
      * @param {String} companyId 
      * @param {String} userId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsGet200Response}
      */
     companiesCompanyIdUsersUserIdAlertsGet(companyId, userId) {
       return this.companiesCompanyIdUsersUserIdAlertsGetWithHttpInfo(companyId, userId)
@@ -403,7 +408,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {module:model/Alert} alert 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsPost200Response} and HTTP response
      */
     companiesCompanyIdUsersUserIdAlertsPostWithHttpInfo(companyId, userId, alert) {
       let postBody = alert;
@@ -434,7 +439,7 @@ export default class AlertsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdUsersUserIdAlertsPost200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/users/{user_id}/alerts', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -447,7 +452,7 @@ export default class AlertsApi {
      * @param {String} companyId 
      * @param {String} userId 
      * @param {module:model/Alert} alert 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdUsersUserIdAlertsPost200Response}
      */
     companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alert) {
       return this.companiesCompanyIdUsersUserIdAlertsPostWithHttpInfo(companyId, userId, alert)

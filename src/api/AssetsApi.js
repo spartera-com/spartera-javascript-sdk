@@ -14,6 +14,11 @@
 
 import ApiClient from "../ApiClient";
 import Asset from '../model/Asset';
+import CompaniesCompanyIdAssetsAssetIdDelete200Response from '../model/CompaniesCompanyIdAssetsAssetIdDelete200Response';
+import CompaniesCompanyIdAssetsAssetIdGet200Response from '../model/CompaniesCompanyIdAssetsAssetIdGet200Response';
+import CompaniesCompanyIdAssetsAssetIdPatch200Response from '../model/CompaniesCompanyIdAssetsAssetIdPatch200Response';
+import CompaniesCompanyIdAssetsGet200Response from '../model/CompaniesCompanyIdAssetsGet200Response';
+import CompaniesCompanyIdAssetsPost200Response from '../model/CompaniesCompanyIdAssetsPost200Response';
 import InlineObject from '../model/InlineObject';
 import InlineObject1 from '../model/InlineObject1';
 import InlineObject2 from '../model/InlineObject2';
@@ -41,24 +46,24 @@ export default class AssetsApi {
 
     /**
      * Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
-     * @param {String} assetSlug 
      * @param {String} companyHandle 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @param {String} assetSlug 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdGet200Response} and HTTP response
      */
-    analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(assetSlug, companyHandle) {
+    analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(companyHandle, assetSlug) {
       let postBody = null;
-      // verify the required parameter 'assetSlug' is set
-      if (assetSlug === undefined || assetSlug === null) {
-        throw new Error("Missing the required parameter 'assetSlug' when calling analyzeCompanyHandleAssetsAssetSlugGet");
-      }
       // verify the required parameter 'companyHandle' is set
       if (companyHandle === undefined || companyHandle === null) {
         throw new Error("Missing the required parameter 'companyHandle' when calling analyzeCompanyHandleAssetsAssetSlugGet");
       }
+      // verify the required parameter 'assetSlug' is set
+      if (assetSlug === undefined || assetSlug === null) {
+        throw new Error("Missing the required parameter 'assetSlug' when calling analyzeCompanyHandleAssetsAssetSlugGet");
+      }
 
       let pathParams = {
-        'asset_slug': assetSlug,
-        'company_handle': companyHandle
+        'company_handle': companyHandle,
+        'asset_slug': assetSlug
       };
       let queryParams = {
       };
@@ -70,7 +75,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsAssetIdGet200Response;
       return this.apiClient.callApi(
         '/analyze/{company_handle}/assets/{asset_slug}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -80,12 +85,12 @@ export default class AssetsApi {
 
     /**
      * Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
-     * @param {String} assetSlug 
      * @param {String} companyHandle 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @param {String} assetSlug 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdGet200Response}
      */
-    analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle) {
-      return this.analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(assetSlug, companyHandle)
+    analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug) {
+      return this.analyzeCompanyHandleAssetsAssetSlugGetWithHttpInfo(companyHandle, assetSlug)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -96,7 +101,7 @@ export default class AssetsApi {
      * Delete single asset by ID
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdDelete200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdDeleteWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -123,7 +128,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsAssetIdDelete200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -135,7 +140,7 @@ export default class AssetsApi {
      * Delete single asset by ID
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdDelete200Response}
      */
     companiesCompanyIdAssetsAssetIdDelete(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdDeleteWithHttpInfo(companyId, assetId)
@@ -149,7 +154,7 @@ export default class AssetsApi {
      * Get single asset by ID
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -176,7 +181,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsAssetIdGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -188,7 +193,7 @@ export default class AssetsApi {
      * Get single asset by ID
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdGet200Response}
      */
     companiesCompanyIdAssetsAssetIdGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdGetWithHttpInfo(companyId, assetId)
@@ -202,7 +207,7 @@ export default class AssetsApi {
      * Get the information schema for a specific asset's table
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdInfoschemaGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -229,7 +234,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/infoschema', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -241,7 +246,7 @@ export default class AssetsApi {
      * Get the information schema for a specific asset's table
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response}
      */
     companiesCompanyIdAssetsAssetIdInfoschemaGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdInfoschemaGetWithHttpInfo(companyId, assetId)
@@ -255,7 +260,7 @@ export default class AssetsApi {
      * Retrieve and save an asset's information schema
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdInfoschemaSaveGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -282,7 +287,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/infoschema/save', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -294,7 +299,7 @@ export default class AssetsApi {
      * Retrieve and save an asset's information schema
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response}
      */
     companiesCompanyIdAssetsAssetIdInfoschemaSaveGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdInfoschemaSaveGetWithHttpInfo(companyId, assetId)
@@ -309,7 +314,7 @@ export default class AssetsApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {module:model/Asset} asset 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdPatch200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPatchWithHttpInfo(companyId, assetId, asset) {
       let postBody = asset;
@@ -340,7 +345,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsAssetIdPatch200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}', 'PATCH',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -353,7 +358,7 @@ export default class AssetsApi {
      * @param {String} companyId 
      * @param {String} assetId 
      * @param {module:model/Asset} asset 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsAssetIdPatch200Response}
      */
     companiesCompanyIdAssetsAssetIdPatch(companyId, assetId, asset) {
       return this.companiesCompanyIdAssetsAssetIdPatchWithHttpInfo(companyId, assetId, asset)
@@ -367,7 +372,7 @@ export default class AssetsApi {
      * Get AI-predicted pricing for a specific asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdPredictedPriceGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -394,7 +399,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/predicted_price', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -406,7 +411,7 @@ export default class AssetsApi {
      * Get AI-predicted pricing for a specific asset
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response}
      */
     companiesCompanyIdAssetsAssetIdPredictedPriceGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdPredictedPriceGetWithHttpInfo(companyId, assetId)
@@ -420,7 +425,7 @@ export default class AssetsApi {
      * Get statistics for a specific asset (public endpoint)
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdStatisticsGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -447,7 +452,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/statistics', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -459,7 +464,7 @@ export default class AssetsApi {
      * Get statistics for a specific asset (public endpoint)
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response}
      */
     companiesCompanyIdAssetsAssetIdStatisticsGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdStatisticsGetWithHttpInfo(companyId, assetId)
@@ -473,7 +478,7 @@ export default class AssetsApi {
      * Test out an Asset (on a subset of data)
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsAssetIdTestGetWithHttpInfo(companyId, assetId) {
       let postBody = null;
@@ -500,7 +505,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/{asset_id}/test', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -512,7 +517,7 @@ export default class AssetsApi {
      * Test out an Asset (on a subset of data)
      * @param {String} companyId 
      * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response}
      */
     companiesCompanyIdAssetsAssetIdTestGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdTestGetWithHttpInfo(companyId, assetId)
@@ -525,7 +530,7 @@ export default class AssetsApi {
     /**
      * Get all assets for a specific company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -547,7 +552,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -558,7 +563,7 @@ export default class AssetsApi {
     /**
      * Get all assets for a specific company
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response}
      */
     companiesCompanyIdAssetsGet(companyId) {
       return this.companiesCompanyIdAssetsGetWithHttpInfo(companyId)
@@ -572,7 +577,7 @@ export default class AssetsApi {
      * Create a new asset
      * @param {String} companyId 
      * @param {module:model/Asset} asset 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsPost200Response} and HTTP response
      */
     companiesCompanyIdAssetsPostWithHttpInfo(companyId, asset) {
       let postBody = asset;
@@ -598,7 +603,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsPost200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -610,7 +615,7 @@ export default class AssetsApi {
      * Create a new asset
      * @param {String} companyId 
      * @param {module:model/Asset} asset 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsPost200Response}
      */
     companiesCompanyIdAssetsPost(companyId, asset) {
       return this.companiesCompanyIdAssetsPostWithHttpInfo(companyId, asset)
@@ -623,7 +628,7 @@ export default class AssetsApi {
     /**
      * Get statistics for all assets the user has access to
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response} and HTTP response
      */
     companiesCompanyIdAssetsStatisticsGetWithHttpInfo(companyId) {
       let postBody = null;
@@ -645,7 +650,7 @@ export default class AssetsApi {
       let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
-      let returnType = Object;
+      let returnType = CompaniesCompanyIdAssetsGet200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/assets/statistics', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -656,7 +661,7 @@ export default class AssetsApi {
     /**
      * Get statistics for all assets the user has access to
      * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link module:model/CompaniesCompanyIdAssetsGet200Response}
      */
     companiesCompanyIdAssetsStatisticsGet(companyId) {
       return this.companiesCompanyIdAssetsStatisticsGetWithHttpInfo(companyId)

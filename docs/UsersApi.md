@@ -9,12 +9,13 @@ Method | HTTP request | Description
 [**companiesCompanyIdUsersUserIdDelete**](UsersApi.md#companiesCompanyIdUsersUserIdDelete) | **DELETE** /companies/{company_id}/users/{user_id} | Delete single user by ID
 [**companiesCompanyIdUsersUserIdGet**](UsersApi.md#companiesCompanyIdUsersUserIdGet) | **GET** /companies/{company_id}/users/{user_id} | Get single user by ID
 [**companiesCompanyIdUsersUserIdPatch**](UsersApi.md#companiesCompanyIdUsersUserIdPatch) | **PATCH** /companies/{company_id}/users/{user_id} | Update an existing user by ID
+[**meGet**](UsersApi.md#meGet) | **GET** /me | Get current authenticated user&#39;s profile information.              Returns:                 JSON response with user profile data from database
 
 
 
 ## companiesCompanyIdUsersGet
 
-> Object companiesCompanyIdUsersGet(companyId)
+> CompaniesCompanyIdUsersGet200Response companiesCompanyIdUsersGet(companyId)
 
 Get a list of all users in a company
 
@@ -48,7 +49,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersGet200Response**](CompaniesCompanyIdUsersGet200Response.md)
 
 ### Authorization
 
@@ -62,7 +63,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersPost
 
-> Object companiesCompanyIdUsersPost(companyId, user)
+> CompaniesCompanyIdUsersPost200Response companiesCompanyIdUsersPost(companyId, user)
 
 Create a new user
 
@@ -98,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersPost200Response**](CompaniesCompanyIdUsersPost200Response.md)
 
 ### Authorization
 
@@ -112,7 +113,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdDelete
 
-> Object companiesCompanyIdUsersUserIdDelete(companyId, userId)
+> CompaniesCompanyIdUsersUserIdDelete200Response companiesCompanyIdUsersUserIdDelete(companyId, userId)
 
 Delete single user by ID
 
@@ -148,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdDelete200Response**](CompaniesCompanyIdUsersUserIdDelete200Response.md)
 
 ### Authorization
 
@@ -162,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdGet
 
-> Object companiesCompanyIdUsersUserIdGet(companyId, userId)
+> CompaniesCompanyIdUsersUserIdGet200Response companiesCompanyIdUsersUserIdGet(companyId, userId)
 
 Get single user by ID
 
@@ -198,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdGet200Response**](CompaniesCompanyIdUsersUserIdGet200Response.md)
 
 ### Authorization
 
@@ -212,7 +213,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdPatch
 
-> Object companiesCompanyIdUsersUserIdPatch(companyId, userId, user)
+> CompaniesCompanyIdUsersUserIdPatch200Response companiesCompanyIdUsersUserIdPatch(companyId, userId, user)
 
 Update an existing user by ID
 
@@ -250,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdUsersUserIdPatch200Response**](CompaniesCompanyIdUsersUserIdPatch200Response.md)
 
 ### Authorization
 
@@ -259,5 +260,49 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## meGet
+
+> MeGet200Response meGet()
+
+Get current authenticated user&#39;s profile information.              Returns:                 JSON response with user profile data from database
+
+### Example
+
+```javascript
+import SparteraApiDocumentation from 'spartera_api_documentation';
+let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiDocumentation.UsersApi();
+apiInstance.meGet().then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**MeGet200Response**](MeGet200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 

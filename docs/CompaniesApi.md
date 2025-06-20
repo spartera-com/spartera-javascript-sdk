@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdAnalyticsAssetsGet
 
-> Object companiesCompanyIdAnalyticsAssetsGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsAssetsGet(companyId)
 
 Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAnalyticsCustomersGet
 
-> Object companiesCompanyIdAnalyticsCustomersGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsCustomersGet(companyId)
 
 Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAnalyticsDashboardGet
 
-> Object companiesCompanyIdAnalyticsDashboardGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsDashboardGet(companyId)
 
 Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAnalyticsSalesGet
 
-> Object companiesCompanyIdAnalyticsSalesGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsSalesGet(companyId)
 
 Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdGet
 
-> Object companiesCompanyIdGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdGet(companyId)
 
 Get details of the requestor&#39;s own company
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdObjectsGet
 
-> Object companiesCompanyIdObjectsGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdObjectsGet(companyId)
 
 Get all objects (connections, assets) of a single company
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdPatch
 
-> Object companiesCompanyIdPatch(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdPatch(companyId)
 
 Update an existing company by ID
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdRequestsPlanGet
 
-> Object companiesCompanyIdRequestsPlanGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdRequestsPlanGet(companyId)
 
 Get the total number of requests allocated in the company&#39;s current subscription plan.
 
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdRequestsUsageGet
 
-> Object companiesCompanyIdRequestsUsageGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdRequestsUsageGet(companyId)
 
 Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
 
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdApiKeysApiKeyIdGet
 
-> Object companiesCompanyIdApiKeysApiKeyIdGet(companyId, apiKeyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysApiKeyIdGet(companyId, apiKeyId)
 
 Get single API key by ID
 
@@ -50,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdApiKeysApiKeyIdPatch
 
-> Object companiesCompanyIdApiKeysApiKeyIdPatch(companyId, apiKeyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysApiKeyIdPatch(companyId, apiKeyId)
 
 Update an existing API key by ID
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdApiKeysGet
 
-> Object companiesCompanyIdApiKeysGet(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysGet(companyId)
 
 Get all API keys
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdApiKeysPost
 
-> Object companiesCompanyIdApiKeysPost(companyId)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysPost(companyId)
 
 Create single API key
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdApiKeysTokenDelete
 
-> Object companiesCompanyIdApiKeysTokenDelete(companyId, token)
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysTokenDelete(companyId, token)
 
 Delete single API key by token
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
 
 ### Authorization
 
