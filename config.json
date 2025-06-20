@@ -1,6 +1,6 @@
 {
     "npmName": "spartera-api-sdk",
-    "npmVersion": "1.0.64",
+    "npmVersion": "1.0.65",
     "clientPackage": "SparteraApiSdk",
     "npmRepository": "https://github.com/spartera-com/spartera-javascript-sdk",
     "npmDescription": "Official SDK for Spartera API - Interface to manage companies' accounts and process insights remotely",
