@@ -40,7 +40,7 @@ export default class AssetsApi {
 
 
     /**
-     * Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
+     * Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
      * @param {String} assetSlug 
      * @param {String} companyHandle 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -67,7 +67,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -79,7 +79,7 @@ export default class AssetsApi {
     }
 
     /**
-     * Process assets route that handles both owned and purchased assets.             Minimal route function that passes all logic to crudder.process_asset              Args:                 asset_path: The path after /analyze/ containing asset information                 company_handle: The subdomain from Flask's routing (if available)
+     * Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
      * @param {String} assetSlug 
      * @param {String} companyHandle 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -120,7 +120,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -173,7 +173,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -226,7 +226,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -252,7 +252,7 @@ export default class AssetsApi {
 
 
     /**
-     * Get the information schema for a specific asset and save it to the asset's asset_schema field
+     * Retrieve and save an asset's information schema
      * @param {String} companyId 
      * @param {String} assetId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -279,7 +279,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -291,7 +291,7 @@ export default class AssetsApi {
     }
 
     /**
-     * Get the information schema for a specific asset and save it to the asset's asset_schema field
+     * Retrieve and save an asset's information schema
      * @param {String} companyId 
      * @param {String} assetId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -337,7 +337,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -391,7 +391,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -410,124 +410,6 @@ export default class AssetsApi {
      */
     companiesCompanyIdAssetsAssetIdPredictedPriceGet(companyId, assetId) {
       return this.companiesCompanyIdAssetsAssetIdPredictedPriceGetWithHttpInfo(companyId, assetId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get detailed explanation of how asset recommendations are calculated for debugging purposes.
-     * @param {String} companyId 
-     * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    companiesCompanyIdAssetsAssetIdRecommendationsExplainGetWithHttpInfo(companyId, assetId) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling companiesCompanyIdAssetsAssetIdRecommendationsExplainGet");
-      }
-      // verify the required parameter 'assetId' is set
-      if (assetId === undefined || assetId === null) {
-        throw new Error("Missing the required parameter 'assetId' when calling companiesCompanyIdAssetsAssetIdRecommendationsExplainGet");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'asset_id': assetId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/companies/{company_id}/assets/{asset_id}/recommendations/explain', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Get detailed explanation of how asset recommendations are calculated for debugging purposes.
-     * @param {String} companyId 
-     * @param {String} assetId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    companiesCompanyIdAssetsAssetIdRecommendationsExplainGet(companyId, assetId) {
-      return this.companiesCompanyIdAssetsAssetIdRecommendationsExplainGetWithHttpInfo(companyId, assetId)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get asset recommendations for a specific asset using heuristic waterfall matching     Returns list of similar assets based on industry, company, connection, tags, etc.      Query Parameters:     - limit: Number of recommendations to return (default: 12, max: 50)     - min_score: Minimum similarity score threshold (default: 0.1)     - include_details: Include component similarity scores (default: false)
-     * @param {String} companyId 
-     * @param {String} assetId 
-     * @param {Object} opts Optional parameters
-     * @param {String} [limit] 
-     * @param {String} [minScore] 
-     * @param {String} [includeDetails] 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    companiesCompanyIdAssetsAssetIdRecommendationsGetWithHttpInfo(companyId, assetId, opts) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling companiesCompanyIdAssetsAssetIdRecommendationsGet");
-      }
-      // verify the required parameter 'assetId' is set
-      if (assetId === undefined || assetId === null) {
-        throw new Error("Missing the required parameter 'assetId' when calling companiesCompanyIdAssetsAssetIdRecommendationsGet");
-      }
-
-      let pathParams = {
-        'company_id': companyId,
-        'asset_id': assetId
-      };
-      let queryParams = {
-        'limit': opts['limit'],
-        'min_score': opts['minScore'],
-        'include_details': opts['includeDetails']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/companies/{company_id}/assets/{asset_id}/recommendations', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Get asset recommendations for a specific asset using heuristic waterfall matching     Returns list of similar assets based on industry, company, connection, tags, etc.      Query Parameters:     - limit: Number of recommendations to return (default: 12, max: 50)     - min_score: Minimum similarity score threshold (default: 0.1)     - include_details: Include component similarity scores (default: false)
-     * @param {String} companyId 
-     * @param {String} assetId 
-     * @param {Object} opts Optional parameters
-     * @param {String} opts.limit 
-     * @param {String} opts.minScore 
-     * @param {String} opts.includeDetails 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    companiesCompanyIdAssetsAssetIdRecommendationsGet(companyId, assetId, opts) {
-      return this.companiesCompanyIdAssetsAssetIdRecommendationsGetWithHttpInfo(companyId, assetId, opts)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -562,7 +444,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -615,7 +497,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -662,7 +544,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -713,7 +595,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -732,104 +614,6 @@ export default class AssetsApi {
      */
     companiesCompanyIdAssetsPost(companyId, asset) {
       return this.companiesCompanyIdAssetsPostWithHttpInfo(companyId, asset)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Get recommendations for multiple assets in a single request. Useful for pre-loading recommendations.
-     * @param {String} companyId 
-     * @param {module:model/Asset} asset 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    companiesCompanyIdAssetsRecommendationsBulkPostWithHttpInfo(companyId, asset) {
-      let postBody = asset;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling companiesCompanyIdAssetsRecommendationsBulkPost");
-      }
-      // verify the required parameter 'asset' is set
-      if (asset === undefined || asset === null) {
-        throw new Error("Missing the required parameter 'asset' when calling companiesCompanyIdAssetsRecommendationsBulkPost");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = ['application/json'];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/companies/{company_id}/assets/recommendations/bulk', 'POST',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Get recommendations for multiple assets in a single request. Useful for pre-loading recommendations.
-     * @param {String} companyId 
-     * @param {module:model/Asset} asset 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    companiesCompanyIdAssetsRecommendationsBulkPost(companyId, asset) {
-      return this.companiesCompanyIdAssetsRecommendationsBulkPostWithHttpInfo(companyId, asset)
-        .then(function(response_and_data) {
-          return response_and_data.data;
-        });
-    }
-
-
-    /**
-     * Health check for the recommendations system with sample data and performance metrics.
-     * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
-     */
-    companiesCompanyIdAssetsRecommendationsHealthGetWithHttpInfo(companyId) {
-      let postBody = null;
-      // verify the required parameter 'companyId' is set
-      if (companyId === undefined || companyId === null) {
-        throw new Error("Missing the required parameter 'companyId' when calling companiesCompanyIdAssetsRecommendationsHealthGet");
-      }
-
-      let pathParams = {
-        'company_id': companyId
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['bearerAuth'];
-      let contentTypes = [];
-      let accepts = ['application/json'];
-      let returnType = Object;
-      return this.apiClient.callApi(
-        '/companies/{company_id}/assets/recommendations/health', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null
-      );
-    }
-
-    /**
-     * Health check for the recommendations system with sample data and performance metrics.
-     * @param {String} companyId 
-     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
-     */
-    companiesCompanyIdAssetsRecommendationsHealthGet(companyId) {
-      return this.companiesCompanyIdAssetsRecommendationsHealthGetWithHttpInfo(companyId)
         .then(function(response_and_data) {
           return response_and_data.data;
         });
@@ -858,7 +642,7 @@ export default class AssetsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;

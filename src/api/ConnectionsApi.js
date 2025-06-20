@@ -67,7 +67,7 @@ export default class ConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -120,7 +120,7 @@ export default class ConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -173,7 +173,7 @@ export default class ConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -231,7 +231,7 @@ export default class ConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -258,7 +258,7 @@ export default class ConnectionsApi {
 
 
     /**
-     * Verify the specified connection to ensure it is functioning correctly
+     * Test the specified connection
      * @param {String} companyId 
      * @param {String} connectionId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -285,7 +285,7 @@ export default class ConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -297,7 +297,7 @@ export default class ConnectionsApi {
     }
 
     /**
-     * Verify the specified connection to ensure it is functioning correctly
+     * Test the specified connection
      * @param {String} companyId 
      * @param {String} connectionId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -332,7 +332,7 @@ export default class ConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -383,7 +383,7 @@ export default class ConnectionsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;

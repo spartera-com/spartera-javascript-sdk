@@ -45,8 +45,7 @@ class ApiClient {
          * @type {Array.<String>}
          */
         this.authentications = {
-            'bearerAuth': {type: 'bearer'}, // JWT
-            'ApiKeyAuth': {type: 'apiKey', 'in': 'header', name: 'X-API-Key'}
+            'ApiKeyAuth': {type: 'apiKey', 'in': 'header', name: 'x-api-key'}
         }
 
 	/**

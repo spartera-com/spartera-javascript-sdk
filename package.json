@@ -1,6 +1,6 @@
 {
   "name": "spartera-api-sdk",
-  "readme": "README.md",  "version": "1.0.67",
+  "readme": "README.md",  "version": "1.0.68",
   "description": "Official JavaScript SDK for the Spartera API platform",
   "license": "MIT",
   "main": "dist/index.js",

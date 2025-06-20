@@ -73,7 +73,7 @@ export default class AlertsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -133,7 +133,7 @@ export default class AlertsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -198,7 +198,7 @@ export default class AlertsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -226,7 +226,7 @@ export default class AlertsApi {
 
 
     /**
-     * Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+     * Get all alerts for a specific asset
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
@@ -259,7 +259,7 @@ export default class AlertsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -271,7 +271,7 @@ export default class AlertsApi {
     }
 
     /**
-     * Get all alerts for a specific asset (from all users)     This would typically be restricted to asset owners or admins
+     * Get all alerts for a specific asset
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
@@ -286,7 +286,7 @@ export default class AlertsApi {
 
 
     /**
-     * Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+     * Get all alerts for a specific asset (by user)
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
@@ -319,7 +319,7 @@ export default class AlertsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -331,7 +331,7 @@ export default class AlertsApi {
     }
 
     /**
-     * Get all alerts for a specific asset by the specified user     Useful for checking if user already has an alert set up for an asset
+     * Get all alerts for a specific asset (by user)
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
@@ -373,7 +373,7 @@ export default class AlertsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -431,7 +431,7 @@ export default class AlertsApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;

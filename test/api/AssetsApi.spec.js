@@ -118,26 +118,6 @@
         done();
       });
     });
-    describe('companiesCompanyIdAssetsAssetIdRecommendationsExplainGet', function() {
-      it('should call companiesCompanyIdAssetsAssetIdRecommendationsExplainGet successfully', function(done) {
-        //uncomment below and update the code to test companiesCompanyIdAssetsAssetIdRecommendationsExplainGet
-        //instance.companiesCompanyIdAssetsAssetIdRecommendationsExplainGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('companiesCompanyIdAssetsAssetIdRecommendationsGet', function() {
-      it('should call companiesCompanyIdAssetsAssetIdRecommendationsGet successfully', function(done) {
-        //uncomment below and update the code to test companiesCompanyIdAssetsAssetIdRecommendationsGet
-        //instance.companiesCompanyIdAssetsAssetIdRecommendationsGet(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('companiesCompanyIdAssetsAssetIdStatisticsGet', function() {
       it('should call companiesCompanyIdAssetsAssetIdStatisticsGet successfully', function(done) {
         //uncomment below and update the code to test companiesCompanyIdAssetsAssetIdStatisticsGet
@@ -172,26 +152,6 @@
       it('should call companiesCompanyIdAssetsPost successfully', function(done) {
         //uncomment below and update the code to test companiesCompanyIdAssetsPost
         //instance.companiesCompanyIdAssetsPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('companiesCompanyIdAssetsRecommendationsBulkPost', function() {
-      it('should call companiesCompanyIdAssetsRecommendationsBulkPost successfully', function(done) {
-        //uncomment below and update the code to test companiesCompanyIdAssetsRecommendationsBulkPost
-        //instance.companiesCompanyIdAssetsRecommendationsBulkPost(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('companiesCompanyIdAssetsRecommendationsHealthGet', function() {
-      it('should call companiesCompanyIdAssetsRecommendationsHealthGet successfully', function(done) {
-        //uncomment below and update the code to test companiesCompanyIdAssetsRecommendationsHealthGet
-        //instance.companiesCompanyIdAssetsRecommendationsHealthGet(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

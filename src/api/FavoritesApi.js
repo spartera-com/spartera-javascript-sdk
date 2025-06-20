@@ -73,7 +73,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -100,7 +100,7 @@ export default class FavoritesApi {
 
 
     /**
-     * Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+     * Check if the specified user has favorited a specific asset
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
@@ -133,7 +133,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -145,7 +145,7 @@ export default class FavoritesApi {
     }
 
     /**
-     * Check if the specified user has favorited a specific asset     Returns the favorite record if it exists, or empty result if not     Useful for UI to show/hide favorite button states
+     * Check if the specified user has favorited a specific asset
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} assetId 
@@ -193,7 +193,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -253,7 +253,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -280,7 +280,7 @@ export default class FavoritesApi {
 
 
     /**
-     * Update an existing favorite by ID     Can update notes, category, priority
+     * Update an existing favorite by ID
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} favoriteId 
@@ -318,7 +318,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -330,7 +330,7 @@ export default class FavoritesApi {
     }
 
     /**
-     * Update an existing favorite by ID     Can update notes, category, priority
+     * Update an existing favorite by ID
      * @param {String} companyId 
      * @param {String} userId 
      * @param {String} favoriteId 
@@ -346,7 +346,7 @@ export default class FavoritesApi {
 
 
     /**
-     * Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+     * Get a list of all favorites for a specific user
      * @param {String} companyId 
      * @param {String} userId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -373,7 +373,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -385,7 +385,7 @@ export default class FavoritesApi {
     }
 
     /**
-     * Get a list of all favorites for a specific user     Query params:     - category: filter by category     - sort: sort field (priority, date_created, etc.)     - order: sort direction (asc, desc)
+     * Get a list of all favorites for a specific user
      * @param {String} companyId 
      * @param {String} userId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -431,7 +431,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = ['application/json'];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -485,7 +485,7 @@ export default class FavoritesApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;

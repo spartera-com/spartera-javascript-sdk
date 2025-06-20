@@ -66,7 +66,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -125,7 +125,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -185,7 +185,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -245,7 +245,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -272,7 +272,7 @@ export default class AssetPriceHistoryApi {
 
 
     /**
-     * Calculate the credit equivalent for a given USD price without saving
+     * POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
      * @param {String} companyId 
      * @param {String} assetId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -299,7 +299,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -311,7 +311,7 @@ export default class AssetPriceHistoryApi {
     }
 
     /**
-     * Calculate the credit equivalent for a given USD price without saving
+     * POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
      * @param {String} companyId 
      * @param {String} assetId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -325,7 +325,7 @@ export default class AssetPriceHistoryApi {
 
 
     /**
-     * Apply a discount to the active price for an asset
+     * POST /companies/{company_id}/assets/{asset_id}/prices/discount
      * @param {String} companyId 
      * @param {String} assetId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing data of type {@link Object} and HTTP response
@@ -352,7 +352,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -364,7 +364,7 @@ export default class AssetPriceHistoryApi {
     }
 
     /**
-     * Apply a discount to the active price for an asset
+     * POST /companies/{company_id}/assets/{asset_id}/prices/discount
      * @param {String} companyId 
      * @param {String} assetId 
      * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with data of type {@link Object}
@@ -405,7 +405,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
@@ -458,7 +458,7 @@ export default class AssetPriceHistoryApi {
       let formParams = {
       };
 
-      let authNames = ['bearerAuth'];
+      let authNames = ['ApiKeyAuth'];
       let contentTypes = [];
       let accepts = ['application/json'];
       let returnType = Object;
