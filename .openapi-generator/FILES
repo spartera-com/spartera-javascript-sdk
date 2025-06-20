@@ -11,6 +11,8 @@ docs/Asset.md
 docs/AssetPriceHistoryApi.md
 docs/Assetpricehistory.md
 docs/AssetsApi.md
+docs/CloudProvidersApi.md
+docs/Cloudprovider.md
 docs/CompaniesApi.md
 docs/Company.md
 docs/Connection.md
@@ -32,6 +34,7 @@ src/api/APIKeysApi.js
 src/api/AlertsApi.js
 src/api/AssetPriceHistoryApi.js
 src/api/AssetsApi.js
+src/api/CloudProvidersApi.js
 src/api/CompaniesApi.js
 src/api/ConnectionsApi.js
 src/api/FavoritesApi.js
@@ -41,6 +44,7 @@ src/model/Alert.js
 src/model/Apikey.js
 src/model/Asset.js
 src/model/Assetpricehistory.js
+src/model/Cloudprovider.js
 src/model/Company.js
 src/model/Connection.js
 src/model/Error.js
@@ -54,6 +58,7 @@ test/api/APIKeysApi.spec.js
 test/api/AlertsApi.spec.js
 test/api/AssetPriceHistoryApi.spec.js
 test/api/AssetsApi.spec.js
+test/api/CloudProvidersApi.spec.js
 test/api/CompaniesApi.spec.js
 test/api/ConnectionsApi.spec.js
 test/api/FavoritesApi.spec.js
@@ -62,6 +67,7 @@ test/model/Alert.spec.js
 test/model/Apikey.spec.js
 test/model/Asset.spec.js
 test/model/Assetpricehistory.spec.js
+test/model/Cloudprovider.spec.js
 test/model/Company.spec.js
 test/model/Connection.spec.js
 test/model/Error.spec.js

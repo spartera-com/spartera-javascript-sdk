@@ -17,6 +17,7 @@ import Alert from './model/Alert';
 import Apikey from './model/Apikey';
 import Asset from './model/Asset';
 import Assetpricehistory from './model/Assetpricehistory';
+import Cloudprovider from './model/Cloudprovider';
 import Company from './model/Company';
 import Connection from './model/Connection';
 import Error from './model/Error';
@@ -30,6 +31,7 @@ import APIKeysApi from './api/APIKeysApi';
 import AlertsApi from './api/AlertsApi';
 import AssetPriceHistoryApi from './api/AssetPriceHistoryApi';
 import AssetsApi from './api/AssetsApi';
+import CloudProvidersApi from './api/CloudProvidersApi';
 import CompaniesApi from './api/CompaniesApi';
 import ConnectionsApi from './api/ConnectionsApi';
 import FavoritesApi from './api/FavoritesApi';
@@ -97,6 +99,12 @@ export {
      * @property {module:model/Assetpricehistory}
      */
     Assetpricehistory,
+
+    /**
+     * The Cloudprovider model constructor.
+     * @property {module:model/Cloudprovider}
+     */
+    Cloudprovider,
 
     /**
      * The Company model constructor.
@@ -175,6 +183,12 @@ export {
     * @property {module:api/AssetsApi}
     */
     AssetsApi,
+
+    /**
+    * The CloudProvidersApi service constructor.
+    * @property {module:api/CloudProvidersApi}
+    */
+    CloudProvidersApi,
 
     /**
     * The CompaniesApi service constructor.
