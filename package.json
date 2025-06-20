@@ -1,19 +1,20 @@
 {
-  "name": "spartera_api_documentation",
-  "readme": "README.md",  "version": "0.0.0",
-  "description": "Auto-generated API documentation for REST services of the Spartera platform",
+  "name": "spartera-api-sdk",
+  "readme": "README.md",  "version": "1.0.64",
+  "description": "Official JavaScript SDK for the Spartera API platform",
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
     "prepare": "npm run build",
-    "test": "mocha --require @babel/register --recursive"
+    "test": "node example.js",
+    "example": "node example.js"
   },
   "browser": {
     "fs": false
   },
-  "publishConfig":{
-    "registry":"https://github.com/spartera-com/spartera-api-sdks/tree/main/javascript"
+  "publishConfig": {
+    "registry": "https://github.com/spartera-com/spartera-javascript-sdk"
   },
   "dependencies": {
     "@babel/cli": "^7.0.0",
@@ -45,5 +46,26 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spartera-com/spartera-javascript-sdk.git"
+  },
+  "homepage": "https://github.com/spartera-com/spartera-javascript-sdk",
+  "bugs": {
+    "url": "https://github.com/spartera-com/spartera-javascript-sdk/issues"
+  },
+  "author": "Tony D <tony@spartera.com>",
+  "keywords": [
+    "spartera",
+    "api",
+    "sdk",
+    "javascript",
+    "nodejs",
+    "data",
+    "analytics"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }

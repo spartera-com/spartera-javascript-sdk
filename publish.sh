@@ -29,27 +29,13 @@ if ! npm whoami >/dev/null 2>&1; then
     exit 1
 fi
 
-# Install dependencies and build
+# Install dependencies
 echo "📚 Installing dependencies..."
 npm install
 
-# Run build if script exists
-if npm run build >/dev/null 2>&1; then
-    echo "🔨 Building package..."
-else
-    echo "ℹ️  No build script found, skipping build step"
-fi
-
-# Run tests if they exist
-if npm test >/dev/null 2>&1; then
-    echo "🧪 Running tests..."
-else
-    echo "ℹ️  No tests found, skipping test step"
-fi
-
 # Check package with dry run
 echo "🔍 Checking package..."
-npm pack --dry-run
+npm publish --dry-run
 
 if [ $? -ne 0 ]; then
     echo "❌ Package check failed"
@@ -58,10 +44,11 @@ fi
 
 # Show package info
 echo "📋 Package info:"
-npm ls --depth=0  || echo "   Dependencies listed in package.json"
+PKG_NAME=$(node -p "require('./package.json').name")
+PKG_VERSION=$(node -p "require('./package.json').version")
+echo "   Name: $PKG_NAME"
+echo "   Version: $PKG_VERSION"
 
-echo ""
-echo "📦 Current package version: $(node -p "require('./package.json').version")"
 echo ""
 
 # Ask for confirmation
@@ -72,9 +59,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     npm publish
     
     if [ $? -eq 0 ]; then
-        PKG_NAME=$(node -p "require('./package.json').name")
-        PKG_VERSION=$(node -p "require('./package.json').version")
-        
         echo "✅ JavaScript SDK published successfully!"
         echo "📦 Install with: npm install $PKG_NAME"
         echo "🔗 View at: https://www.npmjs.com/package/$PKG_NAME"
