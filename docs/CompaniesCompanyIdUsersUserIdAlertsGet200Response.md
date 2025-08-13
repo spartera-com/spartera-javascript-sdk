@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** | Response status message | 
-**data** | [**[Alert]**](Alert.md) |  | 
+**data** | [**[Alerts]**](Alerts.md) |  | 
 
 

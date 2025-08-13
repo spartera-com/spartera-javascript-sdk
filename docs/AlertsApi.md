@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdAlertsAlertIdGet
 
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response companiesCompanyIdUsersUserIdAlertsAlertIdGet(companyId, userId, alertId)
+> CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response companiesCompanyIdUsersUserIdAlertsAlertIdGet(companyId, userId, alertId)
 
 Get single alert by ID
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdAlertsAlertIdPatch
 
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response companiesCompanyIdUsersUserIdAlertsAlertIdPatch(companyId, userId, alertId, alert)
+> CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response companiesCompanyIdUsersUserIdAlertsAlertIdPatch(companyId, userId, alertId, alertsUpdate)
 
 Update an existing alert by ID
 
@@ -139,8 +139,8 @@ let apiInstance = new SparteraApiDocumentation.AlertsApi();
 let companyId = "companyId_example"; // String | 
 let userId = "userId_example"; // String | 
 let alertId = "alertId_example"; // String | 
-let alert = new SparteraApiDocumentation.Alert(); // Alert | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsAlertIdPatch(companyId, userId, alertId, alert).then((data) => {
+let alertsUpdate = new SparteraApiDocumentation.AlertsUpdate(); // AlertsUpdate | 
+apiInstance.companiesCompanyIdUsersUserIdAlertsAlertIdPatch(companyId, userId, alertId, alertsUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
  **companyId** | **String**|  | 
  **userId** | **String**|  | 
  **alertId** | **String**|  | 
- **alert** | [**Alert**](Alert.md)|  | 
+ **alertsUpdate** | [**AlertsUpdate**](AlertsUpdate.md)|  | 
 
 ### Return type
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet
 
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet(companyId, userId, assetId)
+> CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet(companyId, userId, assetId)
 
 Get all alerts for a specific asset (by user)
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response.md)
 
 ### Authorization
 
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdAlertsPost
 
-> CompaniesCompanyIdUsersUserIdAlertsPost200Response companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alert)
+> CompaniesCompanyIdUsersUserIdAlertsPost200Response companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alertsInput)
 
 POST /companies/{company_id}/users/{user_id}/alerts
 
@@ -346,8 +346,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.AlertsApi();
 let companyId = "companyId_example"; // String | 
 let userId = "userId_example"; // String | 
-let alert = new SparteraApiDocumentation.Alert(); // Alert | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alert).then((data) => {
+let alertsInput = new SparteraApiDocumentation.AlertsInput(); // AlertsInput | 
+apiInstance.companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alertsInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **userId** | **String**|  | 
- **alert** | [**Alert**](Alert.md)|  | 
+ **alertsInput** | [**AlertsInput**](AlertsInput.md)|  | 
 
 ### Return type
 

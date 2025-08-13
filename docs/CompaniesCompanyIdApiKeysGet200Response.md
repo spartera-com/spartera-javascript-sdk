@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** | Response status message | 
-**data** | **Object** | Response data | [optional] 
+**data** | [**[ApiKeys]**](ApiKeys.md) |  | 
 
 

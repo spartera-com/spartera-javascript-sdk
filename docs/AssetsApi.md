@@ -4,7 +4,7 @@ All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**analyzeCompanyHandleAssetsAssetSlugGet**](AssetsApi.md#analyzeCompanyHandleAssetsAssetSlugGet) | **GET** /analyze/{company_handle}/assets/{asset_slug} | Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
+[**analyzeCompanyHandleAssetsAssetSlugGet**](AssetsApi.md#analyzeCompanyHandleAssetsAssetSlugGet) | **GET** /analyze/{company_handle}/assets/{asset_slug} | Process (analyze) an asset.
 [**companiesCompanyIdAssetsAssetIdDelete**](AssetsApi.md#companiesCompanyIdAssetsAssetIdDelete) | **DELETE** /companies/{company_id}/assets/{asset_id} | Delete single asset by ID
 [**companiesCompanyIdAssetsAssetIdGet**](AssetsApi.md#companiesCompanyIdAssetsAssetIdGet) | **GET** /companies/{company_id}/assets/{asset_id} | Get single asset by ID
 [**companiesCompanyIdAssetsAssetIdInfoschemaGet**](AssetsApi.md#companiesCompanyIdAssetsAssetIdInfoschemaGet) | **GET** /companies/{company_id}/assets/{asset_id}/infoschema | Get the information schema for a specific asset&#39;s table
@@ -21,9 +21,9 @@ Method | HTTP request | Description
 
 ## analyzeCompanyHandleAssetsAssetSlugGet
 
-> CompaniesCompanyIdAssetsAssetIdGet200Response analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug)
+> AnalyzeCompanyHandleAssetsAssetSlugGet200Response analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle)
 
-Process (analyze) an asset. Attempt to process an analytic on a backend warehouse/AI model.
+Process (analyze) an asset.
 
 ### Example
 
@@ -37,9 +37,9 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SparteraApiDocumentation.AssetsApi();
-let companyHandle = "companyHandle_example"; // String | 
 let assetSlug = "assetSlug_example"; // String | 
-apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug).then((data) => {
+let companyHandle = "companyHandle_example"; // String | 
+apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(assetSlug, companyHandle).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -52,12 +52,12 @@ apiInstance.analyzeCompanyHandleAssetsAssetSlugGet(companyHandle, assetSlug).the
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyHandle** | **String**|  | 
  **assetSlug** | **String**|  | 
+ **companyHandle** | **String**|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
+[**AnalyzeCompanyHandleAssetsAssetSlugGet200Response**](AnalyzeCompanyHandleAssetsAssetSlugGet200Response.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdGet
 
-> CompaniesCompanyIdAssetsAssetIdGet200Response companiesCompanyIdAssetsAssetIdGet(companyId, assetId)
+> AnalyzeCompanyHandleAssetsAssetSlugGet200Response companiesCompanyIdAssetsAssetIdGet(companyId, assetId)
 
 Get single asset by ID
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdAssetsAssetIdGet200Response**](CompaniesCompanyIdAssetsAssetIdGet200Response.md)
+[**AnalyzeCompanyHandleAssetsAssetSlugGet200Response**](AnalyzeCompanyHandleAssetsAssetSlugGet200Response.md)
 
 ### Authorization
 
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPatch
 
-> CompaniesCompanyIdAssetsAssetIdPatch200Response companiesCompanyIdAssetsAssetIdPatch(companyId, assetId, asset)
+> CompaniesCompanyIdAssetsAssetIdPatch200Response companiesCompanyIdAssetsAssetIdPatch(companyId, assetId, assetsUpdate)
 
 Update an existing asset by ID
 
@@ -289,8 +289,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.AssetsApi();
 let companyId = "companyId_example"; // String | 
 let assetId = "assetId_example"; // String | 
-let asset = new SparteraApiDocumentation.Asset(); // Asset | 
-apiInstance.companiesCompanyIdAssetsAssetIdPatch(companyId, assetId, asset).then((data) => {
+let assetsUpdate = new SparteraApiDocumentation.AssetsUpdate(); // AssetsUpdate | 
+apiInstance.companiesCompanyIdAssetsAssetIdPatch(companyId, assetId, assetsUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **assetId** | **String**|  | 
- **asset** | [**Asset**](Asset.md)|  | 
+ **assetsUpdate** | [**AssetsUpdate**](AssetsUpdate.md)|  | 
 
 ### Return type
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsPost
 
-> CompaniesCompanyIdAssetsPost200Response companiesCompanyIdAssetsPost(companyId, asset)
+> CompaniesCompanyIdAssetsPost200Response companiesCompanyIdAssetsPost(companyId, assetsInput)
 
 Create a new asset
 
@@ -538,8 +538,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new SparteraApiDocumentation.AssetsApi();
 let companyId = "companyId_example"; // String | 
-let asset = new SparteraApiDocumentation.Asset(); // Asset | 
-apiInstance.companiesCompanyIdAssetsPost(companyId, asset).then((data) => {
+let assetsInput = new SparteraApiDocumentation.AssetsInput(); // AssetsInput | 
+apiInstance.companiesCompanyIdAssetsPost(companyId, assetsInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -553,7 +553,7 @@ apiInstance.companiesCompanyIdAssetsPost(companyId, asset).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
- **asset** | [**Asset**](Asset.md)|  | 
+ **assetsInput** | [**AssetsInput**](AssetsInput.md)|  | 
 
 ### Return type
 

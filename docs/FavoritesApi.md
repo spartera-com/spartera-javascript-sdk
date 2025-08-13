@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGet
 
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGet(companyId, userId, category)
+> CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response companiesCompanyIdUsersUserIdFavoritesCategoryCategoryGet(companyId, userId, category)
 
 Get all favorites for the specified user in a specific category
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGet
 
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGet(companyId, userId, assetId)
+> CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response companiesCompanyIdUsersUserIdFavoritesCheckAssetIdGet(companyId, userId, assetId)
 
 Check if the specified user has favorited a specific asset
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesFavoriteIdGet
 
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response companiesCompanyIdUsersUserIdFavoritesFavoriteIdGet(companyId, userId, favoriteId)
+> CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response companiesCompanyIdUsersUserIdFavoritesFavoriteIdGet(companyId, userId, favoriteId)
 
 Get single favorite by ID
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdGet200Response.md)
+[**CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response**](CompaniesCompanyIdUsersUserIdFavoritesCategoryCategoryGet200Response.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch
 
-> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch(companyId, userId, favoriteId, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesFavoriteIdPatch200Response companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch(companyId, userId, favoriteId, favoritesUpdate)
 
 Update an existing favorite by ID
 
@@ -244,8 +244,8 @@ let apiInstance = new SparteraApiDocumentation.FavoritesApi();
 let companyId = "companyId_example"; // String | 
 let userId = "userId_example"; // String | 
 let favoriteId = "favoriteId_example"; // String | 
-let favorite = new SparteraApiDocumentation.Favorite(); // Favorite | 
-apiInstance.companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch(companyId, userId, favoriteId, favorite).then((data) => {
+let favoritesUpdate = new SparteraApiDocumentation.FavoritesUpdate(); // FavoritesUpdate | 
+apiInstance.companiesCompanyIdUsersUserIdFavoritesFavoriteIdPatch(companyId, userId, favoriteId, favoritesUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
  **companyId** | **String**|  | 
  **userId** | **String**|  | 
  **favoriteId** | **String**|  | 
- **favorite** | [**Favorite**](Favorite.md)|  | 
+ **favoritesUpdate** | [**FavoritesUpdate**](FavoritesUpdate.md)|  | 
 
 ### Return type
 
@@ -329,7 +329,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdFavoritesPost
 
-> CompaniesCompanyIdUsersUserIdFavoritesPost200Response companiesCompanyIdUsersUserIdFavoritesPost(companyId, userId, favorite)
+> CompaniesCompanyIdUsersUserIdFavoritesPost200Response companiesCompanyIdUsersUserIdFavoritesPost(companyId, userId, favoritesInput)
 
 POST /companies/{company_id}/users/{user_id}/favorites
 
@@ -347,8 +347,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.FavoritesApi();
 let companyId = "companyId_example"; // String | 
 let userId = "userId_example"; // String | 
-let favorite = new SparteraApiDocumentation.Favorite(); // Favorite | 
-apiInstance.companiesCompanyIdUsersUserIdFavoritesPost(companyId, userId, favorite).then((data) => {
+let favoritesInput = new SparteraApiDocumentation.FavoritesInput(); // FavoritesInput | 
+apiInstance.companiesCompanyIdUsersUserIdFavoritesPost(companyId, userId, favoritesInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **userId** | **String**|  | 
- **favorite** | [**Favorite**](Favorite.md)|  | 
+ **favoritesInput** | [**FavoritesInput**](FavoritesInput.md)|  | 
 
 ### Return type
 

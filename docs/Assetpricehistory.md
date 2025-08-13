@@ -1,19 +1,14 @@
-# SparteraApiDocumentation.Assetpricehistory
+# SparteraApiDocumentation.AssetPriceHistory
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**dateCreated** | **Date** |  | [optional] 
+**lastUpdated** | **Date** |  | [optional] 
 **aphId** | **String** |  | [optional] 
 **assetId** | **String** |  | 
 **priceUsd** | **Number** |  | [optional] 
-**priceCredits** | **String** |  | [optional] 
-**discountPercentage** | **Number** |  | [optional] 
-**saleStartDate** | **String** |  | [optional] 
-**saleEndDate** | **String** |  | [optional] 
-**dateEnded** | **String** |  | [optional] 
-**dateCreated** | **String** |  | [optional] [readonly] 
-**lastUpdated** | **String** |  | [optional] [readonly] 
-**active** | **String** |  | 
+**dateEnded** | **Date** | When did the price end (Datetime) | [optional] 
 
 

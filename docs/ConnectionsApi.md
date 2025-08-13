@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsConnectionIdPatch
 
-> CompaniesCompanyIdConnectionsConnectionIdPatch200Response companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connection)
+> CompaniesCompanyIdConnectionsConnectionIdPatch200Response companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connectionsUpdate)
 
 Update an existing connection by ID
 
@@ -184,8 +184,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
 let companyId = "companyId_example"; // String | 
 let connectionId = "connectionId_example"; // String | 
-let connection = new SparteraApiDocumentation.Connection(); // Connection | 
-apiInstance.companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connection).then((data) => {
+let connectionsUpdate = new SparteraApiDocumentation.ConnectionsUpdate(); // ConnectionsUpdate | 
+apiInstance.companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connectionsUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **connectionId** | **String**|  | 
- **connection** | [**Connection**](Connection.md)|  | 
+ **connectionsUpdate** | [**ConnectionsUpdate**](ConnectionsUpdate.md)|  | 
 
 ### Return type
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdConnectionsPost
 
-> CompaniesCompanyIdConnectionsPost200Response companiesCompanyIdConnectionsPost(companyId, connection)
+> CompaniesCompanyIdConnectionsPost200Response companiesCompanyIdConnectionsPost(companyId, connectionsInput)
 
 Create a new connection by ID
 
@@ -333,8 +333,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
 let companyId = "companyId_example"; // String | 
-let connection = new SparteraApiDocumentation.Connection(); // Connection | 
-apiInstance.companiesCompanyIdConnectionsPost(companyId, connection).then((data) => {
+let connectionsInput = new SparteraApiDocumentation.ConnectionsInput(); // ConnectionsInput | 
+apiInstance.companiesCompanyIdConnectionsPost(companyId, connectionsInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -348,7 +348,7 @@ apiInstance.companiesCompanyIdConnectionsPost(companyId, connection).then((data)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
- **connection** | [**Connection**](Connection.md)|  | 
+ **connectionsInput** | [**ConnectionsInput**](ConnectionsInput.md)|  | 
 
 ### Return type
 

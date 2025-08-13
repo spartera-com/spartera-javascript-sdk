@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** | Response status message | 
-**data** | [**[Favorite]**](Favorite.md) |  | 
+**data** | [**[Favorites]**](Favorites.md) |  | 
 
 

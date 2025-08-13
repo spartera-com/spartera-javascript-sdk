@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**companiesCompanyIdUsersUserIdDelete**](UsersApi.md#companiesCompanyIdUsersUserIdDelete) | **DELETE** /companies/{company_id}/users/{user_id} | Delete single user by ID
 [**companiesCompanyIdUsersUserIdGet**](UsersApi.md#companiesCompanyIdUsersUserIdGet) | **GET** /companies/{company_id}/users/{user_id} | Get single user by ID
 [**companiesCompanyIdUsersUserIdPatch**](UsersApi.md#companiesCompanyIdUsersUserIdPatch) | **PATCH** /companies/{company_id}/users/{user_id} | Update an existing user by ID
-[**meGet**](UsersApi.md#meGet) | **GET** /me | Get current authenticated user&#39;s profile information.              Returns:                 JSON response with user profile data from database
+[**meGet**](UsersApi.md#meGet) | **GET** /me | Get current authenticated user&#39;s profile.
 
 
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersPost
 
-> CompaniesCompanyIdUsersPost200Response companiesCompanyIdUsersPost(companyId, user)
+> CompaniesCompanyIdUsersPost200Response companiesCompanyIdUsersPost(companyId, usersInput)
 
 Create a new user
 
@@ -80,8 +80,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new SparteraApiDocumentation.UsersApi();
 let companyId = "companyId_example"; // String | 
-let user = new SparteraApiDocumentation.User(); // User | 
-apiInstance.companiesCompanyIdUsersPost(companyId, user).then((data) => {
+let usersInput = new SparteraApiDocumentation.UsersInput(); // UsersInput | 
+apiInstance.companiesCompanyIdUsersPost(companyId, usersInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -95,7 +95,7 @@ apiInstance.companiesCompanyIdUsersPost(companyId, user).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
- **user** | [**User**](User.md)|  | 
+ **usersInput** | [**UsersInput**](UsersInput.md)|  | 
 
 ### Return type
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdUsersUserIdPatch
 
-> CompaniesCompanyIdUsersUserIdPatch200Response companiesCompanyIdUsersUserIdPatch(companyId, userId, user)
+> CompaniesCompanyIdUsersUserIdPatch200Response companiesCompanyIdUsersUserIdPatch(companyId, userId, usersUpdate)
 
 Update an existing user by ID
 
@@ -231,8 +231,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.UsersApi();
 let companyId = "companyId_example"; // String | 
 let userId = "userId_example"; // String | 
-let user = new SparteraApiDocumentation.User(); // User | 
-apiInstance.companiesCompanyIdUsersUserIdPatch(companyId, userId, user).then((data) => {
+let usersUpdate = new SparteraApiDocumentation.UsersUpdate(); // UsersUpdate | 
+apiInstance.companiesCompanyIdUsersUserIdPatch(companyId, userId, usersUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **userId** | **String**|  | 
- **user** | [**User**](User.md)|  | 
+ **usersUpdate** | [**UsersUpdate**](UsersUpdate.md)|  | 
 
 ### Return type
 
@@ -265,9 +265,9 @@ Name | Type | Description  | Notes
 
 ## meGet
 
-> MeGet200Response meGet()
+> CompaniesCompanyIdUsersGet200Response meGet()
 
-Get current authenticated user&#39;s profile information.              Returns:                 JSON response with user profile data from database
+Get current authenticated user&#39;s profile.
 
 ### Example
 
@@ -295,7 +295,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**MeGet200Response**](MeGet200Response.md)
+[**CompaniesCompanyIdUsersGet200Response**](CompaniesCompanyIdUsersGet200Response.md)
 
 ### Authorization
 

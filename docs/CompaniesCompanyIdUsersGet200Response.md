@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message** | **String** | Response status message | 
-**data** | [**[User]**](User.md) |  | 
+**data** | [**[Users]**](Users.md) |  | 
 
 

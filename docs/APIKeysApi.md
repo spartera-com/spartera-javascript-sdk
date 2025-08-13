@@ -4,19 +4,71 @@ All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**companiesCompanyIdApiKeysApiKeyIdGet**](APIKeysApi.md#companiesCompanyIdApiKeysApiKeyIdGet) | **GET** /companies/{company_id}/api-keys/{api_key_id} | Get single API key by ID
-[**companiesCompanyIdApiKeysApiKeyIdPatch**](APIKeysApi.md#companiesCompanyIdApiKeysApiKeyIdPatch) | **PATCH** /companies/{company_id}/api-keys/{api_key_id} | Update an existing API key by ID
-[**companiesCompanyIdApiKeysGet**](APIKeysApi.md#companiesCompanyIdApiKeysGet) | **GET** /companies/{company_id}/api-keys | Get all API keys
-[**companiesCompanyIdApiKeysPost**](APIKeysApi.md#companiesCompanyIdApiKeysPost) | **POST** /companies/{company_id}/api-keys | Create single API key
-[**companiesCompanyIdApiKeysTokenDelete**](APIKeysApi.md#companiesCompanyIdApiKeysTokenDelete) | **DELETE** /companies/{company_id}/api-keys/{token} | Delete single API key by token
+[**companiesCompanyIdApiKeysApiKeyIdDelete**](APIKeysApi.md#companiesCompanyIdApiKeysApiKeyIdDelete) | **DELETE** /companies/{company_id}/api-keys/{api_key_id} | Delete (deactivate) single API key by api_key_id.     Uses the api_key_id returned during creation for clean identification.     Fixed to use correct primary key lookup.
+[**companiesCompanyIdApiKeysApiKeyIdGet**](APIKeysApi.md#companiesCompanyIdApiKeysApiKeyIdGet) | **GET** /companies/{company_id}/api-keys/{api_key_id} | Get single API key by ID.     Returns masked API key for security (sk_****1234).
+[**companiesCompanyIdApiKeysApiKeyIdPatch**](APIKeysApi.md#companiesCompanyIdApiKeysApiKeyIdPatch) | **PATCH** /companies/{company_id}/api-keys/{api_key_id} | Update an existing API key by ID.     Can update metadata like name, expiration, rate limits, etc.     Cannot update the actual key value (for security).
+[**companiesCompanyIdApiKeysApiKeyIdRevokePost**](APIKeysApi.md#companiesCompanyIdApiKeysApiKeyIdRevokePost) | **POST** /companies/{company_id}/api-keys/{api_key_id}/revoke | Explicitly revoke an API key with reason tracking.     This is different from delete as it includes revocation metadata.
+[**companiesCompanyIdApiKeysApiKeyIdStatsGet**](APIKeysApi.md#companiesCompanyIdApiKeysApiKeyIdStatsGet) | **GET** /companies/{company_id}/api-keys/{api_key_id}/stats | Get usage statistics for a specific API key.     Returns usage count, last used date, failed attempts, etc.
+[**companiesCompanyIdApiKeysGet**](APIKeysApi.md#companiesCompanyIdApiKeysGet) | **GET** /companies/{company_id}/api-keys | Get all API keys for a company.     Returns masked API keys for security (sk_****1234).
+[**companiesCompanyIdApiKeysPost**](APIKeysApi.md#companiesCompanyIdApiKeysPost) | **POST** /companies/{company_id}/api-keys | Create single API key.     Returns the actual sk_ key (only time it&#39;s exposed) and api_key_id for future operations.
 
+
+
+## companiesCompanyIdApiKeysApiKeyIdDelete
+
+> CompaniesCompanyIdApiKeysApiKeyIdDelete200Response companiesCompanyIdApiKeysApiKeyIdDelete(companyId, apiKeyId)
+
+Delete (deactivate) single API key by api_key_id.     Uses the api_key_id returned during creation for clean identification.     Fixed to use correct primary key lookup.
+
+### Example
+
+```javascript
+import SparteraApiDocumentation from 'spartera_api_documentation';
+let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiDocumentation.APIKeysApi();
+let companyId = "companyId_example"; // String | 
+let apiKeyId = "apiKeyId_example"; // String | 
+apiInstance.companiesCompanyIdApiKeysApiKeyIdDelete(companyId, apiKeyId).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**|  | 
+ **apiKeyId** | **String**|  | 
+
+### Return type
+
+[**CompaniesCompanyIdApiKeysApiKeyIdDelete200Response**](CompaniesCompanyIdApiKeysApiKeyIdDelete200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 
 ## companiesCompanyIdApiKeysApiKeyIdGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysApiKeyIdGet(companyId, apiKeyId)
+> CompaniesCompanyIdApiKeysApiKeyIdGet200Response companiesCompanyIdApiKeysApiKeyIdGet(companyId, apiKeyId)
 
-Get single API key by ID
+Get single API key by ID.     Returns masked API key for security (sk_****1234).
 
 ### Example
 
@@ -50,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdApiKeysApiKeyIdGet200Response**](CompaniesCompanyIdApiKeysApiKeyIdGet200Response.md)
 
 ### Authorization
 
@@ -64,9 +116,9 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdApiKeysApiKeyIdPatch
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysApiKeyIdPatch(companyId, apiKeyId)
+> CompaniesCompanyIdApiKeysApiKeyIdPatch200Response companiesCompanyIdApiKeysApiKeyIdPatch(companyId, apiKeyId, apiKeysUpdate)
 
-Update an existing API key by ID
+Update an existing API key by ID.     Can update metadata like name, expiration, rate limits, etc.     Cannot update the actual key value (for security).
 
 ### Example
 
@@ -82,7 +134,111 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.APIKeysApi();
 let companyId = "companyId_example"; // String | 
 let apiKeyId = "apiKeyId_example"; // String | 
-apiInstance.companiesCompanyIdApiKeysApiKeyIdPatch(companyId, apiKeyId).then((data) => {
+let apiKeysUpdate = new SparteraApiDocumentation.ApiKeysUpdate(); // ApiKeysUpdate | 
+apiInstance.companiesCompanyIdApiKeysApiKeyIdPatch(companyId, apiKeyId, apiKeysUpdate).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**|  | 
+ **apiKeyId** | **String**|  | 
+ **apiKeysUpdate** | [**ApiKeysUpdate**](ApiKeysUpdate.md)|  | 
+
+### Return type
+
+[**CompaniesCompanyIdApiKeysApiKeyIdPatch200Response**](CompaniesCompanyIdApiKeysApiKeyIdPatch200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## companiesCompanyIdApiKeysApiKeyIdRevokePost
+
+> CompaniesCompanyIdApiKeysPost200Response companiesCompanyIdApiKeysApiKeyIdRevokePost(companyId, apiKeyId, apiKeysInput)
+
+Explicitly revoke an API key with reason tracking.     This is different from delete as it includes revocation metadata.
+
+### Example
+
+```javascript
+import SparteraApiDocumentation from 'spartera_api_documentation';
+let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiDocumentation.APIKeysApi();
+let companyId = "companyId_example"; // String | 
+let apiKeyId = "apiKeyId_example"; // String | 
+let apiKeysInput = new SparteraApiDocumentation.ApiKeysInput(); // ApiKeysInput | 
+apiInstance.companiesCompanyIdApiKeysApiKeyIdRevokePost(companyId, apiKeyId, apiKeysInput).then((data) => {
+  console.log('API called successfully. Returned data: ' + data);
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**|  | 
+ **apiKeyId** | **String**|  | 
+ **apiKeysInput** | [**ApiKeysInput**](ApiKeysInput.md)|  | 
+
+### Return type
+
+[**CompaniesCompanyIdApiKeysPost200Response**](CompaniesCompanyIdApiKeysPost200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## companiesCompanyIdApiKeysApiKeyIdStatsGet
+
+> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysApiKeyIdStatsGet(companyId, apiKeyId)
+
+Get usage statistics for a specific API key.     Returns usage count, last used date, failed attempts, etc.
+
+### Example
+
+```javascript
+import SparteraApiDocumentation from 'spartera_api_documentation';
+let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiDocumentation.APIKeysApi();
+let companyId = "companyId_example"; // String | 
+let apiKeyId = "apiKeyId_example"; // String | 
+apiInstance.companiesCompanyIdApiKeysApiKeyIdStatsGet(companyId, apiKeyId).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -116,7 +272,7 @@ Name | Type | Description  | Notes
 
 > CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysGet(companyId)
 
-Get all API keys
+Get all API keys for a company.     Returns masked API keys for security (sk_****1234).
 
 ### Example
 
@@ -162,57 +318,9 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdApiKeysPost
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysPost(companyId)
+> CompaniesCompanyIdApiKeysPost200Response companiesCompanyIdApiKeysPost(companyId, apiKeysInput)
 
-Create single API key
-
-### Example
-
-```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SparteraApiDocumentation.APIKeysApi();
-let companyId = "companyId_example"; // String | 
-apiInstance.companiesCompanyIdApiKeysPost(companyId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## companiesCompanyIdApiKeysTokenDelete
-
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdApiKeysTokenDelete(companyId, token)
-
-Delete single API key by token
+Create single API key.     Returns the actual sk_ key (only time it&#39;s exposed) and api_key_id for future operations.
 
 ### Example
 
@@ -227,8 +335,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new SparteraApiDocumentation.APIKeysApi();
 let companyId = "companyId_example"; // String | 
-let token = "token_example"; // String | 
-apiInstance.companiesCompanyIdApiKeysTokenDelete(companyId, token).then((data) => {
+let apiKeysInput = new SparteraApiDocumentation.ApiKeysInput(); // ApiKeysInput | 
+apiInstance.companiesCompanyIdApiKeysPost(companyId, apiKeysInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -242,11 +350,11 @@ apiInstance.companiesCompanyIdApiKeysTokenDelete(companyId, token).then((data) =
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
- **token** | **String**|  | 
+ **apiKeysInput** | [**ApiKeysInput**](ApiKeysInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdApiKeysPost200Response**](CompaniesCompanyIdApiKeysPost200Response.md)
 
 ### Authorization
 
@@ -254,6 +362,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

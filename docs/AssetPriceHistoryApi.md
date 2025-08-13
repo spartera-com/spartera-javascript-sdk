@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**companiesCompanyIdAssetsAssetIdPricesAphIdDelete**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesAphIdDelete) | **DELETE** /companies/{company_id}/assets/{asset_id}/prices/{aph_id} | Delete single price history record by ID
 [**companiesCompanyIdAssetsAssetIdPricesAphIdGet**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesAphIdGet) | **GET** /companies/{company_id}/assets/{asset_id}/prices/{aph_id} | Get single price history record by ID
 [**companiesCompanyIdAssetsAssetIdPricesAphIdPatch**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesAphIdPatch) | **PATCH** /companies/{company_id}/assets/{asset_id}/prices/{aph_id} | Update an existing price history record by ID
-[**companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost) | **POST** /companies/{company_id}/assets/{asset_id}/prices/calculate_credits | POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
+[**companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost) | **POST** /companies/{company_id}/assets/{asset_id}/prices/calculate_credits | Calculate the credit equivalent for a given USD price without saving
 [**companiesCompanyIdAssetsAssetIdPricesDiscountPost**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesDiscountPost) | **POST** /companies/{company_id}/assets/{asset_id}/prices/discount | POST /companies/{company_id}/assets/{asset_id}/prices/discount
 [**companiesCompanyIdAssetsAssetIdPricesGet**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesGet) | **GET** /companies/{company_id}/assets/{asset_id}/prices | Get all price history records for a specific asset
 [**companiesCompanyIdAssetsAssetIdPricesPost**](AssetPriceHistoryApi.md#companiesCompanyIdAssetsAssetIdPricesPost) | **POST** /companies/{company_id}/assets/{asset_id}/prices | Create a new price history record for an asset
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdAssetsAssetIdPricesActiveGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesActiveGet(companyId, assetId)
+> CompaniesCompanyIdAssetsAssetIdPricesGet200Response companiesCompanyIdAssetsAssetIdPricesActiveGet(companyId, assetId)
 
 Get the currently active price for an asset
 
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesGet200Response**](CompaniesCompanyIdAssetsAssetIdPricesGet200Response.md)
 
 ### Authorization
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesAphIdDelete
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesAphIdDelete(companyId, assetId, aphId)
+> CompaniesCompanyIdAssetsAssetIdPricesAphIdDelete200Response companiesCompanyIdAssetsAssetIdPricesAphIdDelete(companyId, assetId, aphId)
 
 Delete single price history record by ID
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesAphIdDelete200Response**](CompaniesCompanyIdAssetsAssetIdPricesAphIdDelete200Response.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesAphIdGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesAphIdGet(companyId, assetId, aphId)
+> CompaniesCompanyIdAssetsAssetIdPricesAphIdGet200Response companiesCompanyIdAssetsAssetIdPricesAphIdGet(companyId, assetId, aphId)
 
 Get single price history record by ID
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesAphIdGet200Response**](CompaniesCompanyIdAssetsAssetIdPricesAphIdGet200Response.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesAphIdPatch
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesAphIdPatch(companyId, assetId, aphId)
+> CompaniesCompanyIdAssetsAssetIdPricesAphIdPatch200Response companiesCompanyIdAssetsAssetIdPricesAphIdPatch(companyId, assetId, aphId, assetPriceHistoryUpdate)
 
 Update an existing price history record by ID
 
@@ -190,7 +190,8 @@ let apiInstance = new SparteraApiDocumentation.AssetPriceHistoryApi();
 let companyId = "companyId_example"; // String | 
 let assetId = "assetId_example"; // String | 
 let aphId = "aphId_example"; // String | 
-apiInstance.companiesCompanyIdAssetsAssetIdPricesAphIdPatch(companyId, assetId, aphId).then((data) => {
+let assetPriceHistoryUpdate = new SparteraApiDocumentation.AssetPriceHistoryUpdate(); // AssetPriceHistoryUpdate | 
+apiInstance.companiesCompanyIdAssetsAssetIdPricesAphIdPatch(companyId, assetId, aphId, assetPriceHistoryUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -206,10 +207,11 @@ Name | Type | Description  | Notes
  **companyId** | **String**|  | 
  **assetId** | **String**|  | 
  **aphId** | **String**|  | 
+ **assetPriceHistoryUpdate** | [**AssetPriceHistoryUpdate**](AssetPriceHistoryUpdate.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesAphIdPatch200Response**](CompaniesCompanyIdAssetsAssetIdPricesAphIdPatch200Response.md)
 
 ### Authorization
 
@@ -217,15 +219,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
 ## companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost(companyId, assetId)
+> CompaniesCompanyIdAssetsAssetIdPricesPost200Response companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost(companyId, assetId, assetPriceHistoryInput)
 
-POST /companies/{company_id}/assets/{asset_id}/prices/calculate_credits
+Calculate the credit equivalent for a given USD price without saving
 
 ### Example
 
@@ -241,7 +243,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.AssetPriceHistoryApi();
 let companyId = "companyId_example"; // String | 
 let assetId = "assetId_example"; // String | 
-apiInstance.companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost(companyId, assetId).then((data) => {
+let assetPriceHistoryInput = new SparteraApiDocumentation.AssetPriceHistoryInput(); // AssetPriceHistoryInput | 
+apiInstance.companiesCompanyIdAssetsAssetIdPricesCalculateCreditsPost(companyId, assetId, assetPriceHistoryInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -256,10 +259,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **assetId** | **String**|  | 
+ **assetPriceHistoryInput** | [**AssetPriceHistoryInput**](AssetPriceHistoryInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesPost200Response**](CompaniesCompanyIdAssetsAssetIdPricesPost200Response.md)
 
 ### Authorization
 
@@ -267,13 +271,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
 ## companiesCompanyIdAssetsAssetIdPricesDiscountPost
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesDiscountPost(companyId, assetId)
+> CompaniesCompanyIdAssetsAssetIdPricesPost200Response companiesCompanyIdAssetsAssetIdPricesDiscountPost(companyId, assetId, assetPriceHistoryInput)
 
 POST /companies/{company_id}/assets/{asset_id}/prices/discount
 
@@ -291,7 +295,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.AssetPriceHistoryApi();
 let companyId = "companyId_example"; // String | 
 let assetId = "assetId_example"; // String | 
-apiInstance.companiesCompanyIdAssetsAssetIdPricesDiscountPost(companyId, assetId).then((data) => {
+let assetPriceHistoryInput = new SparteraApiDocumentation.AssetPriceHistoryInput(); // AssetPriceHistoryInput | 
+apiInstance.companiesCompanyIdAssetsAssetIdPricesDiscountPost(companyId, assetId, assetPriceHistoryInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -306,10 +311,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **assetId** | **String**|  | 
+ **assetPriceHistoryInput** | [**AssetPriceHistoryInput**](AssetPriceHistoryInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesPost200Response**](CompaniesCompanyIdAssetsAssetIdPricesPost200Response.md)
 
 ### Authorization
 
@@ -317,13 +323,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
 ## companiesCompanyIdAssetsAssetIdPricesGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesGet(companyId, assetId)
+> CompaniesCompanyIdAssetsAssetIdPricesGet200Response companiesCompanyIdAssetsAssetIdPricesGet(companyId, assetId)
 
 Get all price history records for a specific asset
 
@@ -359,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesGet200Response**](CompaniesCompanyIdAssetsAssetIdPricesGet200Response.md)
 
 ### Authorization
 
@@ -373,7 +379,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAssetsAssetIdPricesPost
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAssetsAssetIdPricesPost(companyId, assetId)
+> CompaniesCompanyIdAssetsAssetIdPricesPost200Response companiesCompanyIdAssetsAssetIdPricesPost(companyId, assetId, assetPriceHistoryInput)
 
 Create a new price history record for an asset
 
@@ -391,7 +397,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 let apiInstance = new SparteraApiDocumentation.AssetPriceHistoryApi();
 let companyId = "companyId_example"; // String | 
 let assetId = "assetId_example"; // String | 
-apiInstance.companiesCompanyIdAssetsAssetIdPricesPost(companyId, assetId).then((data) => {
+let assetPriceHistoryInput = new SparteraApiDocumentation.AssetPriceHistoryInput(); // AssetPriceHistoryInput | 
+apiInstance.companiesCompanyIdAssetsAssetIdPricesPost(companyId, assetId, assetPriceHistoryInput).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -406,10 +413,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
  **assetId** | **String**|  | 
+ **assetPriceHistoryInput** | [**AssetPriceHistoryInput**](AssetPriceHistoryInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAssetsAssetIdPricesPost200Response**](CompaniesCompanyIdAssetsAssetIdPricesPost200Response.md)
 
 ### Authorization
 
@@ -417,6 +425,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 

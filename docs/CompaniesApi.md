@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## companiesCompanyIdAnalyticsAssetsGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsAssetsGet(companyId)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companiesCompanyIdAnalyticsAssetsGet(companyId)
 
 Get asset performance analytics     Query params: start_date, end_date, limit, sort_by, include
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAnalyticsCustomersGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsCustomersGet(companyId)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companiesCompanyIdAnalyticsCustomersGet(companyId)
 
 Get customer analytics including growth and segmentation     Query params: start_date, end_date, group_by, segment_by
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAnalyticsDashboardGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsDashboardGet(companyId)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companiesCompanyIdAnalyticsDashboardGet(companyId)
 
 Get comprehensive dashboard analytics for seller dashboard     Includes all metrics needed for dashboard charts in one call     Query params: start_date, end_date, period (day/week/month/quarter)
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdAnalyticsSalesGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdAnalyticsSalesGet(companyId)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companiesCompanyIdAnalyticsSalesGet(companyId)
 
 Get sales over time analytics     Query params: start_date, end_date, group_by (day/week/month/quarter), metrics
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdGet(companyId)
+> CompaniesCompanyIdGet200Response companiesCompanyIdGet(companyId)
 
 Get details of the requestor&#39;s own company
 
@@ -244,7 +244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdGet200Response**](CompaniesCompanyIdGet200Response.md)
 
 ### Authorization
 
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdObjectsGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdObjectsGet(companyId)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companiesCompanyIdObjectsGet(companyId)
 
 Get all objects (connections, assets) of a single company
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdPatch
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdPatch(companyId)
+> CompaniesCompanyIdPatch200Response companiesCompanyIdPatch(companyId, companiesUpdate)
 
 Update an existing company by ID
 
@@ -323,7 +323,8 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 
 let apiInstance = new SparteraApiDocumentation.CompaniesApi();
 let companyId = "companyId_example"; // String | 
-apiInstance.companiesCompanyIdPatch(companyId).then((data) => {
+let companiesUpdate = new SparteraApiDocumentation.CompaniesUpdate(); // CompaniesUpdate | 
+apiInstance.companiesCompanyIdPatch(companyId, companiesUpdate).then((data) => {
   console.log('API called successfully. Returned data: ' + data);
 }, (error) => {
   console.error(error);
@@ -337,10 +338,11 @@ apiInstance.companiesCompanyIdPatch(companyId).then((data) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **companyId** | **String**|  | 
+ **companiesUpdate** | [**CompaniesUpdate**](CompaniesUpdate.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdPatch200Response**](CompaniesCompanyIdPatch200Response.md)
 
 ### Authorization
 
@@ -348,13 +350,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
 ## companiesCompanyIdRequestsPlanGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdRequestsPlanGet(companyId)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companiesCompanyIdRequestsPlanGet(companyId)
 
 Get the total number of requests allocated in the company&#39;s current subscription plan.
 
@@ -388,7 +390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
@@ -402,7 +404,7 @@ Name | Type | Description  | Notes
 
 ## companiesCompanyIdRequestsUsageGet
 
-> CompaniesCompanyIdApiKeysGet200Response companiesCompanyIdRequestsUsageGet(companyId)
+> CompaniesCompanyIdAnalyticsAssetsGet200Response companiesCompanyIdRequestsUsageGet(companyId)
 
 Get company request usage data for a specific month. Returns JSON metrics by default or CSV logs when download parameter is included.
 
@@ -436,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CompaniesCompanyIdApiKeysGet200Response**](CompaniesCompanyIdApiKeysGet200Response.md)
+[**CompaniesCompanyIdAnalyticsAssetsGet200Response**](CompaniesCompanyIdAnalyticsAssetsGet200Response.md)
 
 ### Authorization
 
