@@ -1,45 +1,53 @@
-# SparteraApiDocumentation.ConnectionsApi
+# SparteraApiSdk.ConnectionsApi
 
 All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**companiesCompanyIdConnectionsConnectionIdDelete**](ConnectionsApi.md#companiesCompanyIdConnectionsConnectionIdDelete) | **DELETE** /companies/{company_id}/connections/{connection_id} | Delete single connection by ID
-[**companiesCompanyIdConnectionsConnectionIdGet**](ConnectionsApi.md#companiesCompanyIdConnectionsConnectionIdGet) | **GET** /companies/{company_id}/connections/{connection_id} | Get single connection by ID
-[**companiesCompanyIdConnectionsConnectionIdInfoschemaGet**](ConnectionsApi.md#companiesCompanyIdConnectionsConnectionIdInfoschemaGet) | **GET** /companies/{company_id}/connections/{connection_id}/infoschema | Retrieve the information schema for the specified connection
-[**companiesCompanyIdConnectionsConnectionIdPatch**](ConnectionsApi.md#companiesCompanyIdConnectionsConnectionIdPatch) | **PATCH** /companies/{company_id}/connections/{connection_id} | Update an existing connection by ID
-[**companiesCompanyIdConnectionsConnectionIdTestGet**](ConnectionsApi.md#companiesCompanyIdConnectionsConnectionIdTestGet) | **GET** /companies/{company_id}/connections/{connection_id}/test | Test the specified connection
-[**companiesCompanyIdConnectionsGet**](ConnectionsApi.md#companiesCompanyIdConnectionsGet) | **GET** /companies/{company_id}/connections | Get all connections for a specific company
-[**companiesCompanyIdConnectionsPost**](ConnectionsApi.md#companiesCompanyIdConnectionsPost) | **POST** /companies/{company_id}/connections | Create a new connection by ID
+[**createConnections**](ConnectionsApi.md#createConnections) | **POST** /companies/{company_id}/connections | Create a new connection by ID
+[**deleteConnections**](ConnectionsApi.md#deleteConnections) | **DELETE** /companies/{company_id}/connections/{connection_id} | Delete single connection by ID
+[**getConnectionsById**](ConnectionsApi.md#getConnectionsById) | **GET** /companies/{company_id}/connections/{connection_id} | Get single connection by ID
+[**getConnectionsById2**](ConnectionsApi.md#getConnectionsById2) | **GET** /companies/{company_id}/connections/{connection_id}/test | Test the specified connection
+[**getConnectionsByIdInfoschema**](ConnectionsApi.md#getConnectionsByIdInfoschema) | **GET** /companies/{company_id}/connections/{connection_id}/infoschema | Retrieve the information schema for the specified connection
+[**listConnections**](ConnectionsApi.md#listConnections) | **GET** /companies/{company_id}/connections | Get all connections for a specific company
+[**updateConnections**](ConnectionsApi.md#updateConnections) | **PATCH** /companies/{company_id}/connections/{connection_id} | Update an existing connection by ID
 
 
 
-## companiesCompanyIdConnectionsConnectionIdDelete
+## createConnections
 
-> CompaniesCompanyIdConnectionsConnectionIdDelete200Response companiesCompanyIdConnectionsConnectionIdDelete(companyId, connectionId)
+> CreateConnections200Response createConnections(companyId, connectionsInput, opts)
 
-Delete single connection by ID
+Create a new connection by ID
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
-let companyId = "companyId_example"; // String | 
-let connectionId = "connectionId_example"; // String | 
-apiInstance.companiesCompanyIdConnectionsConnectionIdDelete(companyId, connectionId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let connectionsInput = new SparteraApiSdk.ConnectionsInput(); // ConnectionsInput | 
+let opts = {
+  'page': 1, // Number | Page number for pagination
+  'limit': 20, // Number | Number of items per page
+  'sortBy': "sortBy_example", // String | Field to sort by
+  'sortOrder': "'desc'", // String | Sort order (ascending or descending)
+  'search': "search_example" // String | Search term to filter results
+};
+apiInstance.createConnections(companyId, connectionsInput, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -47,164 +55,17 @@ apiInstance.companiesCompanyIdConnectionsConnectionIdDelete(companyId, connectio
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **connectionId** | **String**|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **connectionsInput** | [**ConnectionsInput**](ConnectionsInput.md)|  | 
+ **page** | **Number**| Page number for pagination | [optional] [default to 1]
+ **limit** | **Number**| Number of items per page | [optional] [default to 20]
+ **sortBy** | **String**| Field to sort by | [optional] 
+ **sortOrder** | **String**| Sort order (ascending or descending) | [optional] [default to &#39;desc&#39;]
+ **search** | **String**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**CompaniesCompanyIdConnectionsConnectionIdDelete200Response**](CompaniesCompanyIdConnectionsConnectionIdDelete200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## companiesCompanyIdConnectionsConnectionIdGet
-
-> CompaniesCompanyIdConnectionsConnectionIdGet200Response companiesCompanyIdConnectionsConnectionIdGet(companyId, connectionId)
-
-Get single connection by ID
-
-### Example
-
-```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
-let companyId = "companyId_example"; // String | 
-let connectionId = "connectionId_example"; // String | 
-apiInstance.companiesCompanyIdConnectionsConnectionIdGet(companyId, connectionId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **connectionId** | **String**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdConnectionsConnectionIdGet200Response**](CompaniesCompanyIdConnectionsConnectionIdGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## companiesCompanyIdConnectionsConnectionIdInfoschemaGet
-
-> CompaniesCompanyIdConnectionsGet200Response companiesCompanyIdConnectionsConnectionIdInfoschemaGet(companyId, connectionId)
-
-Retrieve the information schema for the specified connection
-
-### Example
-
-```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
-let companyId = "companyId_example"; // String | 
-let connectionId = "connectionId_example"; // String | 
-apiInstance.companiesCompanyIdConnectionsConnectionIdInfoschemaGet(companyId, connectionId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **connectionId** | **String**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## companiesCompanyIdConnectionsConnectionIdPatch
-
-> CompaniesCompanyIdConnectionsConnectionIdPatch200Response companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connectionsUpdate)
-
-Update an existing connection by ID
-
-### Example
-
-```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
-let companyId = "companyId_example"; // String | 
-let connectionId = "connectionId_example"; // String | 
-let connectionsUpdate = new SparteraApiDocumentation.ConnectionsUpdate(); // ConnectionsUpdate | 
-apiInstance.companiesCompanyIdConnectionsConnectionIdPatch(companyId, connectionId, connectionsUpdate).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **connectionId** | **String**|  | 
- **connectionsUpdate** | [**ConnectionsUpdate**](ConnectionsUpdate.md)|  | 
-
-### Return type
-
-[**CompaniesCompanyIdConnectionsConnectionIdPatch200Response**](CompaniesCompanyIdConnectionsConnectionIdPatch200Response.md)
+[**CreateConnections200Response**](CreateConnections200Response.md)
 
 ### Authorization
 
@@ -216,32 +77,135 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## companiesCompanyIdConnectionsConnectionIdTestGet
+## deleteConnections
 
-> CompaniesCompanyIdConnectionsGet200Response companiesCompanyIdConnectionsConnectionIdTestGet(companyId, connectionId)
+> DeleteConnections200Response deleteConnections(companyId, connectionId)
+
+Delete single connection by ID
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let connectionId = "connectionId_example"; // String | Unique identifier for the Connection
+apiInstance.deleteConnections(companyId, connectionId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **connectionId** | **String**| Unique identifier for the Connection | 
+
+### Return type
+
+[**DeleteConnections200Response**](DeleteConnections200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getConnectionsById
+
+> GetConnectionsById200Response getConnectionsById(companyId, connectionId)
+
+Get single connection by ID
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let connectionId = "connectionId_example"; // String | Unique identifier for the Connection
+apiInstance.getConnectionsById(companyId, connectionId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **connectionId** | **String**| Unique identifier for the Connection | 
+
+### Return type
+
+[**GetConnectionsById200Response**](GetConnectionsById200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getConnectionsById2
+
+> GetConnectionsById200Response getConnectionsById2(companyId, connectionId)
 
 Test the specified connection
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
-let companyId = "companyId_example"; // String | 
-let connectionId = "connectionId_example"; // String | 
-apiInstance.companiesCompanyIdConnectionsConnectionIdTestGet(companyId, connectionId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let connectionId = "connectionId_example"; // String | Unique identifier for the Connection
+apiInstance.getConnectionsById2(companyId, connectionId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -249,12 +213,12 @@ apiInstance.companiesCompanyIdConnectionsConnectionIdTestGet(companyId, connecti
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **connectionId** | **String**|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **connectionId** | **String**| Unique identifier for the Connection | 
 
 ### Return type
 
-[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
+[**GetConnectionsById200Response**](GetConnectionsById200Response.md)
 
 ### Authorization
 
@@ -266,31 +230,90 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## companiesCompanyIdConnectionsGet
+## getConnectionsByIdInfoschema
 
-> CompaniesCompanyIdConnectionsGet200Response companiesCompanyIdConnectionsGet(companyId)
+> GetConnectionsById200Response getConnectionsByIdInfoschema(companyId, connectionId)
+
+Retrieve the information schema for the specified connection
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let connectionId = "connectionId_example"; // String | Unique identifier for the Connection
+apiInstance.getConnectionsByIdInfoschema(companyId, connectionId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **connectionId** | **String**| Unique identifier for the Connection | 
+
+### Return type
+
+[**GetConnectionsById200Response**](GetConnectionsById200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## listConnections
+
+> ListConnections200Response listConnections(companyId, opts)
 
 Get all connections for a specific company
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
-let companyId = "companyId_example"; // String | 
-apiInstance.companiesCompanyIdConnectionsGet(companyId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let opts = {
+  'page': 1, // Number | Page number for pagination
+  'limit': 20, // Number | Number of items per page
+  'sortBy': "sortBy_example", // String | Field to sort by
+  'sortOrder': "'desc'", // String | Sort order (ascending or descending)
+  'search': "search_example" // String | Search term to filter results
+};
+apiInstance.listConnections(companyId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -298,11 +321,16 @@ apiInstance.companiesCompanyIdConnectionsGet(companyId).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **page** | **Number**| Page number for pagination | [optional] [default to 1]
+ **limit** | **Number**| Number of items per page | [optional] [default to 20]
+ **sortBy** | **String**| Field to sort by | [optional] 
+ **sortOrder** | **String**| Sort order (ascending or descending) | [optional] [default to &#39;desc&#39;]
+ **search** | **String**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**CompaniesCompanyIdConnectionsGet200Response**](CompaniesCompanyIdConnectionsGet200Response.md)
+[**ListConnections200Response**](ListConnections200Response.md)
 
 ### Authorization
 
@@ -314,32 +342,34 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## companiesCompanyIdConnectionsPost
+## updateConnections
 
-> CompaniesCompanyIdConnectionsPost200Response companiesCompanyIdConnectionsPost(companyId, connectionsInput)
+> UpdateConnections200Response updateConnections(companyId, connectionId, connectionsUpdate)
 
-Create a new connection by ID
+Update an existing connection by ID
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.ConnectionsApi();
-let companyId = "companyId_example"; // String | 
-let connectionsInput = new SparteraApiDocumentation.ConnectionsInput(); // ConnectionsInput | 
-apiInstance.companiesCompanyIdConnectionsPost(companyId, connectionsInput).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let connectionId = "connectionId_example"; // String | Unique identifier for the Connection
+let connectionsUpdate = new SparteraApiSdk.ConnectionsUpdate(); // ConnectionsUpdate | 
+apiInstance.updateConnections(companyId, connectionId, connectionsUpdate, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -347,12 +377,13 @@ apiInstance.companiesCompanyIdConnectionsPost(companyId, connectionsInput).then(
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **connectionsInput** | [**ConnectionsInput**](ConnectionsInput.md)|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **connectionId** | **String**| Unique identifier for the Connection | 
+ **connectionsUpdate** | [**ConnectionsUpdate**](ConnectionsUpdate.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdConnectionsPost200Response**](CompaniesCompanyIdConnectionsPost200Response.md)
+[**UpdateConnections200Response**](UpdateConnections200Response.md)
 
 ### Authorization
 

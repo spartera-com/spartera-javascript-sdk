@@ -1,39 +1,40 @@
-# SparteraApiDocumentation.JobFunctionsApi
+# SparteraApiSdk.JobFunctionsApi
 
 All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**jobFunctionsFunctionIdGet**](JobFunctionsApi.md#jobFunctionsFunctionIdGet) | **GET** /job-functions/{function_id} | Get single job function by ID
-[**jobFunctionsGet**](JobFunctionsApi.md#jobFunctionsGet) | **GET** /job-functions | Get a list of all job functions
+[**getJobFunctionsById**](JobFunctionsApi.md#getJobFunctionsById) | **GET** /job-functions/{function_id} | Get single job function by ID
+[**listJobFunctions**](JobFunctionsApi.md#listJobFunctions) | **GET** /job-functions | Get a list of all job functions
 
 
 
-## jobFunctionsFunctionIdGet
+## getJobFunctionsById
 
-> JobFunctionsFunctionIdGet200Response jobFunctionsFunctionIdGet(functionId)
+> GetJobFunctionsById200Response getJobFunctionsById(functionId)
 
 Get single job function by ID
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.JobFunctionsApi();
-let functionId = "functionId_example"; // String | 
-apiInstance.jobFunctionsFunctionIdGet(functionId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.JobFunctionsApi();
+let functionId = "functionId_example"; // String | Unique identifier for the Function
+apiInstance.getJobFunctionsById(functionId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -41,11 +42,11 @@ apiInstance.jobFunctionsFunctionIdGet(functionId).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **functionId** | **String**|  | 
+ **functionId** | **String**| Unique identifier for the Function | 
 
 ### Return type
 
-[**JobFunctionsFunctionIdGet200Response**](JobFunctionsFunctionIdGet200Response.md)
+[**GetJobFunctionsById200Response**](GetJobFunctionsById200Response.md)
 
 ### Authorization
 
@@ -57,39 +58,54 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## jobFunctionsGet
+## listJobFunctions
 
-> JobFunctionsGet200Response jobFunctionsGet()
+> ListJobFunctions200Response listJobFunctions(opts)
 
 Get a list of all job functions
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.JobFunctionsApi();
-apiInstance.jobFunctionsGet().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.JobFunctionsApi();
+let opts = {
+  'page': 1, // Number | Page number for pagination
+  'limit': 20, // Number | Number of items per page
+  'sortBy': "sortBy_example", // String | Field to sort by
+  'sortOrder': "'desc'", // String | Sort order (ascending or descending)
+  'search': "search_example" // String | Search term to filter results
+};
+apiInstance.listJobFunctions(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **Number**| Page number for pagination | [optional] [default to 1]
+ **limit** | **Number**| Number of items per page | [optional] [default to 20]
+ **sortBy** | **String**| Field to sort by | [optional] 
+ **sortOrder** | **String**| Sort order (ascending or descending) | [optional] [default to &#39;desc&#39;]
+ **search** | **String**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**JobFunctionsGet200Response**](JobFunctionsGet200Response.md)
+[**ListJobFunctions200Response**](ListJobFunctions200Response.md)
 
 ### Authorization
 

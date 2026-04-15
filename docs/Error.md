@@ -1,4 +1,4 @@
-# SparteraApiDocumentation.Error
+# SparteraApiSdk.Error
 
 ## Properties
 

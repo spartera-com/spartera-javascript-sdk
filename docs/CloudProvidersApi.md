@@ -1,47 +1,52 @@
-# SparteraApiDocumentation.CloudProvidersApi
+# SparteraApiSdk.CloudProvidersApi
 
 All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cloudProvidersGet**](CloudProvidersApi.md#cloudProvidersGet) | **GET** /cloud-providers | Get a list of all cloud providers
-[**cloudProvidersProviderIdGet**](CloudProvidersApi.md#cloudProvidersProviderIdGet) | **GET** /cloud-providers/{provider_id} | Get single cloud provider by ID
+[**getCloudProvidersById**](CloudProvidersApi.md#getCloudProvidersById) | **GET** /cloud-providers/{provider_id} | Get single cloud provider by ID
+[**listCloudProviders**](CloudProvidersApi.md#listCloudProviders) | **GET** /cloud-providers | Get a list of all cloud providers
 
 
 
-## cloudProvidersGet
+## getCloudProvidersById
 
-> CloudProvidersGet200Response cloudProvidersGet()
+> GetCloudProvidersById200Response getCloudProvidersById(providerId)
 
-Get a list of all cloud providers
+Get single cloud provider by ID
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.CloudProvidersApi();
-apiInstance.cloudProvidersGet().then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.CloudProvidersApi();
+let providerId = "providerId_example"; // String | Unique identifier for the Provider
+apiInstance.getCloudProvidersById(providerId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
 
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **providerId** | **String**| Unique identifier for the Provider | 
 
 ### Return type
 
-[**CloudProvidersGet200Response**](CloudProvidersGet200Response.md)
+[**GetCloudProvidersById200Response**](GetCloudProvidersById200Response.md)
 
 ### Authorization
 
@@ -53,31 +58,38 @@ This endpoint does not need any parameter.
 - **Accept**: application/json
 
 
-## cloudProvidersProviderIdGet
+## listCloudProviders
 
-> CloudProvidersProviderIdGet200Response cloudProvidersProviderIdGet(providerId)
+> ListCloudProviders200Response listCloudProviders(opts)
 
-Get single cloud provider by ID
+Get a list of all cloud providers
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.CloudProvidersApi();
-let providerId = "providerId_example"; // String | 
-apiInstance.cloudProvidersProviderIdGet(providerId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.CloudProvidersApi();
+let opts = {
+  'page': 1, // Number | Page number for pagination
+  'limit': 20, // Number | Number of items per page
+  'sortBy': "sortBy_example", // String | Field to sort by
+  'sortOrder': "'desc'", // String | Sort order (ascending or descending)
+  'search': "search_example" // String | Search term to filter results
+};
+apiInstance.listCloudProviders(opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -85,11 +97,15 @@ apiInstance.cloudProvidersProviderIdGet(providerId).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerId** | **String**|  | 
+ **page** | **Number**| Page number for pagination | [optional] [default to 1]
+ **limit** | **Number**| Number of items per page | [optional] [default to 20]
+ **sortBy** | **String**| Field to sort by | [optional] 
+ **sortOrder** | **String**| Sort order (ascending or descending) | [optional] [default to &#39;desc&#39;]
+ **search** | **String**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**CloudProvidersProviderIdGet200Response**](CloudProvidersProviderIdGet200Response.md)
+[**ListCloudProviders200Response**](ListCloudProviders200Response.md)
 
 ### Authorization
 

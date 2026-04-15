@@ -1,17 +1,19 @@
-# SparteraApiDocumentation.Users
+# SparteraApiSdk.Users
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dateCreated** | **Date** |  | [optional] 
-**lastUpdated** | **Date** |  | [optional] 
-**userId** | **String** |  | [optional] 
-**companyId** | **String** |  | 
-**functionId** | **Number** |  | [optional] 
-**status** | **String** | Enum type: StatusCodes | 
-**emailAddress** | **String** |  | [optional] 
-**timezone** | **String** |  | [optional] 
+**dateCreated** | **Date** | Optional. | [optional] 
+**lastUpdated** | **Date** | Optional. | [optional] 
+**userId** | **String** | Unique identifier. | [optional] 
+**companyId** | **String** | References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required. | 
+**roleId** | **Number** | User&#39;s role for RBAC - single source of truth | 
+**functionId** | **Number** | User&#39;s job function/title | [optional] 
+**status** | **String** | Required. One of: ACTIVE, PENDING, INACTIVE, BANNED. | 
+**emailAddress** | **String** | Optional. Must be unique. | [optional] 
+**timezone** | **String** | Optional. | [optional] 
+**marketingOptOut** | **Boolean** | Whether user has opted out of marketing communications. Default false &#x3D; opted in per ToS. | 
 
 
 

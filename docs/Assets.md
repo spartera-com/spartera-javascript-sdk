@@ -1,55 +1,85 @@
-# SparteraApiDocumentation.Assets
+# SparteraApiSdk.Assets
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dateCreated** | **Date** |  | [optional] 
-**lastUpdated** | **Date** |  | [optional] 
-**assetId** | **String** |  | [optional] 
-**userId** | **String** |  | [optional] 
-**companyId** | **String** |  | 
-**connectionId** | **String** |  | [optional] 
-**llmConnectionId** | **String** |  | [optional] 
-**snippetId** | **Number** |  | [optional] 
-**industryId** | **Number** |  | [optional] 
+**dateCreated** | **Date** | Optional. | [optional] 
+**lastUpdated** | **Date** | Optional. | [optional] 
+**assetId** | **String** | Unique identifier. | [optional] 
+**userId** | **String** | References users.user_id — An individual user account within a company. See GET /users for valid values. Optional. | [optional] 
+**companyId** | **String** | References companies.company_id — A Spartera seller or buyer company account. See GET /companies for valid values. Required. | 
+**connectionId** | **String** | Optional. | [optional] 
+**llmConnectionId** | **String** | References connections.connection_id — Secure connections from Spartera to your databases and data warehouses. See GET /connections for valid values. Optional. | [optional] 
+**snippetId** | **Number** | References snippets.snippet_id — Predefined code snippets to accelerate insight creation. See GET /snippets for valid values. Optional. | [optional] 
+**industryId** | **Number** | References industries.industry_id — Available industry categories for asset classification. Based on US NAISC codes.. See GET /industries for valid values. Optional. | [optional] 
 **aiJobId** | **String** | Links to the AutoInsights job that created this asset | [optional] 
+**aucId** | **Number** | Primary use case for this asset, from clustering analysis | [optional] 
+**functionId** | **String** | Optional identifier for routing to specific functions/models at seller endpoint. For GET: appended to URL path. For POST: included in JSON body. | [optional] 
 **approvalStatus** | **String** | Approval status for AI-generated assets | [optional] 
 **approvedByUserId** | **String** | User who approved this asset for marketplace | [optional] 
 **approvedAt** | **Date** | When this asset was approved for marketplace | [optional] 
-**name** | **String** |  | 
-**slug** | **String** |  | [optional] 
-**description** | **String** |  | [optional] 
-**source** | **String** | Enum type: Source | 
-**assetType** | **String** | Enum type: AssetType | [optional] 
+**name** | **String** | Required. | 
+**slug** | **String** | Optional. | [optional] 
+**description** | **String** | Optional. | [optional] 
+**detailedDescription** | **String** | Long-form HTML description for product pages and SEO | [optional] 
+**source** | **String** | Required. One of: MANUAL, AUTOMATIC. | 
+**assetType** | **String** | Optional. One of: CALCULATION, VISUALIZATION, DATA. | [optional] 
 **assetSchema** | **Object** | Stores database table schema data including columns, types, and metadata | [optional] 
-**visibility** | **String** | Enum type: Visibility | [optional] 
-**tags** | **String** |  | [optional] 
-**sqlLogic** | **String** |  | [optional] 
-**sourceSchemaName** | **String** |  | [optional] 
-**sourceTableName** | **String** |  | [optional] 
-**sellInMarketplace** | **Boolean** |  | 
-**vizChartLibrary** | **String** | Enum type: PlottingLibrary | [optional] 
-**vizChartType** | **String** | Enum type: ChartType | [optional] 
-**vizDepVarColName** | **String** |  | [optional] 
-**vizIndepVarColName** | **String** |  | [optional] 
-**vizSizeColName** | **String** |  | [optional] 
-**vizColorColName** | **String** |  | [optional] 
-**vizDataAggregation** | **String** | Enum type: AggregationType | [optional] 
-**vizSortDirection** | **String** | Enum type: SortDirection | [optional] 
-**vizDataLimit** | **Number** |  | [optional] 
-**vizColorScheme** | **String** | Enum type: ColorScheme | [optional] 
-**allowParams** | **Boolean** |  | 
-**acceptTerms** | **Boolean** |  | 
-**cached** | **Boolean** |  | [optional] 
-**schedule** | **String** |  | [optional] 
-**nextRun** | **Date** |  | [optional] 
+**visibility** | **String** | Optional. One of: PRIVATE, SHARED. | [optional] 
+**tags** | **String** | Optional. | [optional] 
+**shortCode** | **String** | Short code for tera.ac URL shortener (e.g., &#39;f78zq1&#39;) | [optional] 
+**restrictedDomains** | **String** | Semicolon or comma-separated list of domains restricted from accessing this asset | [optional] 
+**sqlLogic** | **String** | Optional. | [optional] 
+**sourceSchemaName** | **String** | Optional. | [optional] 
+**sourceTableName** | **String** | Optional. | [optional] 
+**sellInMarketplace** | **Boolean** | Required. | 
+**requireCustomization** | **Boolean** | Whether this asset requires customization before use | 
+**vizChartLibrary** | **String** | Optional. One of: PLOTLY, MATPLOTLIB, SEABORN. | [optional] 
+**vizChartType** | **String** | Optional. One of: LINE, BAR, PIE, DOUGHNUT, POLAR, … (8 total). | [optional] 
+**vizDepVarColName** | **String** | Optional. | [optional] 
+**vizIndepVarColName** | **String** | Optional. | [optional] 
+**vizSizeColName** | **String** | Optional. | [optional] 
+**vizColorColName** | **String** | Optional. | [optional] 
+**vizDataAggregation** | **String** | Optional. One of: No Aggregation, Sum, Average, Count, Minimum, … (6 total). | [optional] 
+**vizSortDirection** | **String** | Optional. One of: No Sorting, Ascending, Descending. | [optional] 
+**vizDataLimit** | **Number** | Optional. | [optional] 
+**vizColorScheme** | **String** | Optional. One of: Default, Sequential, Diverging, Categorical, Monochrome, … (8 total). | [optional] 
+**vizShowLegend** | **Boolean** | Show/hide chart legend | [optional] 
+**vizShowGrid** | **Boolean** | Show/hide grid lines | [optional] 
+**vizShowTrendline** | **Boolean** | Show trendline for scatter/line charts | [optional] 
+**vizLineSmoothing** | **Boolean** | Enable smoothing for line charts | [optional] 
+**vizBarStacked** | **Boolean** | Stack bars instead of grouping | [optional] 
+**vizFilterDirection** | **String** | Whether data_limit shows TOP or BOTTOM N | [optional] 
+**allowParams** | **Boolean** | Required. | 
+**acceptTerms** | **Boolean** | Required. | 
+**cached** | **Boolean** | Optional. | [optional] 
+**schedule** | **String** | Optional. | [optional] 
+**nextRun** | **Date** | Optional. | [optional] 
 **dataTimePeriodStart** | **Date** | Start date of the data time period covered | [optional] 
 **dataTimePeriodEnd** | **Date** | End date of the data time period covered | [optional] 
-**geographicCoverageType** | **String** | Type of geographic coverage (Enum type: GeographicCoverage) | [optional] 
+**geographicCoverageType** | **String** | Type of geographic coverage | [optional] 
 **geographicCoverageDetails** | **String** | Specific regions/countries covered (e.g., &#39;United States, Canada, Mexico&#39;) | [optional] 
-**dataSourceRefreshFrequency** | **String** | How often the source data is refreshed (Enum type: DataRefreshFrequency) | [optional] 
+**dataSourceRefreshFrequency** | **String** | How often the source data is refreshed | [optional] 
 **dataSourceLastRefreshed** | **Date** | When the source data was last refreshed | [optional] 
+**rateLimitNumber** | **Number** | Number of requests allowed per period (e.g., 100) | [optional] 
+**rateLimitPeriod** | **String** | Time period for rate limiting (second, minute, hour, day) | [optional] 
+**rateLimitGranularity** | **String** | Granularity level for rate limiting (USER, COMPANY, IP) | [optional] 
+
+
+
+## Enum: ApprovalStatusEnum
+
+
+* `PENDING` (value: `"PENDING"`)
+
+* `APPROVED` (value: `"APPROVED"`)
+
+* `REJECTED` (value: `"REJECTED"`)
+
+* `NEEDS_REVISION` (value: `"NEEDS_REVISION"`)
+
+
 
 
 
@@ -108,8 +138,6 @@ Name | Type | Description | Notes
 
 * `BAR` (value: `"BAR"`)
 
-* `HORIZONTALBAR` (value: `"HORIZONTALBAR"`)
-
 * `PIE` (value: `"PIE"`)
 
 * `DOUGHNUT` (value: `"DOUGHNUT"`)
@@ -121,8 +149,6 @@ Name | Type | Description | Notes
 * `BUBBLE` (value: `"BUBBLE"`)
 
 * `SCATTER` (value: `"SCATTER"`)
-
-* `NA` (value: `"NA"`)
 
 
 
@@ -183,6 +209,17 @@ Name | Type | Description | Notes
 
 
 
+## Enum: VizFilterDirectionEnum
+
+
+* `TOP` (value: `"TOP"`)
+
+* `BOTTOM` (value: `"BOTTOM"`)
+
+
+
+
+
 ## Enum: GeographicCoverageTypeEnum
 
 
@@ -228,6 +265,36 @@ Name | Type | Description | Notes
 * `CUSTOM` (value: `"CUSTOM"`)
 
 * `UNKNOWN` (value: `"UNKNOWN"`)
+
+
+
+
+
+## Enum: RateLimitPeriodEnum
+
+
+* `SECOND` (value: `"SECOND"`)
+
+* `MINUTE` (value: `"MINUTE"`)
+
+* `HOUR` (value: `"HOUR"`)
+
+* `DAY` (value: `"DAY"`)
+
+
+
+
+
+## Enum: RateLimitGranularityEnum
+
+
+* `USER` (value: `"USER"`)
+
+* `COMPANY` (value: `"COMPANY"`)
+
+* `IP` (value: `"IP"`)
+
+* `GLOBAL` (value: `"GLOBAL"`)
 
 
 

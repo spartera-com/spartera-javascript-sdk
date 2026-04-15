@@ -1,40 +1,41 @@
-# SparteraApiDocumentation.StorageEnginesApi
+# SparteraApiSdk.StorageEnginesApi
 
 All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cloudProvidersProviderIdStorageEnginesEngineIdGet**](StorageEnginesApi.md#cloudProvidersProviderIdStorageEnginesEngineIdGet) | **GET** /cloud-providers/{provider_id}/storage-engines/{engine_id} | Get single storage engine by ID
-[**cloudProvidersProviderIdStorageEnginesGet**](StorageEnginesApi.md#cloudProvidersProviderIdStorageEnginesGet) | **GET** /cloud-providers/{provider_id}/storage-engines | Get a list of all storage engines
+[**getStorageEnginesById**](StorageEnginesApi.md#getStorageEnginesById) | **GET** /cloud-providers/{provider_id}/storage-engines/{engine_id} | Get single storage engine by ID
+[**listStorageEngines**](StorageEnginesApi.md#listStorageEngines) | **GET** /cloud-providers/{provider_id}/storage-engines | Get a list of all storage engines
 
 
 
-## cloudProvidersProviderIdStorageEnginesEngineIdGet
+## getStorageEnginesById
 
-> CloudProvidersProviderIdStorageEnginesGet200Response cloudProvidersProviderIdStorageEnginesEngineIdGet(providerId, engineId)
+> GetStorageEnginesById200Response getStorageEnginesById(providerId, engineId)
 
 Get single storage engine by ID
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.StorageEnginesApi();
-let providerId = "providerId_example"; // String | 
-let engineId = "engineId_example"; // String | 
-apiInstance.cloudProvidersProviderIdStorageEnginesEngineIdGet(providerId, engineId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.StorageEnginesApi();
+let providerId = "providerId_example"; // String | Unique identifier for the Provider
+let engineId = "engineId_example"; // String | Unique identifier for the Engine
+apiInstance.getStorageEnginesById(providerId, engineId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -42,12 +43,12 @@ apiInstance.cloudProvidersProviderIdStorageEnginesEngineIdGet(providerId, engine
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerId** | **String**|  | 
- **engineId** | **String**|  | 
+ **providerId** | **String**| Unique identifier for the Provider | 
+ **engineId** | **String**| Unique identifier for the Engine | 
 
 ### Return type
 
-[**CloudProvidersProviderIdStorageEnginesGet200Response**](CloudProvidersProviderIdStorageEnginesGet200Response.md)
+[**GetStorageEnginesById200Response**](GetStorageEnginesById200Response.md)
 
 ### Authorization
 
@@ -59,31 +60,39 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## cloudProvidersProviderIdStorageEnginesGet
+## listStorageEngines
 
-> CloudProvidersProviderIdStorageEnginesGet200Response cloudProvidersProviderIdStorageEnginesGet(providerId)
+> ListStorageEngines200Response listStorageEngines(providerId, opts)
 
 Get a list of all storage engines
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.StorageEnginesApi();
-let providerId = "providerId_example"; // String | 
-apiInstance.cloudProvidersProviderIdStorageEnginesGet(providerId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.StorageEnginesApi();
+let providerId = "providerId_example"; // String | Unique identifier for the Provider
+let opts = {
+  'page': 1, // Number | Page number for pagination
+  'limit': 20, // Number | Number of items per page
+  'sortBy': "sortBy_example", // String | Field to sort by
+  'sortOrder': "'desc'", // String | Sort order (ascending or descending)
+  'search': "search_example" // String | Search term to filter results
+};
+apiInstance.listStorageEngines(providerId, opts, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -91,11 +100,16 @@ apiInstance.cloudProvidersProviderIdStorageEnginesGet(providerId).then((data) =>
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **providerId** | **String**|  | 
+ **providerId** | **String**| Unique identifier for the Provider | 
+ **page** | **Number**| Page number for pagination | [optional] [default to 1]
+ **limit** | **Number**| Number of items per page | [optional] [default to 20]
+ **sortBy** | **String**| Field to sort by | [optional] 
+ **sortOrder** | **String**| Sort order (ascending or descending) | [optional] [default to &#39;desc&#39;]
+ **search** | **String**| Search term to filter results | [optional] 
 
 ### Return type
 
-[**CloudProvidersProviderIdStorageEnginesGet200Response**](CloudProvidersProviderIdStorageEnginesGet200Response.md)
+[**ListStorageEngines200Response**](ListStorageEngines200Response.md)
 
 ### Authorization
 

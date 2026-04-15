@@ -1,46 +1,47 @@
-# SparteraApiDocumentation.AlertsApi
+# SparteraApiSdk.AlertsApi
 
 All URIs are relative to *https://api.spartera.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**companiesCompanyIdUsersUserIdAlertsAlertIdDelete**](AlertsApi.md#companiesCompanyIdUsersUserIdAlertsAlertIdDelete) | **DELETE** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Delete single alert by ID
-[**companiesCompanyIdUsersUserIdAlertsAlertIdGet**](AlertsApi.md#companiesCompanyIdUsersUserIdAlertsAlertIdGet) | **GET** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Get single alert by ID
-[**companiesCompanyIdUsersUserIdAlertsAlertIdPatch**](AlertsApi.md#companiesCompanyIdUsersUserIdAlertsAlertIdPatch) | **PATCH** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Update an existing alert by ID
-[**companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGet**](AlertsApi.md#companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGet) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id}/all | Get all alerts for a specific asset
-[**companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet**](AlertsApi.md#companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id} | Get all alerts for a specific asset (by user)
-[**companiesCompanyIdUsersUserIdAlertsGet**](AlertsApi.md#companiesCompanyIdUsersUserIdAlertsGet) | **GET** /companies/{company_id}/users/{user_id}/alerts | Get a list of all alerts for a specific user
-[**companiesCompanyIdUsersUserIdAlertsPost**](AlertsApi.md#companiesCompanyIdUsersUserIdAlertsPost) | **POST** /companies/{company_id}/users/{user_id}/alerts | POST /companies/{company_id}/users/{user_id}/alerts
+[**createAlerts**](AlertsApi.md#createAlerts) | **POST** /companies/{company_id}/users/{user_id}/alerts | POST /companies/{company_id}/users/{user_id}/alerts
+[**deleteAlerts**](AlertsApi.md#deleteAlerts) | **DELETE** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Delete single alert by ID
+[**getAlertsById**](AlertsApi.md#getAlertsById) | **GET** /companies/{company_id}/users/{user_id}/alerts | Get a list of all alerts for a specific user
+[**getAlertsByIdAssetAll**](AlertsApi.md#getAlertsByIdAssetAll) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id}/all | Get all alerts for a specific asset
+[**getAlertsByIdUsers**](AlertsApi.md#getAlertsByIdUsers) | **GET** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Get single alert by ID
+[**getAlertsByIdUsersAsset**](AlertsApi.md#getAlertsByIdUsersAsset) | **GET** /companies/{company_id}/users/{user_id}/alerts/asset/{asset_id} | Get all alerts for a specific asset (by user)
+[**updateAlerts**](AlertsApi.md#updateAlerts) | **PATCH** /companies/{company_id}/users/{user_id}/alerts/{alert_id} | Update an existing alert by ID
 
 
 
-## companiesCompanyIdUsersUserIdAlertsAlertIdDelete
+## createAlerts
 
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response companiesCompanyIdUsersUserIdAlertsAlertIdDelete(companyId, userId, alertId)
+> CreateAlerts200Response createAlerts(companyId, userId, alertsInput)
 
-Delete single alert by ID
+POST /companies/{company_id}/users/{user_id}/alerts
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.AlertsApi();
-let companyId = "companyId_example"; // String | 
-let userId = "userId_example"; // String | 
-let alertId = "alertId_example"; // String | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsAlertIdDelete(companyId, userId, alertId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.AlertsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let userId = "userId_example"; // String | Unique identifier for the User
+let alertsInput = new SparteraApiSdk.AlertsInput(); // AlertsInput | 
+apiInstance.createAlerts(companyId, userId, alertsInput, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -48,119 +49,13 @@ apiInstance.companiesCompanyIdUsersUserIdAlertsAlertIdDelete(companyId, userId, 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **userId** | **String**|  | 
- **alertId** | **String**|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **userId** | **String**| Unique identifier for the User | 
+ **alertsInput** | [**AlertsInput**](AlertsInput.md)|  | 
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdDelete200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## companiesCompanyIdUsersUserIdAlertsAlertIdGet
-
-> CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response companiesCompanyIdUsersUserIdAlertsAlertIdGet(companyId, userId, alertId)
-
-Get single alert by ID
-
-### Example
-
-```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SparteraApiDocumentation.AlertsApi();
-let companyId = "companyId_example"; // String | 
-let userId = "userId_example"; // String | 
-let alertId = "alertId_example"; // String | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsAlertIdGet(companyId, userId, alertId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **userId** | **String**|  | 
- **alertId** | **String**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## companiesCompanyIdUsersUserIdAlertsAlertIdPatch
-
-> CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response companiesCompanyIdUsersUserIdAlertsAlertIdPatch(companyId, userId, alertId, alertsUpdate)
-
-Update an existing alert by ID
-
-### Example
-
-```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SparteraApiDocumentation.AlertsApi();
-let companyId = "companyId_example"; // String | 
-let userId = "userId_example"; // String | 
-let alertId = "alertId_example"; // String | 
-let alertsUpdate = new SparteraApiDocumentation.AlertsUpdate(); // AlertsUpdate | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsAlertIdPatch(companyId, userId, alertId, alertsUpdate).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **userId** | **String**|  | 
- **alertId** | **String**|  | 
- **alertsUpdate** | [**AlertsUpdate**](AlertsUpdate.md)|  | 
-
-### Return type
-
-[**CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response**](CompaniesCompanyIdUsersUserIdAlertsAlertIdPatch200Response.md)
+[**CreateAlerts200Response**](CreateAlerts200Response.md)
 
 ### Authorization
 
@@ -172,33 +67,34 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGet
+## deleteAlerts
 
-> CompaniesCompanyIdUsersUserIdAlertsGet200Response companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGet(companyId, userId, assetId)
+> DeleteAlerts200Response deleteAlerts(companyId, userId, alertId)
 
-Get all alerts for a specific asset
+Delete single alert by ID
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.AlertsApi();
-let companyId = "companyId_example"; // String | 
-let userId = "userId_example"; // String | 
-let assetId = "assetId_example"; // String | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGet(companyId, userId, assetId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.AlertsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let userId = "userId_example"; // String | Unique identifier for the User
+let alertId = "alertId_example"; // String | Unique identifier for the Alert
+apiInstance.deleteAlerts(companyId, userId, alertId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -206,13 +102,13 @@ apiInstance.companiesCompanyIdUsersUserIdAlertsAssetAssetIdAllGet(companyId, use
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **userId** | **String**|  | 
- **assetId** | **String**|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **userId** | **String**| Unique identifier for the User | 
+ **alertId** | **String**| Unique identifier for the Alert | 
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsGet200Response**](CompaniesCompanyIdUsersUserIdAlertsGet200Response.md)
+[**DeleteAlerts200Response**](DeleteAlerts200Response.md)
 
 ### Authorization
 
@@ -224,84 +120,33 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet
+## getAlertsById
 
-> CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet(companyId, userId, assetId)
-
-Get all alerts for a specific asset (by user)
-
-### Example
-
-```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
-// Configure API key authorization: ApiKeyAuth
-let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
-ApiKeyAuth.apiKey = 'YOUR API KEY';
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//ApiKeyAuth.apiKeyPrefix = 'Token';
-
-let apiInstance = new SparteraApiDocumentation.AlertsApi();
-let companyId = "companyId_example"; // String | 
-let userId = "userId_example"; // String | 
-let assetId = "assetId_example"; // String | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsAssetAssetIdGet(companyId, userId, assetId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
-});
-
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **userId** | **String**|  | 
- **assetId** | **String**|  | 
-
-### Return type
-
-[**CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response**](CompaniesCompanyIdUsersUserIdAlertsAssetAssetIdGet200Response.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-
-## companiesCompanyIdUsersUserIdAlertsGet
-
-> CompaniesCompanyIdUsersUserIdAlertsGet200Response companiesCompanyIdUsersUserIdAlertsGet(companyId, userId)
+> GetAlertsById200Response getAlertsById(companyId, userId)
 
 Get a list of all alerts for a specific user
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.AlertsApi();
-let companyId = "companyId_example"; // String | 
-let userId = "userId_example"; // String | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsGet(companyId, userId).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.AlertsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let userId = "userId_example"; // String | Unique identifier for the User
+apiInstance.getAlertsById(companyId, userId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -309,12 +154,12 @@ apiInstance.companiesCompanyIdUsersUserIdAlertsGet(companyId, userId).then((data
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **userId** | **String**|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **userId** | **String**| Unique identifier for the User | 
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsGet200Response**](CompaniesCompanyIdUsersUserIdAlertsGet200Response.md)
+[**GetAlertsById200Response**](GetAlertsById200Response.md)
 
 ### Authorization
 
@@ -326,33 +171,34 @@ Name | Type | Description  | Notes
 - **Accept**: application/json
 
 
-## companiesCompanyIdUsersUserIdAlertsPost
+## getAlertsByIdAssetAll
 
-> CompaniesCompanyIdUsersUserIdAlertsPost200Response companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alertsInput)
+> GetAlertsById200Response getAlertsByIdAssetAll(companyId, userId, assetId)
 
-POST /companies/{company_id}/users/{user_id}/alerts
+Get all alerts for a specific asset
 
 ### Example
 
 ```javascript
-import SparteraApiDocumentation from 'spartera_api_documentation';
-let defaultClient = SparteraApiDocumentation.ApiClient.instance;
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
 // Configure API key authorization: ApiKeyAuth
 let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
 ApiKeyAuth.apiKey = 'YOUR API KEY';
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
-let apiInstance = new SparteraApiDocumentation.AlertsApi();
-let companyId = "companyId_example"; // String | 
-let userId = "userId_example"; // String | 
-let alertsInput = new SparteraApiDocumentation.AlertsInput(); // AlertsInput | 
-apiInstance.companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alertsInput).then((data) => {
-  console.log('API called successfully. Returned data: ' + data);
-}, (error) => {
-  console.error(error);
+let apiInstance = new SparteraApiSdk.AlertsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let userId = "userId_example"; // String | Unique identifier for the User
+let assetId = "assetId_example"; // String | Unique identifier for the Asset
+apiInstance.getAlertsByIdAssetAll(companyId, userId, assetId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
 });
-
 ```
 
 ### Parameters
@@ -360,13 +206,174 @@ apiInstance.companiesCompanyIdUsersUserIdAlertsPost(companyId, userId, alertsInp
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **companyId** | **String**|  | 
- **userId** | **String**|  | 
- **alertsInput** | [**AlertsInput**](AlertsInput.md)|  | 
+ **companyId** | **String**| Unique identifier for the Company | 
+ **userId** | **String**| Unique identifier for the User | 
+ **assetId** | **String**| Unique identifier for the Asset | 
 
 ### Return type
 
-[**CompaniesCompanyIdUsersUserIdAlertsPost200Response**](CompaniesCompanyIdUsersUserIdAlertsPost200Response.md)
+[**GetAlertsById200Response**](GetAlertsById200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAlertsByIdUsers
+
+> GetAlertsById200Response getAlertsByIdUsers(companyId, userId, alertId)
+
+Get single alert by ID
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.AlertsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let userId = "userId_example"; // String | Unique identifier for the User
+let alertId = "alertId_example"; // String | Unique identifier for the Alert
+apiInstance.getAlertsByIdUsers(companyId, userId, alertId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **userId** | **String**| Unique identifier for the User | 
+ **alertId** | **String**| Unique identifier for the Alert | 
+
+### Return type
+
+[**GetAlertsById200Response**](GetAlertsById200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getAlertsByIdUsersAsset
+
+> GetAlertsById200Response getAlertsByIdUsersAsset(companyId, userId, assetId)
+
+Get all alerts for a specific asset (by user)
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.AlertsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let userId = "userId_example"; // String | Unique identifier for the User
+let assetId = "assetId_example"; // String | Unique identifier for the Asset
+apiInstance.getAlertsByIdUsersAsset(companyId, userId, assetId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **userId** | **String**| Unique identifier for the User | 
+ **assetId** | **String**| Unique identifier for the Asset | 
+
+### Return type
+
+[**GetAlertsById200Response**](GetAlertsById200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## updateAlerts
+
+> UpdateAlerts200Response updateAlerts(companyId, userId, alertId, alertsUpdate)
+
+Update an existing alert by ID
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.AlertsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let userId = "userId_example"; // String | Unique identifier for the User
+let alertId = "alertId_example"; // String | Unique identifier for the Alert
+let alertsUpdate = new SparteraApiSdk.AlertsUpdate(); // AlertsUpdate | 
+apiInstance.updateAlerts(companyId, userId, alertId, alertsUpdate, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **userId** | **String**| Unique identifier for the User | 
+ **alertId** | **String**| Unique identifier for the Alert | 
+ **alertsUpdate** | [**AlertsUpdate**](AlertsUpdate.md)|  | 
+
+### Return type
+
+[**UpdateAlerts200Response**](UpdateAlerts200Response.md)
 
 ### Authorization
 

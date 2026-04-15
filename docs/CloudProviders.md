@@ -1,14 +1,14 @@
-# SparteraApiDocumentation.CloudProviders
+# SparteraApiSdk.CloudProviders
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dateCreated** | **Date** |  | [optional] 
-**lastUpdated** | **Date** |  | [optional] 
-**providerId** | **Number** |  | [optional] 
-**name** | **String** |  | 
-**parentCompany** | **String** |  | [optional] 
-**marketingHomepageUrl** | **String** |  | [optional] 
+**dateCreated** | **Date** | Optional. | [optional] 
+**lastUpdated** | **Date** | Optional. | [optional] 
+**providerId** | **Number** | Auto-generated unique identifier. | [optional] 
+**name** | **String** | Required. | 
+**parentCompany** | **String** | Optional. | [optional] 
+**marketingHomepageUrl** | **String** | Optional. | [optional] 
 
 

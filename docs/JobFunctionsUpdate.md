@@ -1,9 +1,9 @@
-# SparteraApiDocumentation.JobFunctionsUpdate
+# SparteraApiSdk.JobFunctionsUpdate
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
+**name** | **String** | Required. Must be unique. | [optional] 
 
 

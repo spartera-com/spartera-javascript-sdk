@@ -1,4 +1,4 @@
-# SparteraApiDocumentation.InlineObject3
+# SparteraApiSdk.InlineObject3
 
 ## Properties
 
