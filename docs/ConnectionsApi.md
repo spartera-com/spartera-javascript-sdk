@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**getConnectionsById**](ConnectionsApi.md#getConnectionsById) | **GET** /companies/{company_id}/connections/{connection_id} | Get single connection by ID
 [**getConnectionsById2**](ConnectionsApi.md#getConnectionsById2) | **GET** /companies/{company_id}/connections/{connection_id}/test | Test the specified connection
 [**getConnectionsByIdInfoschema**](ConnectionsApi.md#getConnectionsByIdInfoschema) | **GET** /companies/{company_id}/connections/{connection_id}/infoschema | Retrieve the information schema for the specified connection
+[**getConnectionsByIdSampleData**](ConnectionsApi.md#getConnectionsByIdSampleData) | **GET** /companies/{company_id}/connections/{connection_id}/sample-data | Get a randomized sample of rows from a table on this connection.     Used by the visualization editor to give sellers data to author against.      Query Parameters:         schema_name (required): Schema/dataset name         table_name  (required): Table name         limit       (optional): Max rows to return (default 1000, max 10000)      Returns columnar data — {column_name: [values]} — ready for Plotly&#39;s     dataSources prop. The actual chart at render time will pull fresh data     via the asset&#39;s saved SQL; this is only for authoring preview.
 [**listConnections**](ConnectionsApi.md#listConnections) | **GET** /companies/{company_id}/connections | Get all connections for a specific company
 [**updateConnections**](ConnectionsApi.md#updateConnections) | **PATCH** /companies/{company_id}/connections/{connection_id} | Update an existing connection by ID
 
@@ -251,6 +252,57 @@ let apiInstance = new SparteraApiSdk.ConnectionsApi();
 let companyId = "companyId_example"; // String | Unique identifier for the Company
 let connectionId = "connectionId_example"; // String | Unique identifier for the Connection
 apiInstance.getConnectionsByIdInfoschema(companyId, connectionId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **connectionId** | **String**| Unique identifier for the Connection | 
+
+### Return type
+
+[**GetConnectionsById200Response**](GetConnectionsById200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getConnectionsByIdSampleData
+
+> GetConnectionsById200Response getConnectionsByIdSampleData(companyId, connectionId)
+
+Get a randomized sample of rows from a table on this connection.     Used by the visualization editor to give sellers data to author against.      Query Parameters:         schema_name (required): Schema/dataset name         table_name  (required): Table name         limit       (optional): Max rows to return (default 1000, max 10000)      Returns columnar data — {column_name: [values]} — ready for Plotly&#39;s     dataSources prop. The actual chart at render time will pull fresh data     via the asset&#39;s saved SQL; this is only for authoring preview.
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.ConnectionsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let connectionId = "connectionId_example"; // String | Unique identifier for the Connection
+apiInstance.getConnectionsByIdSampleData(companyId, connectionId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

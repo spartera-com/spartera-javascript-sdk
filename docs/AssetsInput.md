@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **assetType** | **String** | Optional. One of: CALCULATION, VISUALIZATION, DATA. | [optional] 
 **assetSchema** | **Object** | Stores database table schema data including columns, types, and metadata | [optional] 
 **tags** | **String** | Optional. | [optional] 
+**topQuestions** | **String** | Top 3 questions this asset can help answer, in English. Stored as JSON array of strings (1-3 items, 15-200 chars each). Required for marketplace assets. | [optional] 
 **shortCode** | **String** | Short code for tera.ac URL shortener (e.g., &#39;f78zq1&#39;) | [optional] 
 **restrictedDomains** | **String** | Semicolon or comma-separated list of domains restricted from accessing this asset | [optional] 
 **sqlLogic** | **String** | Optional. | [optional] 
@@ -28,6 +29,7 @@ Name | Type | Description | Notes
 **sourceTableName** | **String** | Optional. | [optional] 
 **sellInMarketplace** | **Boolean** | Required. | [optional] 
 **requireCustomization** | **Boolean** | Whether this asset requires customization before use | [optional] 
+**vizSpec** | **Object** | Plotly figure JSON describing the visualization. Authored via the visual editor or via API. When populated, takes precedence over the legacy viz_* fields. Shape follows Plotly&#39;s figure schema: {data: [{type: &#39;...&#39;, xsrc: &#39;...&#39;, ...}], layout: {...}}. Column references use *src keys (xsrc, ysrc, labelssrc, etc.) and are hydrated with actual data at render time. | [optional] 
 **vizChartLibrary** | **String** | Optional. One of: PLOTLY, MATPLOTLIB, SEABORN. | [optional] 
 **vizChartType** | **String** | Optional. One of: LINE, BAR, PIE, DOUGHNUT, POLAR, … (8 total). | [optional] 
 **vizDepVarColName** | **String** | Optional. | [optional] 
@@ -51,10 +53,10 @@ Name | Type | Description | Notes
 **nextRun** | **Date** | Optional. | [optional] 
 **dataTimePeriodStart** | **Date** | Start date of the data time period covered | [optional] 
 **dataTimePeriodEnd** | **Date** | End date of the data time period covered | [optional] 
+**dateCollectionStart** | **Date** | When the seller began actively collecting this data. Distinct from data_time_period_start, which describes when the records themselves begin. Backfilled historical data will have date_collection_start &gt; data_time_period_start. | [optional] 
 **geographicCoverageType** | **String** | Type of geographic coverage | [optional] 
 **geographicCoverageDetails** | **String** | Specific regions/countries covered (e.g., &#39;United States, Canada, Mexico&#39;) | [optional] 
 **dataSourceRefreshFrequency** | **String** | How often the source data is refreshed | [optional] 
-**dataSourceLastRefreshed** | **Date** | When the source data was last refreshed | [optional] 
 **rateLimitNumber** | **Number** | Number of requests allowed per period (e.g., 100) | [optional] 
 **rateLimitPeriod** | **String** | Time period for rate limiting (second, minute, hour, day) | [optional] 
 **rateLimitGranularity** | **String** | Granularity level for rate limiting (USER, COMPANY, IP) | [optional] 
@@ -228,23 +230,23 @@ Name | Type | Description | Notes
 ## Enum: DataSourceRefreshFrequencyEnum
 
 
-* `REAL_TIME` (value: `"REAL_TIME"`)
+* `EVERY_SECOND` (value: `"EVERY_SECOND"`)
 
-* `HOURLY` (value: `"HOURLY"`)
+* `EVERY_MINUTE` (value: `"EVERY_MINUTE"`)
 
-* `DAILY` (value: `"DAILY"`)
+* `EVERY_HOUR` (value: `"EVERY_HOUR"`)
 
-* `WEEKLY` (value: `"WEEKLY"`)
+* `EVERY_DAY` (value: `"EVERY_DAY"`)
 
-* `MONTHLY` (value: `"MONTHLY"`)
+* `EVERY_WEEK` (value: `"EVERY_WEEK"`)
 
-* `QUARTERLY` (value: `"QUARTERLY"`)
+* `EVERY_MONTH` (value: `"EVERY_MONTH"`)
 
-* `ANNUAL` (value: `"ANNUAL"`)
+* `EVERY_QUARTER` (value: `"EVERY_QUARTER"`)
 
-* `ONE_TIME` (value: `"ONE_TIME"`)
+* `EVERY_YEAR` (value: `"EVERY_YEAR"`)
 
-* `CUSTOM` (value: `"CUSTOM"`)
+* `NEVER` (value: `"NEVER"`)
 
 * `UNKNOWN` (value: `"UNKNOWN"`)
 

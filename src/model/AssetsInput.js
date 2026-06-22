@@ -105,6 +105,9 @@ class AssetsInput {
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], 'String');
             }
+            if (data.hasOwnProperty('top_questions')) {
+                obj['top_questions'] = ApiClient.convertToType(data['top_questions'], 'String');
+            }
             if (data.hasOwnProperty('short_code')) {
                 obj['short_code'] = ApiClient.convertToType(data['short_code'], 'String');
             }
@@ -125,6 +128,9 @@ class AssetsInput {
             }
             if (data.hasOwnProperty('require_customization')) {
                 obj['require_customization'] = ApiClient.convertToType(data['require_customization'], 'Boolean');
+            }
+            if (data.hasOwnProperty('viz_spec')) {
+                obj['viz_spec'] = ApiClient.convertToType(data['viz_spec'], Object);
             }
             if (data.hasOwnProperty('viz_chart_library')) {
                 obj['viz_chart_library'] = ApiClient.convertToType(data['viz_chart_library'], 'String');
@@ -195,6 +201,9 @@ class AssetsInput {
             if (data.hasOwnProperty('data_time_period_end')) {
                 obj['data_time_period_end'] = ApiClient.convertToType(data['data_time_period_end'], 'Date');
             }
+            if (data.hasOwnProperty('date_collection_start')) {
+                obj['date_collection_start'] = ApiClient.convertToType(data['date_collection_start'], 'Date');
+            }
             if (data.hasOwnProperty('geographic_coverage_type')) {
                 obj['geographic_coverage_type'] = ApiClient.convertToType(data['geographic_coverage_type'], 'String');
             }
@@ -203,9 +212,6 @@ class AssetsInput {
             }
             if (data.hasOwnProperty('data_source_refresh_frequency')) {
                 obj['data_source_refresh_frequency'] = ApiClient.convertToType(data['data_source_refresh_frequency'], 'String');
-            }
-            if (data.hasOwnProperty('data_source_last_refreshed')) {
-                obj['data_source_last_refreshed'] = ApiClient.convertToType(data['data_source_last_refreshed'], 'Date');
             }
             if (data.hasOwnProperty('rate_limit_number')) {
                 obj['rate_limit_number'] = ApiClient.convertToType(data['rate_limit_number'], 'Number');
@@ -283,6 +289,10 @@ class AssetsInput {
         // ensure the json data is a string
         if (data['tags'] && !(typeof data['tags'] === 'string' || data['tags'] instanceof String)) {
             throw new Error("Expected the field `tags` to be a primitive type in the JSON string but got " + data['tags']);
+        }
+        // ensure the json data is a string
+        if (data['top_questions'] && !(typeof data['top_questions'] === 'string' || data['top_questions'] instanceof String)) {
+            throw new Error("Expected the field `top_questions` to be a primitive type in the JSON string but got " + data['top_questions']);
         }
         // ensure the json data is a string
         if (data['short_code'] && !(typeof data['short_code'] === 'string' || data['short_code'] instanceof String)) {
@@ -480,6 +490,12 @@ AssetsInput.prototype['asset_schema'] = undefined;
 AssetsInput.prototype['tags'] = undefined;
 
 /**
+ * Top 3 questions this asset can help answer, in English. Stored as JSON array of strings (1-3 items, 15-200 chars each). Required for marketplace assets.
+ * @member {String} top_questions
+ */
+AssetsInput.prototype['top_questions'] = undefined;
+
+/**
  * Short code for tera.ac URL shortener (e.g., 'f78zq1')
  * @member {String} short_code
  */
@@ -520,6 +536,12 @@ AssetsInput.prototype['sell_in_marketplace'] = undefined;
  * @member {Boolean} require_customization
  */
 AssetsInput.prototype['require_customization'] = undefined;
+
+/**
+ * Plotly figure JSON describing the visualization. Authored via the visual editor or via API. When populated, takes precedence over the legacy viz_* fields. Shape follows Plotly's figure schema: {data: [{type: '...', xsrc: '...', ...}], layout: {...}}. Column references use *src keys (xsrc, ysrc, labelssrc, etc.) and are hydrated with actual data at render time.
+ * @member {Object} viz_spec
+ */
+AssetsInput.prototype['viz_spec'] = undefined;
 
 /**
  * Optional. One of: PLOTLY, MATPLOTLIB, SEABORN.
@@ -660,6 +682,12 @@ AssetsInput.prototype['data_time_period_start'] = undefined;
 AssetsInput.prototype['data_time_period_end'] = undefined;
 
 /**
+ * When the seller began actively collecting this data. Distinct from data_time_period_start, which describes when the records themselves begin. Backfilled historical data will have date_collection_start > data_time_period_start.
+ * @member {Date} date_collection_start
+ */
+AssetsInput.prototype['date_collection_start'] = undefined;
+
+/**
  * Type of geographic coverage
  * @member {module:model/AssetsInput.GeographicCoverageTypeEnum} geographic_coverage_type
  */
@@ -676,12 +704,6 @@ AssetsInput.prototype['geographic_coverage_details'] = undefined;
  * @member {module:model/AssetsInput.DataSourceRefreshFrequencyEnum} data_source_refresh_frequency
  */
 AssetsInput.prototype['data_source_refresh_frequency'] = undefined;
-
-/**
- * When the source data was last refreshed
- * @member {Date} data_source_last_refreshed
- */
-AssetsInput.prototype['data_source_last_refreshed'] = undefined;
 
 /**
  * Number of requests allowed per period (e.g., 100)
@@ -1085,58 +1107,58 @@ AssetsInput['GeographicCoverageTypeEnum'] = {
 AssetsInput['DataSourceRefreshFrequencyEnum'] = {
 
     /**
-     * value: "REAL_TIME"
+     * value: "EVERY_SECOND"
      * @const
      */
-    "REAL_TIME": "REAL_TIME",
+    "EVERY_SECOND": "EVERY_SECOND",
 
     /**
-     * value: "HOURLY"
+     * value: "EVERY_MINUTE"
      * @const
      */
-    "HOURLY": "HOURLY",
+    "EVERY_MINUTE": "EVERY_MINUTE",
 
     /**
-     * value: "DAILY"
+     * value: "EVERY_HOUR"
      * @const
      */
-    "DAILY": "DAILY",
+    "EVERY_HOUR": "EVERY_HOUR",
 
     /**
-     * value: "WEEKLY"
+     * value: "EVERY_DAY"
      * @const
      */
-    "WEEKLY": "WEEKLY",
+    "EVERY_DAY": "EVERY_DAY",
 
     /**
-     * value: "MONTHLY"
+     * value: "EVERY_WEEK"
      * @const
      */
-    "MONTHLY": "MONTHLY",
+    "EVERY_WEEK": "EVERY_WEEK",
 
     /**
-     * value: "QUARTERLY"
+     * value: "EVERY_MONTH"
      * @const
      */
-    "QUARTERLY": "QUARTERLY",
+    "EVERY_MONTH": "EVERY_MONTH",
 
     /**
-     * value: "ANNUAL"
+     * value: "EVERY_QUARTER"
      * @const
      */
-    "ANNUAL": "ANNUAL",
+    "EVERY_QUARTER": "EVERY_QUARTER",
 
     /**
-     * value: "ONE_TIME"
+     * value: "EVERY_YEAR"
      * @const
      */
-    "ONE_TIME": "ONE_TIME",
+    "EVERY_YEAR": "EVERY_YEAR",
 
     /**
-     * value: "CUSTOM"
+     * value: "NEVER"
      * @const
      */
-    "CUSTOM": "CUSTOM",
+    "NEVER": "NEVER",
 
     /**
      * value: "UNKNOWN"

@@ -134,7 +134,7 @@ ConnectionsUpdate.prototype['engine_id'] = undefined;
 ConnectionsUpdate.prototype['company_id'] = undefined;
 
 /**
- * Optional. One of: SERVICE_ACCOUNT, USERNAME_PASSWORD, API_KEY, SERVICE_IDENTITY, ACCESS_KEY, … (8 total).
+ * Optional. One of: SERVICE_ACCOUNT, USERNAME_PASSWORD, API_KEY, SERVICE_IDENTITY, ACCESS_KEY, … (10 total).
  * @member {module:model/ConnectionsUpdate.CredentialTypeEnum} credential_type
  */
 ConnectionsUpdate.prototype['credential_type'] = undefined;
@@ -220,7 +220,19 @@ ConnectionsUpdate['CredentialTypeEnum'] = {
      * value: "JSON"
      * @const
      */
-    "JSON": "JSON"
+    "JSON": "JSON",
+
+    /**
+     * value: "KEY_PAIR"
+     * @const
+     */
+    "KEY_PAIR": "KEY_PAIR",
+
+    /**
+     * value: "CLIENT_SECRET"
+     * @const
+     */
+    "CLIENT_SECRET": "CLIENT_SECRET"
 };
 
 

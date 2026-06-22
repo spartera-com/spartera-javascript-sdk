@@ -81,9 +81,6 @@ class EndpointsUpdate {
             if (data.hasOwnProperty('sell_in_marketplace')) {
                 obj['sell_in_marketplace'] = ApiClient.convertToType(data['sell_in_marketplace'], 'Boolean');
             }
-            if (data.hasOwnProperty('price_credits')) {
-                obj['price_credits'] = ApiClient.convertToType(data['price_credits'], 'Number');
-            }
             if (data.hasOwnProperty('name')) {
                 obj['name'] = ApiClient.convertToType(data['name'], 'String');
             }
@@ -92,6 +89,12 @@ class EndpointsUpdate {
             }
             if (data.hasOwnProperty('description')) {
                 obj['description'] = ApiClient.convertToType(data['description'], 'String');
+            }
+            if (data.hasOwnProperty('detailed_description')) {
+                obj['detailed_description'] = ApiClient.convertToType(data['detailed_description'], 'String');
+            }
+            if (data.hasOwnProperty('top_questions')) {
+                obj['top_questions'] = ApiClient.convertToType(data['top_questions'], 'String');
             }
             if (data.hasOwnProperty('source_schema_name')) {
                 obj['source_schema_name'] = ApiClient.convertToType(data['source_schema_name'], 'String');
@@ -102,14 +105,11 @@ class EndpointsUpdate {
             if (data.hasOwnProperty('customer_name')) {
                 obj['customer_name'] = ApiClient.convertToType(data['customer_name'], 'String');
             }
-            if (data.hasOwnProperty('price_usd')) {
-                obj['price_usd'] = ApiClient.convertToType(data['price_usd'], 'Number');
-            }
             if (data.hasOwnProperty('endpoint_schema')) {
                 obj['endpoint_schema'] = ApiClient.convertToType(data['endpoint_schema'], Object);
             }
-            if (data.hasOwnProperty('rate_limit_requests')) {
-                obj['rate_limit_requests'] = ApiClient.convertToType(data['rate_limit_requests'], 'Number');
+            if (data.hasOwnProperty('rate_limit_number')) {
+                obj['rate_limit_number'] = ApiClient.convertToType(data['rate_limit_number'], 'Number');
             }
             if (data.hasOwnProperty('rate_limit_period')) {
                 obj['rate_limit_period'] = ApiClient.convertToType(data['rate_limit_period'], 'String');
@@ -126,6 +126,24 @@ class EndpointsUpdate {
             if (data.hasOwnProperty('status')) {
                 obj['status'] = ApiClient.convertToType(data['status'], 'String');
             }
+            if (data.hasOwnProperty('data_time_period_start')) {
+                obj['data_time_period_start'] = ApiClient.convertToType(data['data_time_period_start'], 'Date');
+            }
+            if (data.hasOwnProperty('data_time_period_end')) {
+                obj['data_time_period_end'] = ApiClient.convertToType(data['data_time_period_end'], 'Date');
+            }
+            if (data.hasOwnProperty('date_collection_start')) {
+                obj['date_collection_start'] = ApiClient.convertToType(data['date_collection_start'], 'Date');
+            }
+            if (data.hasOwnProperty('geographic_coverage_type')) {
+                obj['geographic_coverage_type'] = ApiClient.convertToType(data['geographic_coverage_type'], 'String');
+            }
+            if (data.hasOwnProperty('geographic_coverage_details')) {
+                obj['geographic_coverage_details'] = ApiClient.convertToType(data['geographic_coverage_details'], 'String');
+            }
+            if (data.hasOwnProperty('data_source_refresh_frequency')) {
+                obj['data_source_refresh_frequency'] = ApiClient.convertToType(data['data_source_refresh_frequency'], 'String');
+            }
             if (data.hasOwnProperty('tags')) {
                 obj['tags'] = ApiClient.convertToType(data['tags'], 'String');
             }
@@ -134,6 +152,12 @@ class EndpointsUpdate {
             }
             if (data.hasOwnProperty('max_records_per_request')) {
                 obj['max_records_per_request'] = ApiClient.convertToType(data['max_records_per_request'], 'Number');
+            }
+            if (data.hasOwnProperty('export_enabled')) {
+                obj['export_enabled'] = ApiClient.convertToType(data['export_enabled'], 'Boolean');
+            }
+            if (data.hasOwnProperty('max_records_per_export')) {
+                obj['max_records_per_export'] = ApiClient.convertToType(data['max_records_per_export'], 'Number');
             }
             if (data.hasOwnProperty('sample_response')) {
                 obj['sample_response'] = ApiClient.convertToType(data['sample_response'], Object);
@@ -184,6 +208,14 @@ class EndpointsUpdate {
             throw new Error("Expected the field `description` to be a primitive type in the JSON string but got " + data['description']);
         }
         // ensure the json data is a string
+        if (data['detailed_description'] && !(typeof data['detailed_description'] === 'string' || data['detailed_description'] instanceof String)) {
+            throw new Error("Expected the field `detailed_description` to be a primitive type in the JSON string but got " + data['detailed_description']);
+        }
+        // ensure the json data is a string
+        if (data['top_questions'] && !(typeof data['top_questions'] === 'string' || data['top_questions'] instanceof String)) {
+            throw new Error("Expected the field `top_questions` to be a primitive type in the JSON string but got " + data['top_questions']);
+        }
+        // ensure the json data is a string
         if (data['source_schema_name'] && !(typeof data['source_schema_name'] === 'string' || data['source_schema_name'] instanceof String)) {
             throw new Error("Expected the field `source_schema_name` to be a primitive type in the JSON string but got " + data['source_schema_name']);
         }
@@ -210,6 +242,18 @@ class EndpointsUpdate {
         // ensure the json data is a string
         if (data['status'] && !(typeof data['status'] === 'string' || data['status'] instanceof String)) {
             throw new Error("Expected the field `status` to be a primitive type in the JSON string but got " + data['status']);
+        }
+        // ensure the json data is a string
+        if (data['geographic_coverage_type'] && !(typeof data['geographic_coverage_type'] === 'string' || data['geographic_coverage_type'] instanceof String)) {
+            throw new Error("Expected the field `geographic_coverage_type` to be a primitive type in the JSON string but got " + data['geographic_coverage_type']);
+        }
+        // ensure the json data is a string
+        if (data['geographic_coverage_details'] && !(typeof data['geographic_coverage_details'] === 'string' || data['geographic_coverage_details'] instanceof String)) {
+            throw new Error("Expected the field `geographic_coverage_details` to be a primitive type in the JSON string but got " + data['geographic_coverage_details']);
+        }
+        // ensure the json data is a string
+        if (data['data_source_refresh_frequency'] && !(typeof data['data_source_refresh_frequency'] === 'string' || data['data_source_refresh_frequency'] instanceof String)) {
+            throw new Error("Expected the field `data_source_refresh_frequency` to be a primitive type in the JSON string but got " + data['data_source_refresh_frequency']);
         }
         // ensure the json data is a string
         if (data['tags'] && !(typeof data['tags'] === 'string' || data['tags'] instanceof String)) {
@@ -291,12 +335,6 @@ EndpointsUpdate.prototype['approved_at'] = undefined;
 EndpointsUpdate.prototype['sell_in_marketplace'] = undefined;
 
 /**
- * Credits deducted from the buyer's pool per successful (200 OK) request. Same credit pool as assets. price_usd kept for billing records / dashboards.
- * @member {Number} price_credits
- */
-EndpointsUpdate.prototype['price_credits'] = undefined;
-
-/**
  * Human-readable name for the endpoint
  * @member {String} name
  */
@@ -315,6 +353,18 @@ EndpointsUpdate.prototype['slug'] = undefined;
 EndpointsUpdate.prototype['description'] = undefined;
 
 /**
+ * Long-form HTML description for product pages and SEO
+ * @member {String} detailed_description
+ */
+EndpointsUpdate.prototype['detailed_description'] = undefined;
+
+/**
+ * Top 3 questions this endpoint can help answer, in English. Stored as JSON array of strings (1-3 items, 15-200 chars each). Strongly encouraged for marketplace endpoints but not required — nudge via UI completeness score, not hard validation.
+ * @member {String} top_questions
+ */
+EndpointsUpdate.prototype['top_questions'] = undefined;
+
+/**
  * Schema/database name where the table resides
  * @member {String} source_schema_name
  */
@@ -327,16 +377,10 @@ EndpointsUpdate.prototype['source_schema_name'] = undefined;
 EndpointsUpdate.prototype['source_table_name'] = undefined;
 
 /**
- * Named customer for B2B deals (marketplace uses price_credits instead)
+ * Named customer for B2B deals (pricing handled via asset_price_history)
  * @member {String} customer_name
  */
 EndpointsUpdate.prototype['customer_name'] = undefined;
-
-/**
- * USD reference price for billing records and seller dashboards
- * @member {Number} price_usd
- */
-EndpointsUpdate.prototype['price_usd'] = undefined;
 
 /**
  * Column configurations including aggregations, filters, and visibility. Format: {columns: [{name, type, aggregation, filter, is_hidden, alias, ...}]}. This is the source of truth — SQL is generated at runtime from this configuration.
@@ -346,9 +390,9 @@ EndpointsUpdate.prototype['endpoint_schema'] = undefined;
 
 /**
  * Number of requests allowed per rate_limit_period
- * @member {Number} rate_limit_requests
+ * @member {Number} rate_limit_number
  */
-EndpointsUpdate.prototype['rate_limit_requests'] = undefined;
+EndpointsUpdate.prototype['rate_limit_number'] = undefined;
 
 /**
  * Time period for rate limiting (HOUR, DAY, MONTH)
@@ -381,6 +425,42 @@ EndpointsUpdate.prototype['access_whitelist'] = undefined;
 EndpointsUpdate.prototype['status'] = undefined;
 
 /**
+ * Start date of the data time period covered
+ * @member {Date} data_time_period_start
+ */
+EndpointsUpdate.prototype['data_time_period_start'] = undefined;
+
+/**
+ * End date of the data time period covered
+ * @member {Date} data_time_period_end
+ */
+EndpointsUpdate.prototype['data_time_period_end'] = undefined;
+
+/**
+ * When the seller began actively collecting this data. Distinct from data_time_period_start, which describes when the records themselves begin. Backfilled historical data will have date_collection_start > data_time_period_start.
+ * @member {Date} date_collection_start
+ */
+EndpointsUpdate.prototype['date_collection_start'] = undefined;
+
+/**
+ * Type of geographic coverage
+ * @member {module:model/EndpointsUpdate.GeographicCoverageTypeEnum} geographic_coverage_type
+ */
+EndpointsUpdate.prototype['geographic_coverage_type'] = undefined;
+
+/**
+ * Specific regions/countries covered (e.g., 'United States, Canada, Mexico')
+ * @member {String} geographic_coverage_details
+ */
+EndpointsUpdate.prototype['geographic_coverage_details'] = undefined;
+
+/**
+ * How often the source data is refreshed
+ * @member {module:model/EndpointsUpdate.DataSourceRefreshFrequencyEnum} data_source_refresh_frequency
+ */
+EndpointsUpdate.prototype['data_source_refresh_frequency'] = undefined;
+
+/**
  * Comma-separated tags for organizing endpoints
  * @member {String} tags
  */
@@ -397,6 +477,18 @@ EndpointsUpdate.prototype['last_accessed'] = undefined;
  * @member {Number} max_records_per_request
  */
 EndpointsUpdate.prototype['max_records_per_request'] = undefined;
+
+/**
+ * Whether this endpoint supports bulk export to GCS. When True, buyers can request delivery=gcs with format=csv|parquet. Independent of max_records_per_request, which only governs inline JSON.
+ * @member {Boolean} export_enabled
+ */
+EndpointsUpdate.prototype['export_enabled'] = undefined;
+
+/**
+ * Hard ceiling on rows returned per GCS export. Separate from max_records_per_request so sellers can offer larger downloads via file delivery without expanding inline JSON responses.
+ * @member {Number} max_records_per_export
+ */
+EndpointsUpdate.prototype['max_records_per_export'] = undefined;
 
 /**
  * Last successful {spartera, request, response} envelope. Saved on each successful marketplace run. Displayed as preview on product page load.
@@ -576,6 +668,132 @@ EndpointsUpdate['StatusEnum'] = {
      * @const
      */
     "DEPRECATED": "DEPRECATED"
+};
+
+
+/**
+ * Allowed values for the <code>geographic_coverage_type</code> property.
+ * @enum {String}
+ * @readonly
+ */
+EndpointsUpdate['GeographicCoverageTypeEnum'] = {
+
+    /**
+     * value: "GLOBAL"
+     * @const
+     */
+    "GLOBAL": "GLOBAL",
+
+    /**
+     * value: "CONTINENTAL"
+     * @const
+     */
+    "CONTINENTAL": "CONTINENTAL",
+
+    /**
+     * value: "REGIONAL"
+     * @const
+     */
+    "REGIONAL": "REGIONAL",
+
+    /**
+     * value: "NATIONAL"
+     * @const
+     */
+    "NATIONAL": "NATIONAL",
+
+    /**
+     * value: "STATE"
+     * @const
+     */
+    "STATE": "STATE",
+
+    /**
+     * value: "LOCAL"
+     * @const
+     */
+    "LOCAL": "LOCAL",
+
+    /**
+     * value: "CUSTOM"
+     * @const
+     */
+    "CUSTOM": "CUSTOM",
+
+    /**
+     * value: "UNKNOWN"
+     * @const
+     */
+    "UNKNOWN": "UNKNOWN"
+};
+
+
+/**
+ * Allowed values for the <code>data_source_refresh_frequency</code> property.
+ * @enum {String}
+ * @readonly
+ */
+EndpointsUpdate['DataSourceRefreshFrequencyEnum'] = {
+
+    /**
+     * value: "EVERY_SECOND"
+     * @const
+     */
+    "EVERY_SECOND": "EVERY_SECOND",
+
+    /**
+     * value: "EVERY_MINUTE"
+     * @const
+     */
+    "EVERY_MINUTE": "EVERY_MINUTE",
+
+    /**
+     * value: "EVERY_HOUR"
+     * @const
+     */
+    "EVERY_HOUR": "EVERY_HOUR",
+
+    /**
+     * value: "EVERY_DAY"
+     * @const
+     */
+    "EVERY_DAY": "EVERY_DAY",
+
+    /**
+     * value: "EVERY_WEEK"
+     * @const
+     */
+    "EVERY_WEEK": "EVERY_WEEK",
+
+    /**
+     * value: "EVERY_MONTH"
+     * @const
+     */
+    "EVERY_MONTH": "EVERY_MONTH",
+
+    /**
+     * value: "EVERY_QUARTER"
+     * @const
+     */
+    "EVERY_QUARTER": "EVERY_QUARTER",
+
+    /**
+     * value: "EVERY_YEAR"
+     * @const
+     */
+    "EVERY_YEAR": "EVERY_YEAR",
+
+    /**
+     * value: "NEVER"
+     * @const
+     */
+    "NEVER": "NEVER",
+
+    /**
+     * value: "UNKNOWN"
+     * @const
+     */
+    "UNKNOWN": "UNKNOWN"
 };
 
 

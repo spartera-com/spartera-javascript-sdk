@@ -198,6 +198,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property topQuestions (base name: "top_questions")', function() {
+      // uncomment below and update the code to test the property topQuestions
+      //var instance = new SparteraApiSdk.Assets();
+      //expect(instance).to.be();
+    });
+
     it('should have the property shortCode (base name: "short_code")', function() {
       // uncomment below and update the code to test the property shortCode
       //var instance = new SparteraApiSdk.Assets();
@@ -236,6 +242,12 @@
 
     it('should have the property requireCustomization (base name: "require_customization")', function() {
       // uncomment below and update the code to test the property requireCustomization
+      //var instance = new SparteraApiSdk.Assets();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property vizSpec (base name: "viz_spec")', function() {
+      // uncomment below and update the code to test the property vizSpec
       //var instance = new SparteraApiSdk.Assets();
       //expect(instance).to.be();
     });
@@ -378,6 +390,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dateCollectionStart (base name: "date_collection_start")', function() {
+      // uncomment below and update the code to test the property dateCollectionStart
+      //var instance = new SparteraApiSdk.Assets();
+      //expect(instance).to.be();
+    });
+
     it('should have the property geographicCoverageType (base name: "geographic_coverage_type")', function() {
       // uncomment below and update the code to test the property geographicCoverageType
       //var instance = new SparteraApiSdk.Assets();
@@ -392,12 +410,6 @@
 
     it('should have the property dataSourceRefreshFrequency (base name: "data_source_refresh_frequency")', function() {
       // uncomment below and update the code to test the property dataSourceRefreshFrequency
-      //var instance = new SparteraApiSdk.Assets();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property dataSourceLastRefreshed (base name: "data_source_last_refreshed")', function() {
-      // uncomment below and update the code to test the property dataSourceLastRefreshed
       //var instance = new SparteraApiSdk.Assets();
       //expect(instance).to.be();
     });

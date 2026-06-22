@@ -161,6 +161,59 @@ export default class EndpointsApi {
     }
 
     /**
+     * Callback function to receive the result of the createEndpointsScanColumn operation.
+     * @callback module:api/EndpointsApi~createEndpointsScanColumnCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/CreateEndpoints200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * POST /companies/{company_id}/endpoints/{endpoint_id}/scan_column
+     * @param {String} companyId Unique identifier for the Company
+     * @param {String} endpointId Unique identifier for the Endpoint
+     * @param {module:model/EndpointsInput} endpointsInput 
+     * @param {module:api/EndpointsApi~createEndpointsScanColumnCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/CreateEndpoints200Response}
+     */
+    createEndpointsScanColumn(companyId, endpointId, endpointsInput, callback) {
+      let postBody = endpointsInput;
+      // verify the required parameter 'companyId' is set
+      if (companyId === undefined || companyId === null) {
+        throw new Error("Missing the required parameter 'companyId' when calling createEndpointsScanColumn");
+      }
+      // verify the required parameter 'endpointId' is set
+      if (endpointId === undefined || endpointId === null) {
+        throw new Error("Missing the required parameter 'endpointId' when calling createEndpointsScanColumn");
+      }
+      // verify the required parameter 'endpointsInput' is set
+      if (endpointsInput === undefined || endpointsInput === null) {
+        throw new Error("Missing the required parameter 'endpointsInput' when calling createEndpointsScanColumn");
+      }
+
+      let pathParams = {
+        'company_id': companyId,
+        'endpoint_id': endpointId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = ['application/json'];
+      let accepts = ['application/json'];
+      let returnType = CreateEndpoints200Response;
+      return this.apiClient.callApi(
+        '/companies/{company_id}/endpoints/{endpoint_id}/scan_column', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the deleteEndpoints operation.
      * @callback module:api/EndpointsApi~deleteEndpointsCallback
      * @param {String} error Error message, if any.
@@ -497,6 +550,54 @@ export default class EndpointsApi {
       let returnType = GetEndpointsByIdConnectionsDescribe200Response;
       return this.apiClient.callApi(
         '/companies/{company_id}/endpoints/{endpoint_id}/keys', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getEndpointsByIdRecommendations operation.
+     * @callback module:api/EndpointsApi~getEndpointsByIdRecommendationsCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetEndpointsByIdConnectionsDescribe200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * GET /companies/{company_id}/endpoints/{endpoint_id}/recommendations
+     * @param {String} companyId Unique identifier for the Company
+     * @param {String} endpointId Unique identifier for the Endpoint
+     * @param {module:api/EndpointsApi~getEndpointsByIdRecommendationsCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetEndpointsByIdConnectionsDescribe200Response}
+     */
+    getEndpointsByIdRecommendations(companyId, endpointId, callback) {
+      let postBody = null;
+      // verify the required parameter 'companyId' is set
+      if (companyId === undefined || companyId === null) {
+        throw new Error("Missing the required parameter 'companyId' when calling getEndpointsByIdRecommendations");
+      }
+      // verify the required parameter 'endpointId' is set
+      if (endpointId === undefined || endpointId === null) {
+        throw new Error("Missing the required parameter 'endpointId' when calling getEndpointsByIdRecommendations");
+      }
+
+      let pathParams = {
+        'company_id': companyId,
+        'endpoint_id': endpointId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetEndpointsByIdConnectionsDescribe200Response;
+      return this.apiClient.callApi(
+        '/companies/{company_id}/endpoints/{endpoint_id}/recommendations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

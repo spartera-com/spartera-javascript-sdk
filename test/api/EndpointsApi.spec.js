@@ -68,6 +68,16 @@
         done();
       });
     });
+    describe('createEndpointsScanColumn', function() {
+      it('should call createEndpointsScanColumn successfully', function(done) {
+        //uncomment below and update the code to test createEndpointsScanColumn
+        //instance.createEndpointsScanColumn(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('deleteEndpoints', function() {
       it('should call deleteEndpoints successfully', function(done) {
         //uncomment below and update the code to test deleteEndpoints
@@ -132,6 +142,16 @@
       it('should call getEndpointsByIdKeys successfully', function(done) {
         //uncomment below and update the code to test getEndpointsByIdKeys
         //instance.getEndpointsByIdKeys(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('getEndpointsByIdRecommendations', function() {
+      it('should call getEndpointsByIdRecommendations successfully', function(done) {
+        //uncomment below and update the code to test getEndpointsByIdRecommendations
+        //instance.getEndpointsByIdRecommendations(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

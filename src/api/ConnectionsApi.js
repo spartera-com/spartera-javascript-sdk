@@ -300,6 +300,54 @@ export default class ConnectionsApi {
     }
 
     /**
+     * Callback function to receive the result of the getConnectionsByIdSampleData operation.
+     * @callback module:api/ConnectionsApi~getConnectionsByIdSampleDataCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/GetConnectionsById200Response} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get a randomized sample of rows from a table on this connection.     Used by the visualization editor to give sellers data to author against.      Query Parameters:         schema_name (required): Schema/dataset name         table_name  (required): Table name         limit       (optional): Max rows to return (default 1000, max 10000)      Returns columnar data — {column_name: [values]} — ready for Plotly's     dataSources prop. The actual chart at render time will pull fresh data     via the asset's saved SQL; this is only for authoring preview.
+     * @param {String} companyId Unique identifier for the Company
+     * @param {String} connectionId Unique identifier for the Connection
+     * @param {module:api/ConnectionsApi~getConnectionsByIdSampleDataCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/GetConnectionsById200Response}
+     */
+    getConnectionsByIdSampleData(companyId, connectionId, callback) {
+      let postBody = null;
+      // verify the required parameter 'companyId' is set
+      if (companyId === undefined || companyId === null) {
+        throw new Error("Missing the required parameter 'companyId' when calling getConnectionsByIdSampleData");
+      }
+      // verify the required parameter 'connectionId' is set
+      if (connectionId === undefined || connectionId === null) {
+        throw new Error("Missing the required parameter 'connectionId' when calling getConnectionsByIdSampleData");
+      }
+
+      let pathParams = {
+        'company_id': companyId,
+        'connection_id': connectionId
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = ['ApiKeyAuth'];
+      let contentTypes = [];
+      let accepts = ['application/json'];
+      let returnType = GetConnectionsById200Response;
+      return this.apiClient.callApi(
+        '/companies/{company_id}/connections/{connection_id}/sample-data', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the listConnections operation.
      * @callback module:api/ConnectionsApi~listConnectionsCallback
      * @param {String} error Error message, if any.

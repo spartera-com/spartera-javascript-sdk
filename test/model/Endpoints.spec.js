@@ -126,12 +126,6 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property priceCredits (base name: "price_credits")', function() {
-      // uncomment below and update the code to test the property priceCredits
-      //var instance = new SparteraApiSdk.Endpoints();
-      //expect(instance).to.be();
-    });
-
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
       //var instance = new SparteraApiSdk.Endpoints();
@@ -146,6 +140,18 @@
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property detailedDescription (base name: "detailed_description")', function() {
+      // uncomment below and update the code to test the property detailedDescription
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property topQuestions (base name: "top_questions")', function() {
+      // uncomment below and update the code to test the property topQuestions
       //var instance = new SparteraApiSdk.Endpoints();
       //expect(instance).to.be();
     });
@@ -168,20 +174,14 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property priceUsd (base name: "price_usd")', function() {
-      // uncomment below and update the code to test the property priceUsd
-      //var instance = new SparteraApiSdk.Endpoints();
-      //expect(instance).to.be();
-    });
-
     it('should have the property endpointSchema (base name: "endpoint_schema")', function() {
       // uncomment below and update the code to test the property endpointSchema
       //var instance = new SparteraApiSdk.Endpoints();
       //expect(instance).to.be();
     });
 
-    it('should have the property rateLimitRequests (base name: "rate_limit_requests")', function() {
-      // uncomment below and update the code to test the property rateLimitRequests
+    it('should have the property rateLimitNumber (base name: "rate_limit_number")', function() {
+      // uncomment below and update the code to test the property rateLimitNumber
       //var instance = new SparteraApiSdk.Endpoints();
       //expect(instance).to.be();
     });
@@ -216,6 +216,42 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property dataTimePeriodStart (base name: "data_time_period_start")', function() {
+      // uncomment below and update the code to test the property dataTimePeriodStart
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dataTimePeriodEnd (base name: "data_time_period_end")', function() {
+      // uncomment below and update the code to test the property dataTimePeriodEnd
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dateCollectionStart (base name: "date_collection_start")', function() {
+      // uncomment below and update the code to test the property dateCollectionStart
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property geographicCoverageType (base name: "geographic_coverage_type")', function() {
+      // uncomment below and update the code to test the property geographicCoverageType
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property geographicCoverageDetails (base name: "geographic_coverage_details")', function() {
+      // uncomment below and update the code to test the property geographicCoverageDetails
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dataSourceRefreshFrequency (base name: "data_source_refresh_frequency")', function() {
+      // uncomment below and update the code to test the property dataSourceRefreshFrequency
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
     it('should have the property tags (base name: "tags")', function() {
       // uncomment below and update the code to test the property tags
       //var instance = new SparteraApiSdk.Endpoints();
@@ -230,6 +266,18 @@
 
     it('should have the property maxRecordsPerRequest (base name: "max_records_per_request")', function() {
       // uncomment below and update the code to test the property maxRecordsPerRequest
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property exportEnabled (base name: "export_enabled")', function() {
+      // uncomment below and update the code to test the property exportEnabled
+      //var instance = new SparteraApiSdk.Endpoints();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property maxRecordsPerExport (base name: "max_records_per_export")', function() {
+      // uncomment below and update the code to test the property maxRecordsPerExport
       //var instance = new SparteraApiSdk.Endpoints();
       //expect(instance).to.be();
     });

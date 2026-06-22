@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**createEndpoints**](EndpointsApi.md#createEndpoints) | **POST** /companies/{company_id}/endpoints | Create a new endpoint
 [**createEndpointsKeys**](EndpointsApi.md#createEndpointsKeys) | **POST** /companies/{company_id}/endpoints/{endpoint_id}/keys | POST /companies/{company_id}/endpoints/{endpoint_id}/keys
+[**createEndpointsScanColumn**](EndpointsApi.md#createEndpointsScanColumn) | **POST** /companies/{company_id}/endpoints/{endpoint_id}/scan_column | POST /companies/{company_id}/endpoints/{endpoint_id}/scan_column
 [**deleteEndpoints**](EndpointsApi.md#deleteEndpoints) | **DELETE** /companies/{company_id}/endpoints/{endpoint_id} | Delete single endpoint by ID
 [**deleteEndpointsKeys**](EndpointsApi.md#deleteEndpointsKeys) | **DELETE** /companies/{company_id}/endpoints/{endpoint_id}/keys/{api_key_id} | DELETE /companies/{company_id}/endpoints/{endpoint_id}/keys/{api_key_id}
 [**getEndpointsById**](EndpointsApi.md#getEndpointsById) | **GET** /companies/{company_id}/endpoints/{endpoint_id} | Get single endpoint by ID
@@ -13,6 +14,7 @@ Method | HTTP request | Description
 [**getEndpointsByIdConnectionsDescribe**](EndpointsApi.md#getEndpointsByIdConnectionsDescribe) | **GET** /companies/{company_id}/endpoints/../connections/{connection_id}/describe | Get schema information for a connection      Query parameters:         include_fields: Whether to include field information (default: true)         schemas: Optional comma-separated schemas to include         tables: Optional comma-separated tables to include
 [**getEndpointsByIdExecute**](EndpointsApi.md#getEndpointsByIdExecute) | **GET** /companies/{company_id}/endpoints/{endpoint_id}/execute | Execute an endpoint with pagination support.      Customer-facing route that returns paginated data.     Query params: ?start&#x3D;0&amp;limit&#x3D;100
 [**getEndpointsByIdKeys**](EndpointsApi.md#getEndpointsByIdKeys) | **GET** /companies/{company_id}/endpoints/{endpoint_id}/keys | GET /companies/{company_id}/endpoints/{endpoint_id}/keys
+[**getEndpointsByIdRecommendations**](EndpointsApi.md#getEndpointsByIdRecommendations) | **GET** /companies/{company_id}/endpoints/{endpoint_id}/recommendations | GET /companies/{company_id}/endpoints/{endpoint_id}/recommendations
 [**getEndpointsByIdStats**](EndpointsApi.md#getEndpointsByIdStats) | **GET** /companies/{company_id}/endpoints/{endpoint_id}/stats | Get usage statistics for an endpoint      Query parameters:         days: Number of days to analyze (default: 30)
 [**getEndpointsByIdTest**](EndpointsApi.md#getEndpointsByIdTest) | **GET** /companies/{company_id}/endpoints/{endpoint_id}/test | Test an endpoint with sample data      Request body (optional):         limit: Number of sample rows to return (default: 10)
 [**getEndpointsByIdUrl**](EndpointsApi.md#getEndpointsByIdUrl) | **GET** /companies/{company_id}/endpoints/{endpoint_id}/url | GET /companies/{company_id}/endpoints/{endpoint_id}/url
@@ -106,6 +108,59 @@ let companyId = "companyId_example"; // String | Unique identifier for the Compa
 let endpointId = "endpointId_example"; // String | Unique identifier for the Endpoint
 let endpointsInput = new SparteraApiSdk.EndpointsInput(); // EndpointsInput | 
 apiInstance.createEndpointsKeys(companyId, endpointId, endpointsInput, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **endpointId** | **String**| Unique identifier for the Endpoint | 
+ **endpointsInput** | [**EndpointsInput**](EndpointsInput.md)|  | 
+
+### Return type
+
+[**CreateEndpoints200Response**](CreateEndpoints200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## createEndpointsScanColumn
+
+> CreateEndpoints200Response createEndpointsScanColumn(companyId, endpointId, endpointsInput)
+
+POST /companies/{company_id}/endpoints/{endpoint_id}/scan_column
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.EndpointsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let endpointId = "endpointId_example"; // String | Unique identifier for the Endpoint
+let endpointsInput = new SparteraApiSdk.EndpointsInput(); // EndpointsInput | 
+apiInstance.createEndpointsScanColumn(companyId, endpointId, endpointsInput, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -466,6 +521,57 @@ let apiInstance = new SparteraApiSdk.EndpointsApi();
 let companyId = "companyId_example"; // String | Unique identifier for the Company
 let endpointId = "endpointId_example"; // String | Unique identifier for the Endpoint
 apiInstance.getEndpointsByIdKeys(companyId, endpointId, (error, data, response) => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+});
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **companyId** | **String**| Unique identifier for the Company | 
+ **endpointId** | **String**| Unique identifier for the Endpoint | 
+
+### Return type
+
+[**GetEndpointsByIdConnectionsDescribe200Response**](GetEndpointsByIdConnectionsDescribe200Response.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## getEndpointsByIdRecommendations
+
+> GetEndpointsByIdConnectionsDescribe200Response getEndpointsByIdRecommendations(companyId, endpointId)
+
+GET /companies/{company_id}/endpoints/{endpoint_id}/recommendations
+
+### Example
+
+```javascript
+import SparteraApiSdk from 'spartera-api-sdk';
+let defaultClient = SparteraApiSdk.ApiClient.instance;
+// Configure API key authorization: ApiKeyAuth
+let ApiKeyAuth = defaultClient.authentications['ApiKeyAuth'];
+ApiKeyAuth.apiKey = 'YOUR API KEY';
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//ApiKeyAuth.apiKeyPrefix = 'Token';
+
+let apiInstance = new SparteraApiSdk.EndpointsApi();
+let companyId = "companyId_example"; // String | Unique identifier for the Company
+let endpointId = "endpointId_example"; // String | Unique identifier for the Endpoint
+apiInstance.getEndpointsByIdRecommendations(companyId, endpointId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

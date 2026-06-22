@@ -98,6 +98,16 @@
         done();
       });
     });
+    describe('getConnectionsByIdSampleData', function() {
+      it('should call getConnectionsByIdSampleData successfully', function(done) {
+        //uncomment below and update the code to test getConnectionsByIdSampleData
+        //instance.getConnectionsByIdSampleData(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('listConnections', function() {
       it('should call listConnections successfully', function(done) {
         //uncomment below and update the code to test listConnections
