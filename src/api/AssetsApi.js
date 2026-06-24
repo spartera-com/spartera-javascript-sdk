@@ -117,21 +117,21 @@ export default class AssetsApi {
 
     /**
      * Process (analyze) an asset with dynamic rate limiting applied via decorator.
-     * @param {String} assetSlug URL-friendly slug for the Asset
      * @param {String} companyHandle Human-readable handle for the Company
+     * @param {String} assetSlug URL-friendly slug for the Asset
      * @param {module:model/AssetsInput} assetsInput 
      * @param {module:api/AssetsApi~createAssetsAnalyzeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/CreateAssetsAnalyze200Response}
      */
-    createAssetsAnalyze(assetSlug, companyHandle, assetsInput, callback) {
+    createAssetsAnalyze(companyHandle, assetSlug, assetsInput, callback) {
       let postBody = assetsInput;
-      // verify the required parameter 'assetSlug' is set
-      if (assetSlug === undefined || assetSlug === null) {
-        throw new Error("Missing the required parameter 'assetSlug' when calling createAssetsAnalyze");
-      }
       // verify the required parameter 'companyHandle' is set
       if (companyHandle === undefined || companyHandle === null) {
         throw new Error("Missing the required parameter 'companyHandle' when calling createAssetsAnalyze");
+      }
+      // verify the required parameter 'assetSlug' is set
+      if (assetSlug === undefined || assetSlug === null) {
+        throw new Error("Missing the required parameter 'assetSlug' when calling createAssetsAnalyze");
       }
       // verify the required parameter 'assetsInput' is set
       if (assetsInput === undefined || assetsInput === null) {
@@ -139,8 +139,8 @@ export default class AssetsApi {
       }
 
       let pathParams = {
-        'asset_slug': assetSlug,
-        'company_handle': companyHandle
+        'company_handle': companyHandle,
+        'asset_slug': assetSlug
       };
       let queryParams = {
       };
@@ -420,25 +420,25 @@ export default class AssetsApi {
 
     /**
      * Process (analyze) an asset with dynamic rate limiting applied via decorator.
-     * @param {String} assetSlug URL-friendly slug for the Asset
      * @param {String} companyHandle Human-readable handle for the Company
+     * @param {String} assetSlug URL-friendly slug for the Asset
      * @param {module:api/AssetsApi~getAssetsByIdAnalyzeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/GetAssetsByIdAnalyze200Response}
      */
-    getAssetsByIdAnalyze(assetSlug, companyHandle, callback) {
+    getAssetsByIdAnalyze(companyHandle, assetSlug, callback) {
       let postBody = null;
-      // verify the required parameter 'assetSlug' is set
-      if (assetSlug === undefined || assetSlug === null) {
-        throw new Error("Missing the required parameter 'assetSlug' when calling getAssetsByIdAnalyze");
-      }
       // verify the required parameter 'companyHandle' is set
       if (companyHandle === undefined || companyHandle === null) {
         throw new Error("Missing the required parameter 'companyHandle' when calling getAssetsByIdAnalyze");
       }
+      // verify the required parameter 'assetSlug' is set
+      if (assetSlug === undefined || assetSlug === null) {
+        throw new Error("Missing the required parameter 'assetSlug' when calling getAssetsByIdAnalyze");
+      }
 
       let pathParams = {
-        'asset_slug': assetSlug,
-        'company_handle': companyHandle
+        'company_handle': companyHandle,
+        'asset_slug': assetSlug
       };
       let queryParams = {
       };

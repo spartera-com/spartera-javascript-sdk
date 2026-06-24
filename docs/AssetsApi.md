@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## createAssetsAnalyze
 
-> CreateAssetsAnalyze200Response createAssetsAnalyze(assetSlug, companyHandle, assetsInput)
+> CreateAssetsAnalyze200Response createAssetsAnalyze(companyHandle, assetSlug, assetsInput)
 
 Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
@@ -104,10 +104,10 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SparteraApiSdk.AssetsApi();
-let assetSlug = "assetSlug_example"; // String | URL-friendly slug for the Asset
 let companyHandle = "companyHandle_example"; // String | Human-readable handle for the Company
+let assetSlug = "assetSlug_example"; // String | URL-friendly slug for the Asset
 let assetsInput = new SparteraApiSdk.AssetsInput(); // AssetsInput | 
-apiInstance.createAssetsAnalyze(assetSlug, companyHandle, assetsInput, (error, data, response) => {
+apiInstance.createAssetsAnalyze(companyHandle, assetSlug, assetsInput, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -121,8 +121,8 @@ apiInstance.createAssetsAnalyze(assetSlug, companyHandle, assetsInput, (error, d
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assetSlug** | **String**| URL-friendly slug for the Asset | 
  **companyHandle** | **String**| Human-readable handle for the Company | 
+ **assetSlug** | **String**| URL-friendly slug for the Asset | 
  **assetsInput** | [**AssetsInput**](AssetsInput.md)|  | 
 
 ### Return type
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 ## getAssetsByIdAnalyze
 
-> GetAssetsByIdAnalyze200Response getAssetsByIdAnalyze(assetSlug, companyHandle)
+> GetAssetsByIdAnalyze200Response getAssetsByIdAnalyze(companyHandle, assetSlug)
 
 Process (analyze) an asset with dynamic rate limiting applied via decorator.
 
@@ -416,9 +416,9 @@ ApiKeyAuth.apiKey = 'YOUR API KEY';
 //ApiKeyAuth.apiKeyPrefix = 'Token';
 
 let apiInstance = new SparteraApiSdk.AssetsApi();
-let assetSlug = "assetSlug_example"; // String | URL-friendly slug for the Asset
 let companyHandle = "companyHandle_example"; // String | Human-readable handle for the Company
-apiInstance.getAssetsByIdAnalyze(assetSlug, companyHandle, (error, data, response) => {
+let assetSlug = "assetSlug_example"; // String | URL-friendly slug for the Asset
+apiInstance.getAssetsByIdAnalyze(companyHandle, assetSlug, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -432,8 +432,8 @@ apiInstance.getAssetsByIdAnalyze(assetSlug, companyHandle, (error, data, respons
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **assetSlug** | **String**| URL-friendly slug for the Asset | 
  **companyHandle** | **String**| Human-readable handle for the Company | 
+ **assetSlug** | **String**| URL-friendly slug for the Asset | 
 
 ### Return type
 
