@@ -31,7 +31,7 @@ import UpdateAlerts200Response from '../model/UpdateAlerts200Response';
 /**
 * Alerts service.
 * @module api/AlertsApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class AlertsApi {
 

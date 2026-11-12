@@ -32,7 +32,7 @@ import UpdateApiKeys200Response from '../model/UpdateApiKeys200Response';
 /**
 * APIKeys service.
 * @module api/APIKeysApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class APIKeysApi {
 

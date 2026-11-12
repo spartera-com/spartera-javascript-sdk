@@ -17,7 +17,7 @@ import PostgenIntegrations from './PostgenIntegrations';
 /**
  * The ListPostgenIntegrations200Response model module.
  * @module model/ListPostgenIntegrations200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListPostgenIntegrations200Response {
     /**

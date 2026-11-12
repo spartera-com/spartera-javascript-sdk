@@ -17,7 +17,7 @@ import Favorites from './Favorites';
 /**
  * The GetFavoritesById200Response model module.
  * @module model/GetFavoritesById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetFavoritesById200Response {
     /**

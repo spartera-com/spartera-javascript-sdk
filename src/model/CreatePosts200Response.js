@@ -17,7 +17,7 @@ import CreatePosts200ResponseData from './CreatePosts200ResponseData';
 /**
  * The CreatePosts200Response model module.
  * @module model/CreatePosts200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreatePosts200Response {
     /**

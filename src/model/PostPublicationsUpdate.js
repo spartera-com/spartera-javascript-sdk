@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PostPublicationsUpdate model module.
  * @module model/PostPublicationsUpdate
- * @version 1.25.0
+ * @version 1.25.1
  */
 class PostPublicationsUpdate {
     /**

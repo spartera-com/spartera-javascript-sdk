@@ -17,7 +17,7 @@ import DeleteApiKeys200ResponseData from './DeleteApiKeys200ResponseData';
 /**
  * The DeleteApiKeys200Response model module.
  * @module model/DeleteApiKeys200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteApiKeys200Response {
     /**

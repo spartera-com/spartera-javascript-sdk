@@ -32,7 +32,7 @@ import UpdateConnections200Response from '../model/UpdateConnections200Response'
 /**
 * Connections service.
 * @module api/ConnectionsApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class ConnectionsApi {
 

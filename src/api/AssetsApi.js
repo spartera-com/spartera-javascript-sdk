@@ -32,7 +32,7 @@ import UpdateAssets200Response from '../model/UpdateAssets200Response';
 /**
 * Assets service.
 * @module api/AssetsApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class AssetsApi {
 

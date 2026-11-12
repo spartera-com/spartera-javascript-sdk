@@ -17,7 +17,7 @@ import Endpoints from './Endpoints';
 /**
  * The ListEndpoints200Response model module.
  * @module model/ListEndpoints200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListEndpoints200Response {
     /**

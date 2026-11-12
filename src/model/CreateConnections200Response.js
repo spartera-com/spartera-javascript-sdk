@@ -17,7 +17,7 @@ import CreateConnections200ResponseData from './CreateConnections200ResponseData
 /**
  * The CreateConnections200Response model module.
  * @module model/CreateConnections200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateConnections200Response {
     /**

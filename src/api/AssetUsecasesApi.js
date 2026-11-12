@@ -24,7 +24,7 @@ import ListAssetUsecases200Response from '../model/ListAssetUsecases200Response'
 /**
 * AssetUsecases service.
 * @module api/AssetUsecasesApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class AssetUsecasesApi {
 

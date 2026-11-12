@@ -17,7 +17,7 @@ import Companies from './Companies';
 /**
  * The GetCompaniesById200Response model module.
  * @module model/GetCompaniesById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetCompaniesById200Response {
     /**

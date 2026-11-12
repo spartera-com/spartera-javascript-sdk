@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAssets200ResponseData model module.
  * @module model/UpdateAssets200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateAssets200ResponseData {
     /**

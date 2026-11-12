@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreatePosts200ResponseData model module.
  * @module model/CreatePosts200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreatePosts200ResponseData {
     /**

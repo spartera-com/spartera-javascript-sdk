@@ -17,7 +17,7 @@ import Industries from './Industries';
 /**
  * The GetIndustriesById200Response model module.
  * @module model/GetIndustriesById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetIndustriesById200Response {
     /**

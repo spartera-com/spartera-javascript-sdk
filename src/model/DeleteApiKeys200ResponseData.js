@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteApiKeys200ResponseData model module.
  * @module model/DeleteApiKeys200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteApiKeys200ResponseData {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ApiKeys model module.
  * @module model/ApiKeys
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ApiKeys {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateFavorites200ResponseData model module.
  * @module model/CreateFavorites200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateFavorites200ResponseData {
     /**

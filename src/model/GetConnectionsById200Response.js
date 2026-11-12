@@ -17,7 +17,7 @@ import Connections from './Connections';
 /**
  * The GetConnectionsById200Response model module.
  * @module model/GetConnectionsById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetConnectionsById200Response {
     /**

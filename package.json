@@ -1,6 +1,6 @@
 {
   "name": "spartera-api-sdk",
-  "version": "1.25.0",
+  "version": "1.25.1",
   "description": "Auto-generated API documentation for REST services of the Spartera platform",
   "license": "Apache 2.0",
   "main": "dist/index.js",

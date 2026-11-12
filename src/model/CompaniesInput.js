@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CompaniesInput model module.
  * @module model/CompaniesInput
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CompaniesInput {
     /**

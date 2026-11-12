@@ -17,7 +17,7 @@ import Connections from './Connections';
 /**
  * The ListConnections200Response model module.
  * @module model/ListConnections200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListConnections200Response {
     /**

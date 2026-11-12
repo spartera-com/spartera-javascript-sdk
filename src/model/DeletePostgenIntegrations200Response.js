@@ -17,7 +17,7 @@ import DeletePostgenIntegrations200ResponseData from './DeletePostgenIntegration
 /**
  * The DeletePostgenIntegrations200Response model module.
  * @module model/DeletePostgenIntegrations200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeletePostgenIntegrations200Response {
     /**

@@ -17,7 +17,7 @@ import DeleteEndpoints200ResponseData from './DeleteEndpoints200ResponseData';
 /**
  * The DeleteEndpoints200Response model module.
  * @module model/DeleteEndpoints200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteEndpoints200Response {
     /**

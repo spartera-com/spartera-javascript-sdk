@@ -17,7 +17,7 @@ import Users from './Users';
 /**
  * The ListUsers200Response model module.
  * @module model/ListUsers200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListUsers200Response {
     /**

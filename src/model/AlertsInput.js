@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AlertsInput model module.
  * @module model/AlertsInput
- * @version 1.25.0
+ * @version 1.25.1
  */
 class AlertsInput {
     /**

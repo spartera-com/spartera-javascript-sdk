@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The EndpointsInput model module.
  * @module model/EndpointsInput
- * @version 1.25.0
+ * @version 1.25.1
  */
 class EndpointsInput {
     /**

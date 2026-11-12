@@ -17,7 +17,7 @@ import Assets from './Assets';
 /**
  * The GetAssetsByIdAnalyze200Response model module.
  * @module model/GetAssetsByIdAnalyze200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetAssetsByIdAnalyze200Response {
     /**

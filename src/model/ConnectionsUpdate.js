@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The ConnectionsUpdate model module.
  * @module model/ConnectionsUpdate
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ConnectionsUpdate {
     /**

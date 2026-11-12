@@ -17,7 +17,7 @@ import UpdateApiKeys200ResponseData from './UpdateApiKeys200ResponseData';
 /**
  * The UpdateApiKeys200Response model module.
  * @module model/UpdateApiKeys200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateApiKeys200Response {
     /**

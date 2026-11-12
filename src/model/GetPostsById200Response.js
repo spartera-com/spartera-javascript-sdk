@@ -17,7 +17,7 @@ import Posts from './Posts';
 /**
  * The GetPostsById200Response model module.
  * @module model/GetPostsById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetPostsById200Response {
     /**

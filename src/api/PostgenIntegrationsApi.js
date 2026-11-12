@@ -32,7 +32,7 @@ import UpdatePostgenIntegrations200Response from '../model/UpdatePostgenIntegrat
 /**
 * PostgenIntegrations service.
 * @module api/PostgenIntegrationsApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class PostgenIntegrationsApi {
 

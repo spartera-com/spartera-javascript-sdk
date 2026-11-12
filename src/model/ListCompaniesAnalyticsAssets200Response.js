@@ -17,7 +17,7 @@ import Companies from './Companies';
 /**
  * The ListCompaniesAnalyticsAssets200Response model module.
  * @module model/ListCompaniesAnalyticsAssets200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListCompaniesAnalyticsAssets200Response {
     /**

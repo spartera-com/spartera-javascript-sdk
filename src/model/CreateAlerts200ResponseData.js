@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateAlerts200ResponseData model module.
  * @module model/CreateAlerts200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateAlerts200ResponseData {
     /**

@@ -17,7 +17,7 @@ import UpdateAssets200ResponseData from './UpdateAssets200ResponseData';
 /**
  * The UpdateAssets200Response model module.
  * @module model/UpdateAssets200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateAssets200Response {
     /**

@@ -32,7 +32,7 @@ import UpdateEndpoints200Response from '../model/UpdateEndpoints200Response';
 /**
 * Endpoints service.
 * @module api/EndpointsApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class EndpointsApi {
 

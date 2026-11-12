@@ -17,7 +17,7 @@ import UpdateAssetPriceHistory200ResponseData from './UpdateAssetPriceHistory200
 /**
  * The UpdateAssetPriceHistory200Response model module.
  * @module model/UpdateAssetPriceHistory200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateAssetPriceHistory200Response {
     /**

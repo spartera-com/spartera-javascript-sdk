@@ -24,7 +24,7 @@ import ListIndustries200Response from '../model/ListIndustries200Response';
 /**
 * Industries service.
 * @module api/IndustriesApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class IndustriesApi {
 

@@ -17,7 +17,7 @@ import DeleteAlerts200ResponseData from './DeleteAlerts200ResponseData';
 /**
  * The DeleteAlerts200Response model module.
  * @module model/DeleteAlerts200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteAlerts200Response {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateAssetPriceHistory200ResponseData model module.
  * @module model/UpdateAssetPriceHistory200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateAssetPriceHistory200ResponseData {
     /**

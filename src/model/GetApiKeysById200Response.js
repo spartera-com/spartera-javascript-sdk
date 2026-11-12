@@ -17,7 +17,7 @@ import ApiKeys from './ApiKeys';
 /**
  * The GetApiKeysById200Response model module.
  * @module model/GetApiKeysById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetApiKeysById200Response {
     /**

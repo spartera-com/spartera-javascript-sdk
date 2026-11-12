@@ -17,7 +17,7 @@ import UpdateUsers200ResponseData from './UpdateUsers200ResponseData';
 /**
  * The UpdateUsers200Response model module.
  * @module model/UpdateUsers200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateUsers200Response {
     /**

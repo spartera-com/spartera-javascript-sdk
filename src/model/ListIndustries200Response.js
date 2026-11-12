@@ -17,7 +17,7 @@ import Industries from './Industries';
 /**
  * The ListIndustries200Response model module.
  * @module model/ListIndustries200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListIndustries200Response {
     /**

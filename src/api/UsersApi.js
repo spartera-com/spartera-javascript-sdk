@@ -32,7 +32,7 @@ import UsersUpdate from '../model/UsersUpdate';
 /**
 * Users service.
 * @module api/UsersApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class UsersApi {
 

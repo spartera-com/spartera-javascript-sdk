@@ -17,7 +17,7 @@ import CreateFavorites200ResponseData from './CreateFavorites200ResponseData';
 /**
  * The CreateFavorites200Response model module.
  * @module model/CreateFavorites200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateFavorites200Response {
     /**

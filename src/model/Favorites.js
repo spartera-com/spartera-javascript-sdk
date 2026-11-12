@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Favorites model module.
  * @module model/Favorites
- * @version 1.25.0
+ * @version 1.25.1
  */
 class Favorites {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteConnections200ResponseData model module.
  * @module model/DeleteConnections200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteConnections200ResponseData {
     /**

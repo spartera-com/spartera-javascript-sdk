@@ -17,7 +17,7 @@ import UpdateEndpoints200ResponseData from './UpdateEndpoints200ResponseData';
 /**
  * The UpdateEndpoints200Response model module.
  * @module model/UpdateEndpoints200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateEndpoints200Response {
     /**

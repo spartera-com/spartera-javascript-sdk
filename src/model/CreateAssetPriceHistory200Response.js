@@ -17,7 +17,7 @@ import CreateAssetPriceHistory200ResponseData from './CreateAssetPriceHistory200
 /**
  * The CreateAssetPriceHistory200Response model module.
  * @module model/CreateAssetPriceHistory200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateAssetPriceHistory200Response {
     /**

@@ -17,7 +17,7 @@ import DeleteAssetPriceHistory200ResponseData from './DeleteAssetPriceHistory200
 /**
  * The DeleteAssetPriceHistory200Response model module.
  * @module model/DeleteAssetPriceHistory200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteAssetPriceHistory200Response {
     /**

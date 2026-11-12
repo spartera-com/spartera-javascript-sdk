@@ -17,7 +17,7 @@ import CreateAssetsAnalyze200ResponseData from './CreateAssetsAnalyze200Response
 /**
  * The CreateAssetsAnalyze200Response model module.
  * @module model/CreateAssetsAnalyze200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateAssetsAnalyze200Response {
     /**

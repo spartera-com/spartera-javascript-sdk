@@ -17,7 +17,7 @@ import Posts from './Posts';
 /**
  * The ListPosts200Response model module.
  * @module model/ListPosts200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListPosts200Response {
     /**

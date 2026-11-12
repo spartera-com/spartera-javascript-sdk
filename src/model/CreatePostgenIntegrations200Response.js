@@ -17,7 +17,7 @@ import CreatePostgenIntegrations200ResponseData from './CreatePostgenIntegration
 /**
  * The CreatePostgenIntegrations200Response model module.
  * @module model/CreatePostgenIntegrations200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreatePostgenIntegrations200Response {
     /**

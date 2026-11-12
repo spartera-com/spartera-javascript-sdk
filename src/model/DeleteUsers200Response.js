@@ -17,7 +17,7 @@ import DeleteUsers200ResponseData from './DeleteUsers200ResponseData';
 /**
  * The DeleteUsers200Response model module.
  * @module model/DeleteUsers200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteUsers200Response {
     /**

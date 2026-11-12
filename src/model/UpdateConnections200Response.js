@@ -17,7 +17,7 @@ import UpdateConnections200ResponseData from './UpdateConnections200ResponseData
 /**
  * The UpdateConnections200Response model module.
  * @module model/UpdateConnections200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateConnections200Response {
     /**

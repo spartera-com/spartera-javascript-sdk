@@ -17,7 +17,7 @@ import CreateAlerts200ResponseData from './CreateAlerts200ResponseData';
 /**
  * The CreateAlerts200Response model module.
  * @module model/CreateAlerts200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateAlerts200Response {
     /**

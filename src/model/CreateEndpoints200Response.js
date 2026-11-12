@@ -17,7 +17,7 @@ import CreateEndpoints200ResponseData from './CreateEndpoints200ResponseData';
 /**
  * The CreateEndpoints200Response model module.
  * @module model/CreateEndpoints200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateEndpoints200Response {
     /**

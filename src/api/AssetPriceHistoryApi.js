@@ -31,7 +31,7 @@ import UpdateAssetPriceHistory200Response from '../model/UpdateAssetPriceHistory
 /**
 * AssetPriceHistory service.
 * @module api/AssetPriceHistoryApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class AssetPriceHistoryApi {
 

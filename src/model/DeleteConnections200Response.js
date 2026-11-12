@@ -17,7 +17,7 @@ import DeleteConnections200ResponseData from './DeleteConnections200ResponseData
 /**
  * The DeleteConnections200Response model module.
  * @module model/DeleteConnections200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteConnections200Response {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PostgenIntegrations model module.
  * @module model/PostgenIntegrations
- * @version 1.25.0
+ * @version 1.25.1
  */
 class PostgenIntegrations {
     /**

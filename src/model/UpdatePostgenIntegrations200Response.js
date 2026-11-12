@@ -17,7 +17,7 @@ import UpdatePostgenIntegrations200ResponseData from './UpdatePostgenIntegration
 /**
  * The UpdatePostgenIntegrations200Response model module.
  * @module model/UpdatePostgenIntegrations200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdatePostgenIntegrations200Response {
     /**

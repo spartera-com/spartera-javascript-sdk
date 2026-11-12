@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AlertsUpdate model module.
  * @module model/AlertsUpdate
- * @version 1.25.0
+ * @version 1.25.1
  */
 class AlertsUpdate {
     /**

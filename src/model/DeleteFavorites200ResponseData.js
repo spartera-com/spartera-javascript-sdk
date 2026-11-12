@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteFavorites200ResponseData model module.
  * @module model/DeleteFavorites200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteFavorites200ResponseData {
     /**

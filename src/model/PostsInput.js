@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PostsInput model module.
  * @module model/PostsInput
- * @version 1.25.0
+ * @version 1.25.1
  */
 class PostsInput {
     /**

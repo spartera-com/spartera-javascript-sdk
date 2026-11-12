@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeletePostgenIntegrations200ResponseData model module.
  * @module model/DeletePostgenIntegrations200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeletePostgenIntegrations200ResponseData {
     /**

@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The AssetPriceHistoryUpdate model module.
  * @module model/AssetPriceHistoryUpdate
- * @version 1.25.0
+ * @version 1.25.1
  */
 class AssetPriceHistoryUpdate {
     /**

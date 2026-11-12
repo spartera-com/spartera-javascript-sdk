@@ -17,7 +17,7 @@ import JobFunctions from './JobFunctions';
 /**
  * The ListJobFunctions200Response model module.
  * @module model/ListJobFunctions200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListJobFunctions200Response {
     /**

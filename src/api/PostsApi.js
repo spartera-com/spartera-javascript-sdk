@@ -32,7 +32,7 @@ import UpdatePosts200Response from '../model/UpdatePosts200Response';
 /**
 * Posts service.
 * @module api/PostsApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class PostsApi {
 

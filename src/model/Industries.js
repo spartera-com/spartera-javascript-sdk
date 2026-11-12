@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The Industries model module.
  * @module model/Industries
- * @version 1.25.0
+ * @version 1.25.1
  */
 class Industries {
     /**

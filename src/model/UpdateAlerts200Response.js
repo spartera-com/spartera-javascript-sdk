@@ -17,7 +17,7 @@ import UpdateAlerts200ResponseData from './UpdateAlerts200ResponseData';
 /**
  * The UpdateAlerts200Response model module.
  * @module model/UpdateAlerts200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateAlerts200Response {
     /**

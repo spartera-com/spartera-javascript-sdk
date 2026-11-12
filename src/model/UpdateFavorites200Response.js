@@ -17,7 +17,7 @@ import UpdateFavorites200ResponseData from './UpdateFavorites200ResponseData';
 /**
  * The UpdateFavorites200Response model module.
  * @module model/UpdateFavorites200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateFavorites200Response {
     /**

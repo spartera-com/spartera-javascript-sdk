@@ -17,7 +17,7 @@ import CreateUsers200ResponseData from './CreateUsers200ResponseData';
 /**
  * The CreateUsers200Response model module.
  * @module model/CreateUsers200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateUsers200Response {
     /**

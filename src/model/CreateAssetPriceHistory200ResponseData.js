@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CreateAssetPriceHistory200ResponseData model module.
  * @module model/CreateAssetPriceHistory200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateAssetPriceHistory200ResponseData {
     /**

@@ -17,7 +17,7 @@ import Endpoints from './Endpoints';
 /**
  * The GetEndpointsByIdConnectionsDescribe200Response model module.
  * @module model/GetEndpointsByIdConnectionsDescribe200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetEndpointsByIdConnectionsDescribe200Response {
     /**

@@ -24,7 +24,7 @@ import ListJobFunctions200Response from '../model/ListJobFunctions200Response';
 /**
 * JobFunctions service.
 * @module api/JobFunctionsApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class JobFunctionsApi {
 

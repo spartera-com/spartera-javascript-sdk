@@ -17,7 +17,7 @@ import CloudProviders from './CloudProviders';
 /**
  * The GetCloudProvidersById200Response model module.
  * @module model/GetCloudProvidersById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetCloudProvidersById200Response {
     /**

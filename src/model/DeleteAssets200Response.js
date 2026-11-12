@@ -17,7 +17,7 @@ import DeleteAssets200ResponseData from './DeleteAssets200ResponseData';
 /**
  * The DeleteAssets200Response model module.
  * @module model/DeleteAssets200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteAssets200Response {
     /**

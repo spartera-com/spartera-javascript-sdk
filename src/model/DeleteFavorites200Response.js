@@ -17,7 +17,7 @@ import DeleteFavorites200ResponseData from './DeleteFavorites200ResponseData';
 /**
  * The DeleteFavorites200Response model module.
  * @module model/DeleteFavorites200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteFavorites200Response {
     /**

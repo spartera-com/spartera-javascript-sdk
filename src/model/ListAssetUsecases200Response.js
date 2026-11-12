@@ -17,7 +17,7 @@ import AssetUsecases from './AssetUsecases';
 /**
  * The ListAssetUsecases200Response model module.
  * @module model/ListAssetUsecases200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListAssetUsecases200Response {
     /**

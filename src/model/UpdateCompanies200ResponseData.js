@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The UpdateCompanies200ResponseData model module.
  * @module model/UpdateCompanies200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateCompanies200ResponseData {
     /**

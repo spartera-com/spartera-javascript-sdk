@@ -17,7 +17,7 @@ import Users from './Users';
 /**
  * The GetUsersById200Response model module.
  * @module model/GetUsersById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetUsersById200Response {
     /**

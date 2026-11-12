@@ -17,7 +17,7 @@ import AssetPriceHistory from './AssetPriceHistory';
 /**
  * The GetAssetPriceHistoryById200Response model module.
  * @module model/GetAssetPriceHistoryById200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class GetAssetPriceHistoryById200Response {
     /**

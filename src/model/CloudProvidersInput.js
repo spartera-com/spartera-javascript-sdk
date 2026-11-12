@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CloudProvidersInput model module.
  * @module model/CloudProvidersInput
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CloudProvidersInput {
     /**

@@ -17,7 +17,7 @@ import UpdateCompanies200ResponseData from './UpdateCompanies200ResponseData';
 /**
  * The UpdateCompanies200Response model module.
  * @module model/UpdateCompanies200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class UpdateCompanies200Response {
     /**

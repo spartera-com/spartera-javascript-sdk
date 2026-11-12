@@ -17,7 +17,7 @@ import Assets from './Assets';
 /**
  * The ListAssets200Response model module.
  * @module model/ListAssets200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class ListAssets200Response {
     /**

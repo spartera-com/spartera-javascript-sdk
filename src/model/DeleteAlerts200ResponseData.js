@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteAlerts200ResponseData model module.
  * @module model/DeleteAlerts200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteAlerts200ResponseData {
     /**

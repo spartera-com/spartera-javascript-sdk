@@ -29,7 +29,7 @@ import UpdateCompanies200Response from '../model/UpdateCompanies200Response';
 /**
 * Companies service.
 * @module api/CompaniesApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class CompaniesApi {
 

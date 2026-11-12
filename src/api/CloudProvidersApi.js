@@ -24,7 +24,7 @@ import ListCloudProviders200Response from '../model/ListCloudProviders200Respons
 /**
 * CloudProviders service.
 * @module api/CloudProvidersApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class CloudProvidersApi {
 

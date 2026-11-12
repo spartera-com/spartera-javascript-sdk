@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The CloudProvidersUpdate model module.
  * @module model/CloudProvidersUpdate
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CloudProvidersUpdate {
     /**

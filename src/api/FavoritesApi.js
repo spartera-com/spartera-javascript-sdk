@@ -31,7 +31,7 @@ import UpdateFavorites200Response from '../model/UpdateFavorites200Response';
 /**
 * Favorites service.
 * @module api/FavoritesApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class FavoritesApi {
 

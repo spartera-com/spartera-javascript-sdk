@@ -24,7 +24,7 @@ import ListStorageEngines200Response from '../model/ListStorageEngines200Respons
 /**
 * StorageEngines service.
 * @module api/StorageEnginesApi
-* @version 1.25.0
+* @version 1.25.1
 */
 export default class StorageEnginesApi {
 

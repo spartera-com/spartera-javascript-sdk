@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The PostsUpdate model module.
  * @module model/PostsUpdate
- * @version 1.25.0
+ * @version 1.25.1
  */
 class PostsUpdate {
     /**

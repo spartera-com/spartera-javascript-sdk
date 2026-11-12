@@ -17,7 +17,7 @@ import CreateApiKeys200ResponseData from './CreateApiKeys200ResponseData';
 /**
  * The CreateApiKeys200Response model module.
  * @module model/CreateApiKeys200Response
- * @version 1.25.0
+ * @version 1.25.1
  */
 class CreateApiKeys200Response {
     /**

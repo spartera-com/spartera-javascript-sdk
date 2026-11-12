@@ -16,7 +16,7 @@ import ApiClient from '../ApiClient';
 /**
  * The DeleteEndpoints200ResponseData model module.
  * @module model/DeleteEndpoints200ResponseData
- * @version 1.25.0
+ * @version 1.25.1
  */
 class DeleteEndpoints200ResponseData {
     /**
